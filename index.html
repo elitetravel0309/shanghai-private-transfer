@@ -1,0 +1,2514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shanghai Private Transfer — Airport Transfer & Private Chauffeur</title>
+<meta name="description" content="Safe, punctual & comfortable PVG and SHA airport transfers, private chauffeur service and city charter for international visitors in Shanghai, Suzhou, Hangzhou, Wuzhen and beyond.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shanghai Private Transfer — Airport Transfer & Private Chauffeur">
+<meta property="og:description" content="Private PVG & SHA airport transfers, chauffeur service, city charter and day trips. WhatsApp / WeChat +86 191 1727 3912.">
+<meta property="og:image" content="https://aka.doubaocdn.com/s/LmuUosjVHU">
+<meta name="theme-color" content="#0B1B2E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1B2E'/%3E%3Cpath d='M20 34l8-8 5 5 9-11' stroke='%23C8A45C' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='18' cy='42' r='2.4' fill='%23C8A45C'/%3E%3Ccircle cx='46' cy='42' r='2.4' fill='%23C8A45C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Marcellus&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* ============ Design tokens ============ */
+:root{
+  --navy-950:#081420;
+  --navy-900:#0B1B2E;
+  --navy-800:#10263E;
+  --navy-700:#183451;
+  --navy-600:#23507a;
+  --gold:#C8A45C;
+  --gold-strong:#B8913F;
+  --gold-soft:#EAD9B4;
+  --cream:#F6F2EA;
+  --paper:#FFFFFF;
+  --ink:#14202E;
+  --muted:#5A6675;
+  --line:#E5DECF;
+  --line-dark:rgba(234,217,180,.18);
+  --font-display:"Marcellus","Georgia","Times New Roman",serif;
+  --font-body:"Public Sans","Helvetica Neue","Segoe UI",Arial,sans-serif;
+  --shadow-card:0 12px 34px rgba(11,27,46,.09);
+  --shadow-card-hover:0 20px 48px rgba(11,27,46,.16);
+  --radius:14px;
+  --radius-lg:22px;
+  --maxw:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+/* ============ Buttons ============ */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:14px 26px;border-radius:999px;
+  font-weight:600;font-size:15px;letter-spacing:.2px;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease,color .2s ease;
+}
+.btn svg{width:17px;height:17px;flex:none;}
+.btn-gold{background:var(--gold);color:var(--navy-950);}
+.btn-gold:hover{background:var(--gold-strong);transform:translateY(-2px);box-shadow:0 12px 26px rgba(200,164,92,.4);}
+.btn-ghost{border:1px solid rgba(255,255,255,.55);color:#fff;}
+.btn-ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-2px);}
+.btn-navy{background:var(--navy-900);color:#fff;}
+.btn-navy:hover{background:var(--navy-700);transform:translateY(-2px);box-shadow:0 12px 26px rgba(11,27,46,.25);}
+.btn-outline{border:1px solid var(--gold);color:var(--navy-900);}
+.btn-outline:hover{background:var(--gold);color:var(--navy-950);transform:translateY(-2px);}
+
+/* ============ Header ============ */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(8,20,32,.82);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line-dark);
+  transition:background .3s ease,box-shadow .3s ease;
+}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px;}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;}
+.brand-mark{
+  width:42px;height:42px;flex:none;border-radius:11px;
+  background:linear-gradient(135deg,var(--gold),var(--gold-strong));
+  display:flex;align-items:center;justify-content:center;
+  color:var(--navy-950);
+}
+.brand-mark svg{width:24px;height:24px;}
+.brand-name{font-family:var(--font-display);font-size:20px;letter-spacing:.6px;line-height:1.1;}
+.brand-sub{font-size:10.5px;letter-spacing:2.2px;text-transform:uppercase;color:var(--gold-soft);opacity:.9;}
+.main-nav{display:flex;align-items:center;gap:30px;}
+.main-nav a{color:rgba(255,255,255,.82);font-size:15px;font-weight:500;transition:color .2s;position:relative;padding:6px 0;}
+.main-nav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold);transition:width .25s ease;}
+.main-nav a:hover,.main-nav a.active{color:#fff;}
+.main-nav a:hover::after,.main-nav a.active::after{width:100%;}
+.header-cta{display:flex;align-items:center;gap:14px;}
+.header-phone{display:flex;align-items:center;gap:8px;color:var(--gold-soft);font-weight:600;font-size:14.5px;}
+.header-phone svg{width:16px;height:16px;color:var(--gold);}
+.nav-toggle{display:none;flex-direction:column;gap:5px;padding:8px;}
+.nav-toggle span{width:24px;height:2px;background:#fff;border-radius:2px;transition:.25s;}
+.mobile-nav{
+  display:none;flex-direction:column;gap:4px;
+  background:var(--navy-900);padding:14px 24px 22px;
+  border-top:1px solid var(--line-dark);
+}
+.mobile-nav a{color:rgba(255,255,255,.9);padding:12px 4px;font-size:16px;border-bottom:1px solid rgba(255,255,255,.07);}
+.mobile-nav a:last-child{border-bottom:none;}
+
+/* ============ Views ============ */
+.view{display:none;}
+.view.active{display:block;}
+main{min-height:70vh;}
+
+/* ============ Hero ============ */
+.hero{
+  position:relative;min-height:92vh;display:flex;align-items:center;
+  color:#fff;overflow:hidden;
+}
+.hero-bg{position:absolute;inset:0;}
+.hero-bg img{width:100%;height:100%;object-fit:cover;}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,32,.72) 0%,rgba(8,20,32,.45) 45%,rgba(8,20,32,.86) 100%);}
+.hero-content{position:relative;z-index:2;padding:150px 0 110px;max-width:760px;}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-soft);
+  margin-bottom:22px;
+}
+.hero-eyebrow::before{content:"";width:38px;height:1px;background:var(--gold);}
+.hero h1{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(40px,6.2vw,74px);line-height:1.05;
+  letter-spacing:.5px;margin-bottom:22px;
+}
+.hero h1 em{font-style:normal;color:var(--gold);}
+.hero p.lead{font-size:clamp(16px,1.6vw,19px);color:rgba(255,255,255,.88);max-width:600px;margin-bottom:34px;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:44px;}
+.hero-trust{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.85);font-size:14.5px;}
+.hero-trust .stars{display:flex;gap:3px;color:var(--gold);}
+.hero-trust .stars svg{width:15px;height:15px;}
+.hero-trust b{color:#fff;font-weight:700;}
+/* hero bottom route line */
+.hero-route{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;
+  background:rgba(8,20,32,.5);backdrop-filter:blur(8px);
+  border-top:1px solid var(--line-dark);
+}
+.hero-route .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:16px;padding-bottom:16px;flex-wrap:wrap;}
+.hero-route-item{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.9);font-size:13.5px;font-weight:500;}
+.hero-route-item .dot{width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(200,164,92,.22);flex:none;}
+.hero-route-item small{display:block;color:rgba(255,255,255,.6);font-weight:400;font-size:11.5px;}
+
+/* ============ Section scaffolding ============ */
+.section{padding:96px 0;}
+.section.cream{background:var(--cream);}
+.section.navy{background:var(--navy-900);color:#fff;}
+.section-head{max-width:680px;margin-bottom:54px;}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold-strong);font-weight:600;margin-bottom:16px;
+}
+.eyebrow::before{content:"";width:30px;height:1px;background:var(--gold);}
+.section-head.center .eyebrow::after{content:"";width:30px;height:1px;background:var(--gold);}
+.section h2{
+  font-family:var(--font-display);font-weight:400;font-size:clamp(30px,4vw,46px);
+  line-height:1.12;letter-spacing:.3px;margin-bottom:16px;
+}
+.section.navy h2{color:#fff;}
+.section-head p{color:var(--muted);font-size:17px;}
+.section.navy .section-head p{color:rgba(255,255,255,.7);}
+.route-motif{display:flex;align-items:center;gap:0;margin-top:26px;}
+.route-motif svg{height:22px;width:100%;max-width:240px;}
+.section.navy .route-motif svg path{stroke:rgba(200,164,92,.55);}
+
+/* ============ Feature strip ============ */
+.features{display:grid;grid-template-columns:repeat(6,1fr);gap:0;background:var(--navy-900);color:#fff;}
+.feature{
+  padding:30px 22px;text-align:center;border-right:1px solid rgba(255,255,255,.07);
+  display:flex;flex-direction:column;align-items:center;gap:12px;
+}
+.feature:last-child{border-right:none;}
+.feature .f-icon{width:52px;height:52px;border-radius:50%;background:rgba(200,164,92,.14);display:flex;align-items:center;justify-content:center;color:var(--gold);}
+.feature .f-icon svg{width:24px;height:24px;}
+.feature b{font-size:15.5px;font-weight:600;letter-spacing:.2px;}
+.feature span{font-size:12.5px;color:rgba(255,255,255,.62);line-height:1.45;}
+
+/* ============ Cards (generic) ============ */
+.card{background:var(--paper);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);border:1px solid var(--line);transition:transform .28s ease,box-shadow .28s ease;}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-card-hover);}
+.card-img{position:relative;overflow:hidden;aspect-ratio:4/3;}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.card:hover .card-img img{transform:scale(1.05);}
+.card-img .tag{
+  position:absolute;top:14px;left:14px;z-index:2;
+  background:rgba(8,20,32,.78);color:#fff;backdrop-filter:blur(6px);
+  font-size:11.5px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
+  padding:6px 12px;border-radius:999px;
+}
+.card-body{padding:24px 24px 26px;}
+.card-body h3{font-family:var(--font-display);font-weight:400;font-size:22px;letter-spacing:.3px;margin-bottom:9px;}
+.card-body p{color:var(--muted);font-size:14.5px;margin-bottom:18px;}
+.card-link{display:inline-flex;align-items:center;gap:7px;font-weight:600;font-size:14px;color:var(--navy-800);}
+.card-link svg{width:15px;height:15px;transition:transform .2s;}
+.card:hover .card-link svg{transform:translateX(4px);}
+.card-link.gold{color:var(--gold-strong);}
+
+/* ============ Services grid ============ */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+
+/* ============ Fleet ============ */
+.fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.filter-bar{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:38px;}
+.filter-chip{
+  padding:10px 20px;border-radius:999px;border:1px solid var(--line);
+  background:var(--paper);color:var(--ink);font-weight:600;font-size:14px;
+  transition:.2s;
+}
+.filter-chip:hover{border-color:var(--gold);}
+.filter-chip.active{background:var(--navy-900);color:#fff;border-color:var(--navy-900);}
+.fleet-card .fleet-spec{display:flex;gap:16px;margin:14px 0 18px;}
+.fleet-spec .spec{display:flex;flex-direction:column;gap:3px;}
+.fleet-spec .spec b{font-size:16px;font-weight:700;color:var(--navy-900);}
+.fleet-spec .spec span{font-size:12px;color:var(--muted);}
+.fleet-price{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:16px;}
+.fleet-price .from{font-size:12.5px;color:var(--muted);}
+.fleet-price .amt{font-family:var(--font-display);font-size:30px;color:var(--navy-900);}
+.fleet-price .amt span{font-size:14px;color:var(--muted);font-family:var(--font-body);}
+
+/* ============ Destinations chips ============ */
+.dest-chips{display:flex;flex-wrap:wrap;gap:12px;}
+.dest-chip{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:13px 24px;border-radius:999px;background:var(--paper);
+  border:1px solid var(--line);box-shadow:var(--shadow-card);
+  font-weight:600;font-size:15px;transition:.22s;
+}
+.dest-chip .pin{width:18px;height:18px;color:var(--gold-strong);}
+.dest-chip:hover{transform:translateY(-3px);box-shadow:var(--shadow-card-hover);border-color:var(--gold);}
+.dest-chip small{display:block;font-weight:400;color:var(--muted);font-size:12px;}
+
+/* ============ Routes ============ */
+.route-list{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.route-item{
+  display:flex;align-items:center;gap:14px;
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px;transition:.22s;box-shadow:0 4px 14px rgba(11,27,46,.05);
+}
+.route-item:hover{transform:translateY(-3px);box-shadow:var(--shadow-card);border-color:var(--gold);}
+.route-arrow{flex:none;width:40px;height:40px;border-radius:10px;background:var(--cream);display:flex;align-items:center;justify-content:center;color:var(--gold-strong);}
+.route-arrow svg{width:20px;height:20px;}
+.route-item b{font-size:14.5px;font-weight:700;color:var(--navy-900);line-height:1.3;}
+.route-item span{display:block;font-size:12.5px;color:var(--muted);margin-top:3px;}
+
+/* ============ Why choose ============ */
+.why-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;}
+.why-item{text-align:center;padding:34px 20px;background:rgba(255,255,255,.04);border:1px solid var(--line-dark);border-radius:var(--radius-lg);transition:.25s;}
+.why-item:hover{background:rgba(200,164,92,.08);transform:translateY(-4px);}
+.why-item .w-icon{width:58px;height:58px;margin:0 auto 18px;border-radius:50%;background:rgba(200,164,92,.16);color:var(--gold);display:flex;align-items:center;justify-content:center;}
+.why-item .w-icon svg{width:26px;height:26px;}
+.why-item b{display:block;font-family:var(--font-display);font-weight:400;font-size:19px;color:#fff;margin-bottom:9px;}
+.why-item p{font-size:13.5px;color:rgba(255,255,255,.68);line-height:1.55;}
+
+/* ============ Testimonials ============ */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.testi-card{background:var(--paper);border-radius:var(--radius-lg);padding:32px;box-shadow:var(--shadow-card);border:1px solid var(--line);display:flex;flex-direction:column;}
+.testi-stars{display:flex;gap:3px;color:var(--gold);margin-bottom:18px;}
+.testi-stars svg{width:16px;height:16px;}
+.testi-card blockquote{font-size:15.5px;line-height:1.7;color:var(--ink);margin-bottom:24px;flex:1;}
+.testi-person{display:flex;align-items:center;gap:14px;}
+.testi-avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--navy-800),var(--navy-600));color:var(--gold-soft);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;font-family:var(--font-display);}
+.testi-person b{display:block;font-size:15px;color:var(--navy-900);}
+.testi-person span{display:block;font-size:12.5px;color:var(--muted);}
+.testi-tag{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-strong);margin-bottom:6px;}
+
+/* ============ FAQ ============ */
+.faq-list{max-width:840px;margin:0 auto;}
+.faq-item{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:14px;overflow:hidden;transition:box-shadow .25s;}
+.faq-item.open{box-shadow:var(--shadow-card);border-color:var(--gold);}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;padding:21px 26px;font-weight:600;font-size:16.5px;color:var(--navy-900);}
+.faq-q .plus{flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold-strong);display:flex;align-items:center;justify-content:center;font-size:18px;transition:transform .25s;}
+.faq-item.open .plus{transform:rotate(45deg);background:var(--gold);color:var(--navy-950);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.faq-a-inner{padding:0 26px 24px;color:var(--muted);font-size:15px;line-height:1.75;}
+
+/* ============ Route detail ============ */
+.route-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;background:var(--navy-900);color:#fff;border-radius:var(--radius-lg);padding:32px 30px;margin-top:-64px;position:relative;z-index:3;box-shadow:0 20px 50px rgba(8,20,32,.28);}
+.route-fact b{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.route-fact span{font-size:15px;line-height:1.5;color:rgba(255,255,255,.92);}
+.route-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:26px 26px 24px;display:flex;flex-direction:column;gap:12px;transition:transform .25s,box-shadow .25s,border-color .25s;}
+.route-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(8,20,32,.10);border-color:rgba(200,164,92,.5);}
+.route-card h3{font-size:18px;font-weight:600;color:var(--navy-900);font-family:var(--font-display);letter-spacing:.2px;line-height:1.35;}
+.rc-top{display:flex;justify-content:space-between;align-items:center;}
+.rc-time{display:inline-flex;align-items:center;gap:6px;color:var(--navy-700);font-size:13.5px;font-weight:600;}
+.rc-more{display:inline-flex;align-items:center;gap:6px;color:var(--gold-strong);font-size:14px;font-weight:700;margin-top:2px;}
+
+/* ============ CTA banner ============ */
+.cta-banner{position:relative;overflow:hidden;background:linear-gradient(120deg,var(--navy-900),var(--navy-700));color:#fff;border-radius:var(--radius-lg);padding:64px 56px;text-align:center;}
+.cta-banner::before{content:"";position:absolute;right:-120px;top:-120px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(200,164,92,.28),transparent 70%);}
+.cta-banner::after{content:"";position:absolute;left:-80px;bottom:-140px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(200,164,92,.2),transparent 70%);}
+.cta-banner > *{position:relative;z-index:2;}
+.cta-banner h2{font-family:var(--font-display);font-weight:400;font-size:clamp(28px,4vw,44px);margin-bottom:14px;}
+.cta-banner p{color:rgba(255,255,255,.78);font-size:17px;margin-bottom:32px;max-width:620px;margin-left:auto;margin-right:auto;}
+.cta-badges{display:flex;justify-content:center;flex-wrap:wrap;gap:26px;margin-top:34px;}
+.cta-badges .cb{display:flex;align-items:center;gap:9px;font-size:13.5px;color:rgba(255,255,255,.85);}
+.cta-badges .cb svg{width:18px;height:18px;color:var(--gold);}
+
+/* ============ Service detail ============ */
+.sd-hero{position:relative;color:#fff;overflow:hidden;}
+.sd-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.sd-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,32,.7),rgba(8,20,32,.88));}
+.sd-hero-inner{position:relative;z-index:2;padding:150px 0 84px;max-width:820px;}
+.sd-hero .crumb{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-soft);margin-bottom:20px;}
+.sd-hero .crumb a{color:rgba(255,255,255,.75);}
+.sd-hero h1{font-family:var(--font-display);font-weight:400;font-size:clamp(34px,5vw,58px);line-height:1.1;margin-bottom:20px;}
+.sd-hero p.lead{font-size:17px;color:rgba(255,255,255,.86);max-width:640px;margin-bottom:30px;}
+.sd-body{padding:84px 0;}
+.sd-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start;}
+.sd-about h3{font-family:var(--font-display);font-weight:400;font-size:26px;color:var(--navy-900);margin-bottom:14px;}
+.sd-about p{color:var(--muted);font-size:16px;}
+.sd-check{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;margin-top:26px;}
+.sd-check li{display:flex;align-items:center;gap:11px;font-size:15px;color:var(--ink);list-style:none;}
+.sd-check svg{width:19px;height:19px;color:var(--gold-strong);flex:none;}
+.sd-ideal{background:var(--cream);border-radius:var(--radius-lg);padding:32px;margin-top:40px;}
+.sd-ideal b{display:block;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-strong);margin-bottom:16px;}
+.sd-ideal .tags{display:flex;flex-wrap:wrap;gap:9px;}
+.sd-ideal .tags span{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:13.5px;font-weight:600;color:var(--navy-800);}
+.sd-rail{position:sticky;top:100px;display:flex;flex-direction:column;gap:14px;}
+.sd-highlights{background:var(--navy-900);color:#fff;border-radius:var(--radius-lg);padding:30px;}
+.sd-highlights b{display:block;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.sd-hl{display:flex;gap:15px;padding:16px 0;border-bottom:1px solid var(--line-dark);}
+.sd-hl:last-child{border-bottom:none;padding-bottom:0;}
+.sd-hl .n{flex:none;font-family:var(--font-display);font-size:26px;color:var(--gold);line-height:1;}
+.sd-hl h4{font-size:16px;font-weight:600;margin-bottom:4px;}
+.sd-hl p{font-size:13.5px;color:rgba(255,255,255,.68);}
+.sd-quote{background:var(--cream);border:1px solid var(--line);border-radius:var(--radius-lg);padding:28px;text-align:center;}
+.sd-quote b{display:block;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-strong);margin-bottom:8px;}
+.sd-quote p{font-size:13.5px;color:var(--muted);margin-bottom:18px;}
+
+/* ============ Guides ============ */
+.guide-list{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:70px;}
+.guide-full{max-width:860px;margin:0 auto;}
+.guide-full .gf-block{margin-bottom:40px;}
+.guide-full h3{font-family:var(--font-display);font-weight:400;font-size:27px;color:var(--navy-900);margin-bottom:14px;}
+.guide-full p{color:var(--muted);font-size:15.5px;margin-bottom:14px;}
+.guide-steps{display:grid;gap:18px;margin:22px 0;}
+.guide-step{display:flex;gap:18px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:0 4px 14px rgba(11,27,46,.05);}
+.guide-step .n{flex:none;width:44px;height:44px;border-radius:50%;background:var(--navy-900);color:var(--gold);font-family:var(--font-display);font-size:19px;display:flex;align-items:center;justify-content:center;}
+.guide-step h4{font-size:16.5px;color:var(--navy-900);margin-bottom:5px;}
+.guide-step p{font-size:14px;color:var(--muted);margin:0;}
+
+/* ============ Contact ============ */
+.contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:start;}
+.contact-form{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:38px;}
+.contact-form h3{font-family:var(--font-display);font-weight:400;font-size:26px;color:var(--navy-900);margin-bottom:6px;}
+.contact-form > p{color:var(--muted);font-size:14.5px;margin-bottom:26px;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.field{display:flex;flex-direction:column;gap:7px;}
+.field.full{grid-column:1/-1;}
+.field label{font-size:13px;font-weight:600;color:var(--navy-800);letter-spacing:.2px;}
+.field input,.field select,.field textarea{
+  font-family:inherit;font-size:15px;color:var(--ink);
+  border:1px solid var(--line);border-radius:10px;padding:12px 15px;
+  background:var(--cream);outline:none;transition:border .2s,box-shadow .2s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,164,92,.18);background:#fff;}
+.field textarea{min-height:110px;resize:vertical;}
+.form-note{font-size:12.5px;color:var(--muted);margin-top:16px;}
+.form-success{display:none;margin-top:18px;background:#E9F3EA;border:1px solid #BFDCC4;color:#1F5A2C;border-radius:10px;padding:16px;font-size:14.5px;}
+.contact-channels{display:grid;gap:16px;}
+.channel{display:flex;gap:18px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-card);transition:.22s;}
+.channel:hover{transform:translateY(-3px);box-shadow:var(--shadow-card-hover);}
+.channel .c-icon{flex:none;width:50px;height:50px;border-radius:13px;background:var(--cream);color:var(--gold-strong);display:flex;align-items:center;justify-content:center;}
+.channel .c-icon svg{width:24px;height:24px;}
+.channel b{display:block;font-size:16px;color:var(--navy-900);margin-bottom:4px;}
+.channel p{font-size:13.5px;color:var(--muted);}
+.channel .big{font-size:17px;font-weight:700;color:var(--navy-800);}
+
+/* ============ Footer ============ */
+.site-footer{background:var(--navy-950);color:rgba(255,255,255,.78);padding:70px 0 0;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:44px;padding-bottom:54px;}
+.footer-brand p{color:rgba(255,255,255,.6);font-size:14px;margin:18px 0 22px;max-width:320px;line-height:1.7;}
+.footer-col b{display:block;font-family:var(--font-display);font-weight:400;font-size:17px;color:#fff;margin-bottom:18px;}
+.footer-col a{display:block;padding:6px 0;font-size:14px;color:rgba(255,255,255,.68);transition:color .2s,padding-left .2s;}
+.footer-col a:hover{color:var(--gold);padding-left:4px;}
+.footer-contact div{display:flex;gap:10px;align-items:center;padding:7px 0;font-size:14px;}
+.footer-contact svg{width:17px;height:17px;color:var(--gold);flex:none;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.5);}
+.footer-policy{display:flex;gap:22px;}
+.footer-policy a{color:rgba(255,255,255,.55);}
+.footer-policy a:hover{color:var(--gold);}
+
+/* ============ Page hero (subpages) ============ */
+.page-hero{background:var(--navy-900);color:#fff;padding:150px 0 74px;position:relative;overflow:hidden;}
+.page-hero::before{content:"";position:absolute;right:-140px;top:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(200,164,92,.22),transparent 70%);}
+.page-hero .crumb{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-soft);margin-bottom:20px;}
+.page-hero .crumb a{color:rgba(255,255,255,.7);}
+.page-hero h1{font-family:var(--font-display);font-weight:400;font-size:clamp(34px,5vw,56px);line-height:1.1;margin-bottom:18px;}
+.page-hero p{font-size:17px;color:rgba(255,255,255,.8);max-width:640px;}
+.page-hero > .wrap{position:relative;z-index:2;}
+
+/* ============ Responsive ============ */
+@media(max-width:1080px){
+  .features{grid-template-columns:repeat(3,1fr);}
+  .feature{border-bottom:1px solid rgba(255,255,255,.07);}
+  .why-grid{grid-template-columns:repeat(3,1fr);}
+  .route-list{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:960px){
+  .grid-3,.grid-4,.fleet-grid,.guide-list,.testi-grid{grid-template-columns:repeat(2,1fr);}
+  .sd-grid{grid-template-columns:1fr;}
+  .sd-rail{position:static;}
+  .contact-grid{grid-template-columns:1fr;}
+  .main-nav,.header-phone{display:none;}
+  .nav-toggle{display:flex;}
+  .mobile-nav.open{display:flex;}
+}
+@media(max-width:620px){
+  .grid-3,.grid-4,.fleet-grid,.guide-list,.testi-grid,.route-list{grid-template-columns:1fr;}
+  .why-grid{grid-template-columns:1fr;}
+  .features{grid-template-columns:repeat(2,1fr);}
+  .form-grid{grid-template-columns:1fr;}
+  .section{padding:70px 0;}
+  .cta-banner{padding:44px 24px;}
+  .footer-grid{grid-template-columns:1fr;}
+  .hero{min-height:88vh;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ Header ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <a href="#home" class="brand" data-nav="home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h7l1.5-2h8.5a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-9.5L10 15H3z"/><circle cx="6.5" cy="15.5" r="1.6"/><circle cx="16.5" cy="15.5" r="1.6"/></svg>
+      </span>
+      <span>
+        <span class="brand-name">Shanghai Private Transfer</span>
+        <span class="brand-sub" style="display:block;">City Rides &amp; Airport Transfer</span>
+      </span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#services" data-nav="services">Services</a>
+      <a href="#fleet" data-nav="fleet">Fleet</a>
+      <a href="#destinations" data-nav="destinations">Destinations</a>
+      <a href="#guides" data-nav="guides">Guides</a>
+      <a href="#faq" data-nav="faq">FAQ</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a class="header-phone" href="https://wa.me/8619117273912" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.2c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.1.2-.2.4-.3.5l-.5.6c-.2.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.6-.1l1-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.1z"/></svg>
+        <span>+86 191 1727 3912</span>
+      </a>
+      <a class="btn btn-gold" href="#contact" data-nav="contact">Get a Quote</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#home" data-nav="home">Home</a>
+    <a href="#services" data-nav="services">Services</a>
+    <a href="#fleet" data-nav="fleet">Fleet</a>
+    <a href="#destinations" data-nav="destinations">Destinations</a>
+    <a href="#routes" data-nav="routes">Routes</a>
+    <a href="#guides" data-nav="guides">Guides</a>
+    <a href="#faq" data-nav="faq">FAQ</a>
+    <a href="#contact" data-nav="contact">Contact</a>
+    <a href="https://wa.me/8619117273912" target="_blank" rel="noopener">WhatsApp: +86 191 1727 3912</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ================= HOME ================= -->
+<section class="view" id="view-home" data-route="home">
+
+  <div class="hero">
+    <div class="hero-bg"><img src="https://aka.doubaocdn.com/s/LmuUosjVHU" alt="Premium MPV on the Shanghai waterfront at dusk"></div>
+    <div class="wrap">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Shanghai Private Transportation</span>
+        <h1>Shanghai Airport Transfer<br>&amp; <em>Private Chauffeur</em></h1>
+        <p class="lead">Your Journey. Our Priority. Safe, punctual &amp; comfortable PVG and SHA airport transfers, chauffeur service and private travel for international visitors.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#contact" data-nav="contact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Get a Quote
+          </a>
+          <a class="btn btn-ghost" href="#services" data-nav="services">Explore Services</a>
+        </div>
+        <div class="hero-trust">
+          <span class="stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          </span>
+          <span>Trusted by <b>1,000+ international travelers</b></span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-route">
+      <div class="wrap" id="heroRoute"></div>
+    </div>
+  </div>
+
+  <!-- Feature strip -->
+  <div class="features">
+    <div class="feature">
+      <span class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+      <b>24/7 Service</b><span>Always at your service</span>
+    </div>
+    <div class="feature">
+      <span class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg></span>
+      <b>Flight Tracking</b><span>Real-time flight monitor</span>
+    </div>
+    <div class="feature">
+      <span class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18v14H3z"/><path d="M3 8l9 6 9-6"/></svg></span>
+      <b>Multilingual Support</b><span>We speak your language</span>
+    </div>
+    <div class="feature">
+      <span class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+      <b>Safe &amp; Reliable</b><span>Licensed, insured drivers</span>
+    </div>
+    <div class="feature">
+      <span class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      <b>Comfort &amp; Luxury</b><span>Premium vehicles</span>
+    </div>
+    <div class="feature">
+      <span class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6M12 9v6"/><circle cx="12" cy="12" r="9"/></svg></span>
+      <b>Fixed Pricing</b><span>No hidden fees</span>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Our Services</span>
+        <h2>Tailored transportation solutions for every journey.</h2>
+        <p>Airport transfers, private chauffeur, city charter, day trips, business travel and fully custom tours.</p>
+        <div class="route-motif">
+          <svg viewBox="0 0 240 22" fill="none"><path d="M5 11H235" stroke="#C8A45C" stroke-width="1.4" stroke-dasharray="2 7" stroke-linecap="round"/><circle cx="5" cy="11" r="4" fill="#C8A45C"/><circle cx="120" cy="11" r="3.2" fill="#fff" stroke="#C8A45C" stroke-width="1.4"/><circle cx="235" cy="11" r="4" fill="#C8A45C"/></svg>
+        </div>
+      </div>
+      <div class="grid-3" id="homeServices"></div>
+    </div>
+  </div>
+
+  <!-- Fleet preview (navy) -->
+  <div class="section navy">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Our Fleet</span>
+        <h2>A private fleet for every journey.</h2>
+        <p>From executive sedans to luxury MPVs and group minibuses — select the right vehicle for your party.</p>
+      </div>
+      <div class="grid-4" id="homeFleet"></div>
+      <div style="text-align:center;margin-top:44px;">
+        <a class="btn btn-gold" href="#fleet" data-nav="fleet">View Full Fleet</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Destinations -->
+  <div class="section cream">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Popular Destinations &amp; Routes</span>
+        <h2>Where we take you</h2>
+        <p>Direct private transport across Shanghai and the Yangtze River Delta.</p>
+      </div>
+      <div class="dest-chips" id="homeDest"></div>
+    </div>
+  </div>
+
+  <!-- Guides preview -->
+  <div class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Shanghai private transportation guide</span>
+        <h2>Find the right transfer for your itinerary</h2>
+        <p>Explore detailed pickup guidance, vehicle planning, common routes, and booking answers for Shanghai airports, business schedules, Disney visits, cruise travel, and regional day trips.</p>
+        <div style="margin-top:22px;"><a class="btn btn-outline" href="#guide/airport" data-nav="guide">View Shanghai airport transfer guide
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a></div>
+      </div>
+      <div class="grid-3" id="homeGuides"></div>
+    </div>
+  </div>
+
+  <!-- Popular routes -->
+  <div class="section cream">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Popular private transfer routes</span>
+        <h2>Direct routes travelers search for most</h2>
+      </div>
+      <div class="route-list" id="homeRoutes"></div>
+      <div style="text-align:center;margin-top:38px;">
+        <a class="btn btn-outline" href="#routes" data-nav="routes">View All Routes
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why choose -->
+  <div class="section navy">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Why Choose Us</span>
+        <h2>Travel with confidence</h2>
+      </div>
+      <div class="why-grid" id="homeWhy"></div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <div class="section">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">What Our Customers Say</span>
+        <h2>Travelers who booked with us</h2>
+      </div>
+      <div class="testi-grid" id="homeTesti"></div>
+    </div>
+  </div>
+
+  <!-- FAQ preview -->
+  <div class="section cream">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Frequently Asked Questions</span>
+        <h2>Clear answers before you book</h2>
+        <p>For anything specific to your trip, our team is available on WhatsApp.</p>
+      </div>
+      <div class="faq-list" id="homeFaq"></div>
+      <div style="text-align:center;margin-top:34px;">
+        <a class="btn btn-outline" href="#faq" data-nav="faq">View All FAQs</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="section" style="padding-top:0;">
+    <div class="wrap">
+      <div class="cta-banner">
+        <h2>Get a Quote / Book Now</h2>
+        <p>Fill in your trip details and we will get back to you within 30 minutes.</p>
+        <a class="btn btn-gold" href="#contact" data-nav="contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Start Your Booking
+        </a>
+        <div class="cta-badges">
+          <span class="cb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg>Best Price Guarantee</span>
+          <span class="cb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3M16 3v3M3 9h18"/><path d="M5 6h14a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1z"/></svg>Free Cancellation (T&amp;C)</span>
+          <span class="cb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>24/7 Customer Support</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="view" id="view-services" data-route="services">
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="crumb"><a href="#home" data-nav="home">Home</a> / Our Services</div>
+      <h1>Our Services</h1>
+      <p>Airport transfers, tours, guides, hotels, tickets, dining, events, and business charter support.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap">
+      <div class="grid-3" id="servicesGrid"></div>
+    </div>
+  </div>
+  <div class="section cream">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Explore our core services</span>
+        <h2>Every journey, fully arranged</h2>
+      </div>
+      <div class="grid-3" id="servicesDetail"></div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap">
+      <div class="cta-banner">
+        <h2>Not sure which service fits?</h2>
+        <p>Tell us your plan and we will recommend the right service, vehicle and written quote.</p>
+        <a class="btn btn-gold" href="#contact" data-nav="contact">Request a Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE DETAIL ================= -->
+<section class="view" id="view-service" data-route="service">
+  <div class="sd-hero">
+    <img id="sdHeroImg" src="" alt="">
+    <div class="wrap">
+      <div class="sd-hero-inner">
+        <div class="crumb"><a href="#home" data-nav="home">Home</a> / <a href="#services" data-nav="services">Services</a> / <span id="sdCrumb"></span></div>
+        <h1 id="sdTitle"></h1>
+        <p class="lead" id="sdLead"></p>
+        <a class="btn btn-gold" href="#contact" data-nav="contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Request a Quote
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="sd-body">
+    <div class="wrap">
+      <div class="sd-grid">
+        <div class="sd-about">
+          <h3 id="sdAboutTitle"></h3>
+          <p id="sdAboutText"></p>
+          <ul class="sd-check" id="sdChecks"></ul>
+          <div class="sd-ideal">
+            <b>Ideal for</b>
+            <div class="tags" id="sdIdeal"></div>
+          </div>
+        </div>
+        <div class="sd-rail">
+          <div class="sd-highlights">
+            <b>Trip highlights · What to expect</b>
+            <div id="sdHighlights"></div>
+          </div>
+          <div class="sd-quote">
+            <b>Ready to book?</b>
+            <p>Share your date, route, passengers and luggage for an accurate written quote.</p>
+            <a class="btn btn-navy" href="#contact" data-nav="contact">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FLEET ================= -->
+<section class="view" id="view-fleet" data-route="fleet">
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="crumb"><a href="#home" data-nav="home">Home</a> / Our Premium Fleet</div>
+      <h1>Our Premium Fleet</h1>
+      <p>From executive sedans to luxury MPVs, select the right vehicle for airport transfers, business schedules, private tours, and group travel.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap">
+      <p style="color:var(--muted);margin-bottom:10px;"><b style="color:var(--navy-900);">Choose by journey and group size.</b> Every price below is a USD reference. We confirm the exact vehicle, luggage plan and final quote before booking.</p>
+      <div class="filter-bar" id="fleetFilters"></div>
+      <div class="fleet-grid" id="fleetGrid"></div>
+    </div>
+  </div>
+  <div class="section cream">
+    <div class="wrap">
+      <div class="cta-banner">
+        <h2>Tell us your passengers &amp; luggage</h2>
+        <p>We will recommend the perfect vehicle for a comfortable journey.</p>
+        <a class="btn btn-gold" href="#contact" data-nav="contact">Request a Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DESTINATIONS ================= -->
+<section class="view" id="view-destinations" data-route="destinations">
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="crumb"><a href="#home" data-nav="home">Home</a> / Popular Destinations &amp; Routes</div>
+      <h1>Popular Destinations &amp; Routes</h1>
+      <p>Private transport across Shanghai and the Yangtze River Delta — from the city and its airports to Suzhou, Hangzhou, Wuzhen and Shanghai Disney Resort.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Choose your destination</span>
+        <h2>Where we take you</h2>
+        <p>Every destination includes door-to-door private transfer, flexible route planning and a vehicle matched to your party.</p>
+      </div>
+      <div class="grid-3" id="destGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DESTINATION DETAIL ================= -->
+<section class="view" id="view-destination" data-route="destination">
+  <div class="sd-hero">
+    <img id="ddHeroImg" src="" alt="">
+    <div class="wrap">
+      <div class="sd-hero-inner">
+        <div class="crumb"><a href="#home" data-nav="home">Home</a> / <a href="#destinations" data-nav="destinations">Destinations</a> / <span id="ddCrumb"></span></div>
+        <h1 id="ddTitle"></h1>
+        <p class="lead" id="ddLead"></p>
+        <a class="btn btn-gold" href="#contact" data-nav="contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Request a Quote
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="sd-body">
+    <div class="wrap">
+      <div class="sd-grid">
+        <div class="sd-about">
+          <h3 id="ddAboutTitle"></h3>
+          <p id="ddAboutText"></p>
+          <ul class="sd-check" id="ddChecks"></ul>
+          <div class="sd-ideal">
+            <b>Ideal for</b>
+            <div class="tags" id="ddIdeal"></div>
+          </div>
+        </div>
+        <div class="sd-rail">
+          <div class="sd-highlights">
+            <b>Trip highlights · What to expect</b>
+            <div id="ddHighlights"></div>
+          </div>
+          <div class="sd-quote">
+            <b>Ready to explore?</b>
+            <p>Share your itinerary, dates and party size for an accurate written quote.</p>
+            <a class="btn btn-navy" href="#contact" data-nav="contact">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GUIDES ================= -->
+<section class="view" id="view-guides" data-route="guides">
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="crumb"><a href="#home" data-nav="home">Home</a> / Shanghai Private Transportation Guide</div>
+      <h1>Shanghai private transportation guide</h1>
+      <p>Find the right transfer for your itinerary — airport pickups, business schedules, Disney visits, cruise travel and regional day trips.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Guide topics</span>
+        <h2>Find the right transfer for your itinerary</h2>
+      </div>
+      <div class="guide-list" id="guidesGrid"></div>
+    </div>
+  </div>
+
+  <div class="section cream">
+    <div class="wrap">
+      <div class="guide-full">
+        <div class="section-head">
+          <span class="eyebrow">Private airport pickup</span>
+          <h2>Shanghai Airport Transfer</h2>
+          <p>Private Shanghai airport transfers with flight tracking, meet and greet, luggage planning, English-friendly support, and clear written quotes.</p>
+        </div>
+        <div class="gf-block">
+          <h3>Plan with confidence</h3>
+          <p>Arrive in Shanghai with a confirmed private chauffeur, clear meeting instructions, and a vehicle selected for your passengers and luggage. We coordinate arrivals and departures at both Pudong International Airport and Hongqiao International Airport, with direct service to hotels, offices, residences, cruise terminals, railway stations, and nearby cities.</p>
+          <div class="guide-steps">
+            <div class="guide-step"><span class="n">01</span><div><h4>A clear arrival plan before you fly</h4><p>Your confirmation includes the airport, terminal, pickup time, meeting instructions, chauffeur contact method, vehicle category, and waiting-time terms. Sharing your flight number allows our team to monitor arrival updates and coordinate the pickup more accurately.</p></div></div>
+            <div class="guide-step"><span class="n">02</span><div><h4>A vehicle matched to people and luggage</h4><p>An airport transfer needs enough usable luggage space, not only enough seats. Tell us the number of adults, children, checked suitcases, cabin bags, strollers, or special equipment. We will recommend an executive sedan, luxury MPV, van, or minibus that fits the real travel party.</p></div></div>
+            <div class="guide-step"><span class="n">03</span><div><h4>Direct service beyond central Shanghai</h4><p>Airport pickups can continue directly to Shanghai districts, Disney hotels, cruise terminals, exhibition venues, Suzhou, Hangzhou, Wuzhen, and other Yangtze River Delta destinations. Multi-stop plans and return transfers can be included in one written itinerary.</p></div></div>
+          </div>
+        </div>
+        <div class="gf-block">
+          <h3>Simple booking process</h3>
+          <p>Send the real journey information and we will recommend the vehicle and written service plan:</p>
+          <div class="guide-steps">
+            <div class="guide-step"><span class="n">1</span><div><h4>Date and pickup time</h4><p>Your scheduled arrival or departure.</p></div></div>
+            <div class="guide-step"><span class="n">2</span><div><h4>Route and flight details</h4><p>Airports, terminals and flight numbers.</p></div></div>
+            <div class="guide-step"><span class="n">3</span><div><h4>Passengers and luggage</h4><p>Adults, children, suitcases and special equipment.</p></div></div>
+            <div class="guide-step"><span class="n">4</span><div><h4>Vehicle and special requests</h4><p>Child seats, name signs, or amenities.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <div class="guide-full">
+        <div class="section-head">
+          <span class="eyebrow">Private Disney ride</span>
+          <h2>Shanghai Disney Transfer</h2>
+          <p>Private transfers to Shanghai Disney Resort with family-friendly vehicles, child-seat requests, luggage planning, and flexible return pickup.</p>
+        </div>
+        <div class="gf-block">
+          <h3>Plan with confidence</h3>
+          <p>Make a Shanghai Disney day easier with private door-to-door transport. We can arrange hotel pickup, airport-to-resort transfers, family luggage space, child-seat requests, and a confirmed return pickup after the park closes or your dinner finishes.</p>
+          <div class="guide-steps">
+            <div class="guide-step"><span class="n">01</span><div><h4>Door-to-door travel for families</h4><p>Avoid carrying children, strollers, and bags through multiple transport connections. A private vehicle collects your party from the hotel, residence, airport, or railway station and travels directly to the confirmed Disney drop-off area.</p></div></div>
+            <div class="guide-step"><span class="n">02</span><div><h4>Plan the return before entering the park</h4><p>Disney closing times, evening shows, and dining plans can affect pickup. We agree on a practical return plan before the trip and share the communication method for final coordination near the end of your visit.</p></div></div>
+            <div class="guide-step"><span class="n">03</span><div><h4>Space for strollers and holiday luggage</h4><p>A vehicle that seats the family may not hold every suitcase and stroller. Share the full luggage list for airport or hotel-change transfers so we can recommend a suitable MPV, van, or minibus.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GUIDE DETAIL ================= -->
+<section class="view" id="view-guide" data-route="guide">
+  <div class="sd-hero">
+    <img id="gdHeroImg" src="" alt="">
+    <div class="wrap">
+      <div class="sd-hero-inner">
+        <div class="crumb"><a href="#home" data-nav="home">Home</a> / <a href="#guides" data-nav="guides">Travel Guides</a> / <span id="gdCrumb"></span></div>
+        <h1 id="gdTitle"></h1>
+        <p class="lead" id="gdLead"></p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;">
+          <a class="btn btn-gold" href="#contact" data-nav="contact">Request a Quote</a>
+          <a class="btn btn-ghost" href="https://wa.me/8619117273912" target="_blank" rel="noopener">Ask on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sd-body">
+    <div class="wrap">
+      <div class="guide-full">
+        <div class="gf-block">
+          <h3>Plan with confidence</h3>
+          <p id="gdIntro"></p>
+          <ul class="sd-check" id="gdHighlights"></ul>
+        </div>
+        <div class="gf-block">
+          <h3>What to expect</h3>
+          <div class="guide-steps" id="gdSteps"></div>
+        </div>
+        <div class="gf-block">
+          <h3>Popular itinerary ideas</h3>
+          <div class="tags" id="gdRoutes"></div>
+        </div>
+        <div class="gf-block">
+          <h3>Questions before booking</h3>
+          <p style="margin-bottom:16px;">These answers apply to this service. Your final confirmation contains the exact route, inclusions, and policy.</p>
+          <div class="faq-list" id="gdFaqs"></div>
+        </div>
+        <div style="text-align:center;margin-top:44px;">
+          <a class="btn btn-navy" href="#contact" data-nav="contact">Get a Written Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= POLICY ================= -->
+<section class="view" id="view-policy" data-route="policy">
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="crumb"><a href="#home" data-nav="home">Home</a> / <span id="plCrumb"></span></div>
+      <h1 id="plTitle"></h1>
+      <p id="plLead"></p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap" style="max-width:860px;">
+      <div id="plBody"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ROUTES ================= -->
+<section class="view" id="view-routes" data-route="routes">
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="crumb"><a href="#home" data-nav="home">Home</a> / Popular Private Transfer Routes</div>
+      <h1>Popular Private Transfer Routes</h1>
+      <p>Direct routes travelers search for most — door-to-door private transfers across Shanghai, its airports, and the Yangtze River Delta.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap">
+      <div class="route-list" id="routesGrid" style="grid-template-columns:repeat(3,1fr);"></div>
+    </div>
+  </div>
+  <div class="section cream">
+    <div class="wrap">
+      <div class="cta-banner">
+        <h2>Can't find your route?</h2>
+        <p>Tell us your pickup, destination, date and party size — we will prepare a written quote.</p>
+        <a class="btn btn-gold" href="#contact" data-nav="contact">Request a Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ROUTE DETAIL ================= -->
+<section class="view" id="view-route" data-route="route">
+  <div class="sd-hero">
+    <img id="rtHeroImg" src="" alt="">
+    <div class="wrap">
+      <div class="sd-hero-inner">
+        <div class="crumb"><a href="#home" data-nav="home">Home</a> / <a href="#routes" data-nav="routes">Routes</a> / <span id="rtCrumb"></span></div>
+        <h1 id="rtTitle"></h1>
+        <p class="lead" id="rtLead"></p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;">
+          <a class="btn btn-gold" href="#contact" data-nav="contact">Get a Route Quote</a>
+          <a class="btn btn-ghost" href="https://wa.me/8619117273912" target="_blank" rel="noopener">Ask on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sd-body">
+    <div class="wrap">
+      <div class="route-facts" id="rtFacts"></div>
+      <div class="guide-full" style="margin-top:52px;">
+        <div class="gf-block">
+          <h3>Door-to-door private travel</h3>
+          <p id="rtIntro"></p>
+          <ul class="sd-check" id="rtHighlights"></ul>
+        </div>
+        <div class="gf-block">
+          <h3>Before you book — plan the route accurately</h3>
+          <div class="guide-steps" id="rtSteps"></div>
+        </div>
+        <div class="gf-block">
+          <h3>Route questions</h3>
+          <p style="margin-bottom:16px;">Travel time and availability can change with traffic, flight schedules, holidays, vehicle choice, and the exact addresses. Your final confirmation contains the route-specific terms.</p>
+          <div class="faq-list" id="rtFaqs"></div>
+        </div>
+        <div style="text-align:center;margin-top:44px;">
+          <a class="btn btn-navy" href="#contact" data-nav="contact">Get a Written Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="view" id="view-faq" data-route="faq">
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="crumb"><a href="#home" data-nav="home">Home</a> / Frequently Asked Questions</div>
+      <h1>Frequently Asked Questions</h1>
+      <p>Travel with confidence — clear answers before you book. For anything specific to your trip, our team is available on WhatsApp.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap">
+      <div class="faq-list" id="faqList"></div>
+      <div style="text-align:center;margin-top:40px;">
+        <a class="btn btn-outline" href="https://wa.me/8619117273912" target="_blank" rel="noopener">Ask on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <div class="section cream">
+    <div class="wrap">
+      <div class="guide-full">
+        <div class="section-head">
+          <span class="eyebrow">Booking changes</span>
+          <h2>Cancellation &amp; Refund Policy</h2>
+          <p>We understand travel plans can change. Please notify us as early as possible so we can help adjust your arrangements or confirm any applicable refund.</p>
+        </div>
+        <div class="gf-block">
+          <h3>How to cancel or change a booking</h3>
+          <p>Send your request by email or WhatsApp using the contact details on this website. A cancellation or change is effective only at the time we confirm receipt in writing, not when a message is first sent. Include your name, service date, and booking reference where available.</p>
+          <div class="guide-steps">
+            <div class="guide-step"><span class="n">1</span><div><h4>More than 48 hours before pickup</h4><p>Eligible for a full refund of prepaid service charges.</p></div></div>
+            <div class="guide-step"><span class="n">2</span><div><h4>24 to 48 hours before pickup</h4><p>Eligible for a 50% refund of prepaid service charges.</p></div></div>
+            <div class="guide-step"><span class="n">3</span><div><h4>Less than 24 hours before pickup</h4><p>Prepaid service charges are non-refundable.</p></div></div>
+            <div class="guide-step"><span class="n">4</span><div><h4>No-show or cancellation after dispatch</h4><p>No-show, refusal of service, or cancellation after vehicle dispatch: non-refundable.</p></div></div>
+          </div>
+          <p style="margin-top:20px;">Bookings involving Toyota Alphard, Volvo EM90, Mercedes-Benz S-Class, peak dates, exhibitions, long-distance travel, or multi-day charters may have different cancellation terms. Approved refunds are returned to the original payment method where possible; processing may take 5 to 10 business days.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="view" id="view-contact" data-route="contact">
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="crumb"><a href="#home" data-nav="home">Home</a> / Contact Us</div>
+      <h1>Contact Us</h1>
+      <p>Have questions? We are here to help. Our team is available 24/7 for booking support.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="contact-form">
+          <h3>Private Booking Desk</h3>
+          <p>Share your journey through the secure form. Our team will reply with a clear written proposal.</p>
+          <form id="quoteForm">
+            <div class="form-grid">
+              <div class="field"><label for="f-name">Full name</label><input id="f-name" type="text" required placeholder="Your name"></div>
+              <div class="field"><label for="f-email">Email / WhatsApp</label><input id="f-email" type="text" required placeholder="Email or WhatsApp number"></div>
+              <div class="field"><label for="f-date">Date</label><input id="f-date" type="date"></div>
+              <div class="field"><label for="f-time">Pickup time</label><input id="f-time" type="time"></div>
+              <div class="field"><label for="f-route">Route</label><input id="f-route" type="text" placeholder="e.g. PVG → The Bund hotel"></div>
+              <div class="field"><label for="f-flight">Flight number (optional)</label><input id="f-flight" type="text" placeholder="e.g. MU588"></div>
+              <div class="field"><label for="f-pax">Passengers</label><input id="f-pax" type="number" min="1" placeholder="e.g. 3"></div>
+              <div class="field"><label for="f-bags">Luggage</label><input id="f-bags" type="number" min="0" placeholder="e.g. 3 suitcases"></div>
+              <div class="field full"><label for="f-vehicle">Preferred vehicle</label>
+                <select id="f-vehicle">
+                  <option value="">Let us recommend</option>
+                  <option>Sedan (1–3 pax)</option>
+                  <option>Luxury MPV (1–6 pax)</option>
+                  <option>Luxury Van (1–7 pax)</option>
+                  <option>Minibus (8–15 pax)</option>
+                </select>
+              </div>
+              <div class="field full"><label for="f-notes">Special requests</label><textarea id="f-notes" placeholder="Child seats, name sign, multi-stop, or anything else we should know…"></textarea></div>
+            </div>
+            <button class="btn btn-gold" type="submit" style="width:100%;justify-content:center;margin-top:22px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              Submit Request
+            </button>
+            <p class="form-note">We reply with a clear written quote within 30 minutes. No hidden fees.</p>
+            <div class="form-success" id="formSuccess">
+              <b>Almost done — WhatsApp opened with your request pre-filled.</b><br>
+              Tap <b>Send</b> in WhatsApp to deliver your enquiry to our booking desk, and we will reply with a written quote. If WhatsApp did not open, message us at +86 191 1727 3912.
+            </div>
+          </form>
+        </div>
+        <div class="contact-channels">
+          <div class="channel">
+            <span class="c-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.2c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.1.2-.2.4-.3.5l-.5.6c-.2.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.6-.1l1-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.1z"/></svg></span>
+            <div>
+              <b>Direct support</b>
+              <p>Speak with our team instantly</p>
+              <a class="big" href="https://wa.me/8619117273912" target="_blank" rel="noopener">WhatsApp / WeChat<br>+86 191 1727 3912</a>
+            </div>
+          </div>
+          <div class="channel">
+            <span class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+            <div>
+              <b>Hours</b>
+              <p>Available 24/7, including holidays</p>
+            </div>
+          </div>
+          <div class="channel">
+            <span class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+            <div>
+              <b>Location</b>
+              <p>Shanghai, China — serving PVG &amp; SHA airports, the city and the Yangtze River Delta</p>
+            </div>
+          </div>
+          <div class="channel">
+            <span class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18v14H3z"/><path d="M3 8l9 6 9-6"/></svg></span>
+            <div>
+              <b>Online request</b>
+              <p>Use the secure inquiry form and receive a written proposal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ Footer ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand" data-nav="home">
+          <span class="brand-mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h7l1.5-2h8.5a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-9.5L10 15H3z"/><circle cx="6.5" cy="15.5" r="1.6"/><circle cx="16.5" cy="15.5" r="1.6"/></svg>
+          </span>
+          <span>
+            <span class="brand-name">Shanghai Private Transfer</span>
+            <span class="brand-sub" style="display:block;">City Rides &amp; Airport Transfer</span>
+          </span>
+        </a>
+        <p>Your Journey. Our Priority. Safe, punctual and comfortable private transfers across Shanghai, PVG and SHA airports, Suzhou, Hangzhou, Wuzhen and beyond.</p>
+      </div>
+      <div class="footer-col">
+        <b>Explore</b>
+        <a href="#home" data-nav="home">Home</a>
+        <a href="#services" data-nav="services">Our Services</a>
+        <a href="#fleet" data-nav="fleet">Our Fleet</a>
+        <a href="#destinations" data-nav="destinations">Destinations</a>
+        <a href="#routes" data-nav="routes">Popular Routes</a>
+        <a href="#guides" data-nav="guides">Travel Guides</a>
+        <a href="#faq" data-nav="faq">FAQ</a>
+        <a href="#contact" data-nav="contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <b>Services</b>
+        <a href="#service/airport-transfer" data-nav="service">Airport Transfer</a>
+        <a href="#service/private-chauffeur" data-nav="service">Private Chauffeur</a>
+        <a href="#service/city-charter" data-nav="service">City Charter</a>
+        <a href="#service/day-trips" data-nav="service">Day Trips</a>
+        <a href="#service/business-travel" data-nav="service">Business Travel</a>
+        <a href="#service/custom-tours" data-nav="service">Custom Tours</a>
+      </div>
+      <div class="footer-col footer-contact">
+        <b>Contact</b>
+        <div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.2c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.1.2-.2.4-.3.5l-.5.6c-.2.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.6-.1l1-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.1z"/></svg>WhatsApp / WeChat: +86 191 1727 3912</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Open 24/7</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Shanghai, China</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18v14H3z"/><path d="M3 8l9 6 9-6"/></svg>English support available</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Shanghai Private Transfer. Your Journey. Our Priority.</span>
+      <div class="footer-policy">
+        <a href="#policy/cancellation" data-nav="policy">Cancellation Policy</a>
+        <a href="#policy/terms" data-nav="policy">Terms of Service</a>
+        <a href="#policy/privacy" data-nav="policy">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============ Data ============ */
+var IMG = {
+  hero:"https://aka.doubaocdn.com/s/LmuUosjVHU",
+  airport:"https://aka.doubaocdn.com/s/BMLEe5Qp4w",
+  chauffeur:"https://aka.doubaocdn.com/s/eRb0TslOSs",
+  city:"https://aka.doubaocdn.com/s/wrShTFl2Wm",
+  daytrip:"https://aka.doubaocdn.com/s/LcY3EHSzD6",
+  business:"https://aka.doubaocdn.com/s/jCCyVIEElU",
+  cabin:"https://aka.doubaocdn.com/s/0YZKrDvjtL"
+};
+
+var services = [
+  {
+    slug:"airport-transfer",
+    name:"Airport Transfer",
+    short:"Reliable pickup and drop-off from all airports.",
+    img:IMG.airport,
+    lead:"Private Pudong and Hongqiao airport pickup with flight tracking, meet and greet, luggage assistance and clear written pricing.",
+    aboutTitle:"Land in Shanghai with the pickup already arranged.",
+    about:"Arrive in Shanghai without worrying about taxi queues, language barriers or changing flight times. Your booking team confirms the terminal, meeting point, vehicle and chauffeur contact before landing. We monitor the flight and coordinate the pickup around the actual arrival time.",
+    checks:["Real-time flight tracking","Arrivals hall name sign","60-minute airport waiting","Luggage assistance","English communication","Child seats on request"],
+    ideal:["International arrivals","Families with luggage","Business travelers","Small and large groups"],
+    highlights:[
+      {h:"PVG & SHA",p:"Pickup from Pudong International Airport and Hongqiao Airport."},
+      {h:"Door to Door",p:"Direct transfer to hotels, residences, offices and cruise terminals."},
+      {h:"Clear Meeting Point",p:"Written terminal instructions and chauffeur contact before pickup."}
+    ]
+  },
+  {
+    slug:"private-chauffeur",
+    name:"Private Chauffeur",
+    short:"Hourly or daily chauffeur at your service.",
+    img:IMG.chauffeur,
+    lead:"A professional private chauffeur by the hour or day for flexible travel throughout Shanghai and surrounding cities.",
+    aboutTitle:"Keep one chauffeur aligned with your entire day.",
+    about:"Keep one vehicle and one chauffeur available for your schedule. The service is planned around your hotel, meetings, dining reservations and personal stops, with live coordination when your itinerary changes.",
+    checks:["Hourly and full-day options","Multi-stop itinerary","Hotel and venue pickup","English support","Clean smoke-free vehicles","Flexible schedule changes"],
+    ideal:["Executive travel","Private shopping","Hotel guests","Families and VIP visitors"],
+    highlights:[
+      {h:"Your Schedule",p:"The vehicle stays aligned with your own timetable and stops."},
+      {h:"One Contact",p:"Simple coordination through one English-friendly booking desk."},
+      {h:"Vehicle Choice",p:"Executive sedans, premium MPVs, luxury vans and minibuses."}
+    ]
+  },
+  {
+    slug:"city-charter",
+    name:"City Charter",
+    short:"Explore the best of Shanghai in comfort.",
+    img:IMG.city,
+    lead:"Explore Shanghai comfortably with a private vehicle, flexible stops and a route planned around your interests.",
+    aboutTitle:"See Shanghai at your own pace without rebuilding the route between stops.",
+    about:"Create an easy city day covering classic landmarks, shopping streets, museums, restaurants and neighbourhood walks. Your chauffeur handles the driving and pickup logistics while you choose how long to spend at each stop.",
+    checks:["Custom city route","Flexible photo stops","Hotel pickup and return","Half-day or full-day","Local route planning","Restaurant transfer support"],
+    ideal:["First-time visitors","Families","Photography trips","Short Shanghai stays"],
+    highlights:[
+      {h:"Classic Shanghai",p:"The Bund, Yu Garden, Lujiazui and Nanjing Road."},
+      {h:"City Walk Support",p:"Convenient drop-off and pickup near walking districts."},
+      {h:"At Your Pace",p:"Adjust time at each attraction without joining a group tour."}
+    ]
+  },
+  {
+    slug:"day-trips",
+    name:"Day Trips",
+    short:"Discover Suzhou, Hangzhou, Wuzhen and more.",
+    img:IMG.daytrip,
+    lead:"Door-to-door private day trips to Suzhou, Hangzhou, Wuzhen, Zhujiajiao and other nearby destinations.",
+    aboutTitle:"Leave Shanghai for the day without station changes or fixed group schedules.",
+    about:"Travel beyond Shanghai without changing trains or carrying luggage between stations. We plan the pickup, driving time, comfort stops and return around the places you want to visit.",
+    checks:["Door-to-door service","Flexible departure time","Multiple attraction stops","Comfort breaks","Return or onward transfer","Vehicle matched to luggage"],
+    ideal:["Suzhou gardens","Hangzhou West Lake","Wuzhen water town","Family day trips"],
+    highlights:[
+      {h:"Suzhou",p:"Classical gardens, Pingjiang Road and historic canals."},
+      {h:"Hangzhou",p:"West Lake, tea villages and scenic viewpoints."},
+      {h:"Water Towns",p:"Wuzhen or Zhujiajiao with flexible arrival and return times."}
+    ]
+  },
+  {
+    slug:"business-travel",
+    name:"Business Travel",
+    short:"Professional travel for meetings and delegations.",
+    img:IMG.business,
+    lead:"Professional executive transport for meetings, roadshows, factory visits, conferences and international delegations.",
+    aboutTitle:"Executive transport built around meeting times, traffic and last-minute changes.",
+    about:"Business schedules need precise timing, discreet service and quick changes. We coordinate airport arrivals, hotel transfers and multi-stop meeting days with written pickup information and one point of contact.",
+    checks:["Executive vehicle options","Multi-stop scheduling","Airport and hotel coordination","Factory and office visits","Receipt support","Discreet professional service"],
+    ideal:["Corporate visitors","International delegations","Roadshows","Conference guests"],
+    highlights:[
+      {h:"On Time",p:"Pickup windows planned around meetings and Shanghai traffic."},
+      {h:"Professional Image",p:"Clean executive vehicles and experienced chauffeurs."},
+      {h:"One Coordinator",p:"Central contact for several guests, vehicles and daily schedules."}
+    ]
+  },
+  {
+    slug:"custom-tours",
+    name:"Custom Tours",
+    short:"A private itinerary designed around your plans.",
+    img:IMG.cabin,
+    lead:"A private multi-day journey designed around your destinations, hotel plans, group size and travel style.",
+    aboutTitle:"Build one private transport plan across several cities and travel days.",
+    about:"Share the cities and experiences you want, then receive a transport plan covering the route, suitable vehicle, daily driving and pickup details. The itinerary stays private and can be adjusted as your plans develop.",
+    checks:["Personalised itinerary","Multi-city transport","Hotel-to-hotel transfer","Daily chauffeur service","Family and group vehicles","English booking support"],
+    ideal:["Shanghai–Suzhou–Hangzhou","Family holidays","Multi-day private tours","Special-interest travel"],
+    highlights:[
+      {h:"Built Around You",p:"Choose the cities, attractions, pace and preferred vehicle."},
+      {h:"One Continuous Journey",p:"Keep the same transport plan across several destinations."},
+      {h:"Luggage Included",p:"Vehicle recommendations account for passengers and bags."}
+    ]
+  }
+];
+
+var extraServices = [
+  {name:"Disney Shuttle",desc:"Private Shanghai Disney Resort rides with flexible pickup after closing.",tags:["Wait until park closes","Child seats","Snacks and water"],cat:"Transfer Services"},
+  {name:"City Tour",desc:"Explore Shanghai highlights at your own pace with a private chauffeur.",tags:["Custom route","Local driver","Photo stops"],cat:"Tour & Charter"},
+  {name:"Tickets & Dining",desc:"Help with attractions, restaurants, and local plans alongside private transport.",tags:["Dining suggestions","Ticket guidance","Local support"],cat:"Tour & Charter"},
+  {name:"Wedding & Events",desc:"Premium cars and coordinated transport for weddings, banquets, and VIP events.",tags:["VIP arrival","Guest shuttle","Decor ready"],cat:"Event Support"},
+  {name:"Translation Support",desc:"English-friendly support with real-time assistance when language gets difficult.",tags:["English support","AI translation help","Driver coordination"],cat:"Event Support"}
+];
+
+var fleet = [
+  {name:"Tesla Model 3",cat:"Sedan",desc:"Electric sedan for airport transfers, city rides, and efficient private travel in Shanghai.",seats:3,bags:"2-3 bags",price:39,img:"https://aka.doubaocdn.com/s/OoRbS2cfQ8",tag:"Electric sedan"},
+  {name:"Mercedes-Benz E300",cat:"Sedan",desc:"Executive sedan for business arrivals, premium airport pickups, and comfortable city transfers.",seats:3,bags:"2-3 bags",price:83,img:"https://aka.doubaocdn.com/s/2TyZ9Qrt9t",tag:"Executive sedan"},
+  {name:"Mercedes-Benz S400",cat:"Sedan",desc:"Flagship executive sedan for VIP airport transfers, formal arrivals, and luxury business trips.",seats:3,bags:"2-3 bags",price:139,img:"https://aka.doubaocdn.com/s/YfrpxMaYGe",tag:"VIP sedan"},
+  {name:"Voyah Dreamer",cat:"Luxury MPV",desc:"Comfort-focused MPV for families, executives, and day trips across Shanghai and nearby cities.",seats:6,bags:"4-5 bags",price:42,img:"https://aka.doubaocdn.com/s/YnhXVTdOw5",tag:"Luxury MPV"},
+  {name:"Zeekr 009",cat:"Luxury MPV",desc:"Premium electric MPV with generous cabin space for airport transfers and long-distance rides.",seats:6,bags:"4-5 bags",price:56,img:"https://aka.doubaocdn.com/s/8nAVVSWHT5",tag:"Electric MPV"},
+  {name:"Mercedes-Benz V260",cat:"Business",desc:"Business MPV for client hosting, airport arrivals, meetings, and full-day charter schedules.",seats:6,bags:"4-5 bags",price:69,img:"https://aka.doubaocdn.com/s/jw8Yz6ICzW",tag:"Business MPV"},
+  {name:"Volvo EM90",cat:"Luxury MPV",desc:"Executive electric MPV with quiet comfort for VIP airport transfers and private city rides.",seats:6,bags:"4-5 bags",price:83,img:"https://aka.doubaocdn.com/s/C1Ht9lYWmG",tag:"Electric MPV"},
+  {name:"Toyota Alphard",cat:"Luxury MPV",desc:"Premium MPV for VIP hospitality, families, weddings, business guests, and high-comfort transfers.",seats:6,bags:"4-5 bags",price:111,img:"https://aka.doubaocdn.com/s/79OqptUq2V",tag:"Luxury MPV"},
+  {name:"Hiace",cat:"Minibus",desc:"Practical 9-seat van for airport pickups, families, small groups, and city transfer routes.",seats:8,bags:"6-8 bags",price:83,img:"https://aka.doubaocdn.com/s/T4smOaK2fJ",tag:"9-seat van"}
+];
+
+var routes = [
+  {from:"PVG",to:"Shanghai Hotel",d:"Direct airport-to-hotel pickup",slug:"pvg-to-shanghai-hotel"},
+  {from:"PVG",to:"The Bund",d:"Airport to Bund waterfront hotels",slug:"pvg-to-the-bund"},
+  {from:"PVG",to:"Hongqiao",d:"Airport and railway connections",slug:"pvg-to-hongqiao"},
+  {from:"PVG",to:"Disneyland",d:"Family-friendly resort transfer",slug:"pvg-to-disneyland"},
+  {from:"Shanghai",to:"Suzhou",d:"Private car and day-trip chauffeur",slug:"shanghai-to-suzhou"},
+  {from:"Shanghai",to:"Hangzhou",d:"West Lake private transfer",slug:"shanghai-to-hangzhou"},
+  {from:"Shanghai",to:"Wuzhen",d:"Water-town transfer or day trip",slug:"shanghai-to-wuzhen"},
+  {from:"Shanghai",to:"Zhujiajiao",d:"Easy half-day private excursion",slug:"shanghai-to-zhujiajiao"}
+];
+
+var destinations = [
+  {n:"Shanghai",d:"The Bund, Lujiazui, Yu Garden",slug:"shanghai"},
+  {n:"Suzhou",d:"Classical gardens & canals",slug:"suzhou"},
+  {n:"Hangzhou",d:"West Lake & tea villages",slug:"hangzhou"},
+  {n:"Wuzhen",d:"Poetic water town",slug:"wuzhen"},
+  {n:"Disneyland",d:"Family resort transfers",slug:"disneyland"},
+  {n:"Airports",d:"PVG & SHA pickups",slug:"airports"}
+];
+
+var destinationsDetail = [
+  {
+    slug:"shanghai", name:"Shanghai",
+    title:"Shanghai Private Tour & Transfer",
+    lead:"Private chauffeur travel for airport arrivals, city sightseeing, business meetings and evening journeys across Shanghai.",
+    img:IMG.city,
+    aboutTitle:"Move across Shanghai with one private transport plan for the whole day.",
+    about:"From the Bund and Lujiazui to the former French Concession, Disney Resort and business districts, we connect each stop with a private vehicle and a flexible pickup plan. The itinerary can combine walking districts with door-to-door transfers so you spend less time arranging taxis between attractions.",
+    checks:["PVG & SHA airport connections","The Bund and Lujiazui drop-offs","Half-day or full-day city charter","Disney and cruise terminal transfers","Business district scheduling","Evening return service"],
+    ideal:["The Bund & Lujiazui","Yu Garden & Old City","Former French Concession","Shanghai Disneyland"],
+    highlights:[
+      {h:"Central Shanghai",p:"Link hotels with The Bund, Nanjing Road, Xintiandi, Yu Garden and Lujiazui."},
+      {h:"Flexible Pickups",p:"Use planned drop-off and collection points around walking streets and busy attractions."},
+      {h:"Airport to City",p:"Combine arrival or departure transfers with hotel, dining or sightseeing stops."}
+    ]
+  },
+  {
+    slug:"suzhou", name:"Suzhou",
+    title:"Suzhou Private Day Trip",
+    lead:"A comfortable private journey from Shanghai to Suzhou's gardens, canals and historic streets.",
+    img:"https://aka.doubaocdn.com/s/sz7PLXvnMY",
+    aboutTitle:"Turn Suzhou into an easy door-to-door day from Shanghai.",
+    about:"Travel directly from your Shanghai hotel to Suzhou, then visit the Humble Administrator's Garden, Suzhou Museum, Pingjiang Road and Shantang Street at your own pace. The road journey is usually around 1.5–2 hours each way, so an early start gives you more useful sightseeing time.",
+    checks:["Approx. 1.5–2 hours from Shanghai","Humble Administrator's Garden","Suzhou Museum and Pingjiang Road","Shantang Street evening option","Driver waiting between attractions","Shanghai hotel pickup and return"],
+    ideal:["Classical gardens","Pingjiang Road","Suzhou Museum","Shantang Street"],
+    highlights:[
+      {h:"Garden Morning",p:"Start with a classical garden and nearby Suzhou Museum before the busiest part of the day."},
+      {h:"Historic Streets",p:"Continue to Pingjiang Road or Shantang Street with a convenient vehicle pickup nearby."},
+      {h:"Return or Stay",p:"Return to Shanghai the same day or finish at a Suzhou hotel for an overnight stay."}
+    ]
+  },
+  {
+    slug:"hangzhou", name:"Hangzhou",
+    title:"Hangzhou Private Day Trip",
+    lead:"Private chauffeur service from Shanghai to West Lake, tea villages and Hangzhou highlights.",
+    img:"https://aka.doubaocdn.com/s/yXmF9n6Dq2",
+    aboutTitle:"Plan Hangzhou around West Lake, tea country and the time you actually have.",
+    about:"Avoid station transfers and enjoy door-to-door travel to West Lake, Leifeng Pagoda, Longjing tea village and your chosen dining or hotel stops. The road journey is commonly around 2.5–3 hours, so route order matters when combining West Lake, Lingyin Temple and the tea hills in one day.",
+    checks:["Approx. 2.5–3 hours from Shanghai","West Lake hotel and attraction stops","Lingyin Temple route planning","Longjing tea village transfer","One-way or round-trip service","Premium MPVs for longer journeys"],
+    ideal:["West Lake","Leifeng Pagoda","Longjing Tea Village","Lingyin Temple"],
+    highlights:[
+      {h:"West Lake First",p:"Begin around your preferred side of West Lake and avoid unnecessary cross-city driving."},
+      {h:"Tea & Temple",p:"Add Longjing or Lingyin Temple with realistic driving time between scenic areas."},
+      {h:"Hotel Transfer",p:"Use the same service for a one-way Shanghai-to-Hangzhou hotel change with luggage."}
+    ]
+  },
+  {
+    slug:"wuzhen", name:"Wuzhen",
+    title:"Wuzhen Water Town Tour",
+    lead:"A private Shanghai–Wuzhen transfer for canals, traditional lanes and an atmospheric evening visit.",
+    img:"https://aka.doubaocdn.com/s/fnGPKIDB3V",
+    aboutTitle:"Visit Wuzhen on your own timetable, including the evening if you want it.",
+    about:"A chauffeur journey makes it easier to arrive with luggage, stay into the evening and continue to Hangzhou or return to Shanghai without relying on fixed group schedules. Wuzhen is typically around 2–2.5 hours from Shanghai by road, and an overnight stay is a good option when you want to experience the evening lights without a late return.",
+    checks:["Approx. 2–2.5 hours from Shanghai","Xizha Scenic Area drop-off","Evening return option","Overnight luggage support","Onward transfer to Hangzhou","Private round-trip vehicle"],
+    ideal:["Xizha Scenic Area","Canal boat views","Traditional lanes","Evening lights"],
+    highlights:[
+      {h:"Day or Overnight",p:"Choose a same-day return or finish at a Wuzhen hotel for a slower evening visit."},
+      {h:"Stay for the Lights",p:"A longer charter can keep the return flexible after dinner and the illuminated canals."},
+      {h:"Continue to Hangzhou",p:"Wuzhen fits naturally between Shanghai and Hangzhou in a multi-city private itinerary."}
+    ]
+  },
+  {
+    slug:"disneyland", name:"Disneyland",
+    title:"Shanghai Disneyland Transfer",
+    lead:"Private family transfer to Shanghai Disney Resort with child seats and flexible return pickup available.",
+    img:IMG.chauffeur,
+    aboutTitle:"Make the Disney day easier before the park gates even open.",
+    about:"Start the day with hotel pickup, keep the family together and arrange a return time around the park closing schedule. Larger vehicles are available for strollers and luggage, and child seats can be requested before confirmation. Central Shanghai hotels are commonly around 35–60 minutes from the resort depending on traffic.",
+    checks:["Central hotel pickup","Child seats on request","Stroller and luggage planning","Early park-opening departures","Flexible evening return","PVG-to-Disney option"],
+    ideal:["Hotel pickup","Child seats","Flexible return","Family-size vehicles"],
+    highlights:[
+      {h:"Family Vehicle",p:"Choose an MPV or larger vehicle when you have children, strollers and several bags."},
+      {h:"Early Arrival",p:"Plan the hotel pickup around park opening and expected weekday traffic."},
+      {h:"Evening Pickup",p:"Arrange the return around dinner, the evening show or park closing."}
+    ]
+  },
+  {
+    slug:"airports", name:"Airports",
+    title:"Shanghai Airport Transfers",
+    lead:"Private transfers for Pudong International Airport and Hongqiao Airport with flight tracking and meet and greet.",
+    img:IMG.airport,
+    aboutTitle:"Choose the right Shanghai airport transfer for PVG, SHA or a cross-city connection.",
+    about:"Receive terminal-specific meeting instructions, chauffeur details and a vehicle selected for your passenger and luggage count before the flight arrives. Pudong Airport serves most international long-haul arrivals, while Hongqiao is especially convenient for domestic flights, high-speed rail and the National Exhibition and Convention Center.",
+    checks:["Pudong Airport (PVG) pickup","Hongqiao Airport (SHA) pickup","Flight monitoring","Arrival name sign option","Luggage-based vehicle planning","PVG-to-Hongqiao connections"],
+    ideal:["Pudong Airport","Hongqiao Airport","Flight monitoring","Arrival name sign"],
+    highlights:[
+      {h:"PVG",p:"International-arrival pickup with flight tracking and direct hotel or intercity transfer."},
+      {h:"SHA & Rail",p:"Hongqiao Airport and Railway Station connections for domestic and business travel."},
+      {h:"Cross-City",p:"Private PVG-to-Hongqiao transfers keep passengers and luggage together for onward connections."}
+    ]
+  }
+];
+
+var guides = [
+  {n:"Shanghai Airport Transfer",d:"Private PVG & SHA airport pickups with flight tracking and luggage planning.",cat:"Airport",img:IMG.airport,slug:"airport"},
+  {n:"Pudong Airport Transfer (PVG)",d:"Private PVG pickup with flight tracking and luggage planning.",cat:"PVG",img:IMG.airport,slug:"pudong"},
+  {n:"Hongqiao Airport Transfer (SHA)",d:"SHA, railway station, exhibition, and business connections.",cat:"SHA",img:IMG.business,slug:"hongqiao"},
+  {n:"Shanghai Chauffeur Service",d:"Hourly and full-day private car service for flexible itineraries.",cat:"Chauffeur",img:IMG.chauffeur,slug:"chauffeur"},
+  {n:"Business Chauffeur",d:"Executive meetings, roadshows, delegations, and client hosting.",cat:"Business",img:IMG.business,slug:"business"},
+  {n:"Shanghai Disney Transfer",d:"Family-friendly hotel, airport, and late return transportation.",cat:"Disney",img:IMG.city,slug:"disney"},
+  {n:"Cruise Port Transfer",d:"Private port, hotel, city, railway, and airport connections.",cat:"Cruise",img:IMG.daytrip,slug:"cruise"},
+  {n:"Suzhou Day Trip",d:"Classical gardens, Pingjiang Road and historic canals by private car.",cat:"Suzhou",img:"https://aka.doubaocdn.com/s/sz7PLXvnMY",slug:"suzhou"},
+  {n:"Hangzhou Day Trip",d:"West Lake, tea villages and scenic viewpoints by private car.",cat:"Hangzhou",img:"https://aka.doubaocdn.com/s/yXmF9n6Dq2",slug:"hangzhou"},
+  {n:"Wuzhen Private Tour",d:"Water-town transfer or day trip with flexible timing.",cat:"Wuzhen",img:"https://aka.doubaocdn.com/s/fnGPKIDB3V",slug:"wuzhen"}
+];
+
+var guidesDetail = [
+  {
+    slug:"airport", name:"Shanghai Airport Transfer",
+    cat:"Private airport pickup",
+    lead:"Private Shanghai airport transfers with flight tracking, meet and greet, luggage planning, English-friendly support, and clear written quotes.",
+    img:IMG.airport,
+    intro:"Arrive in Shanghai with a confirmed private chauffeur, clear meeting instructions, and a vehicle selected for your passengers and luggage. We coordinate arrivals and departures at both Pudong International Airport and Hongqiao International Airport, with direct service to hotels, offices, residences, cruise terminals, railway stations, and nearby cities.",
+    highlights:["PVG and SHA service","Flight tracking","Meet-and-greet option","Private vehicle only"],
+    steps:[
+      {t:"A clear arrival plan before you fly",p:"Your confirmation includes the airport, terminal, pickup time, meeting instructions, chauffeur contact method, vehicle category, and waiting-time terms. Sharing your flight number allows our team to monitor arrival updates and coordinate the pickup more accurately."},
+      {t:"A vehicle matched to people and luggage",p:"An airport transfer needs enough usable luggage space, not only enough seats. Tell us the number of adults, children, checked suitcases, cabin bags, strollers, or special equipment. We will recommend an executive sedan, luxury MPV, van, or minibus that fits the real travel party."},
+      {t:"Direct service beyond central Shanghai",p:"Airport pickups can continue directly to Shanghai districts, Disney hotels, cruise terminals, exhibition venues, Suzhou, Hangzhou, Wuzhen, and other Yangtze River Delta destinations. Multi-stop plans and return transfers can be included in one written itinerary."}
+    ],
+    routes:["Pudong Airport to The Bund","Hongqiao Airport to Jing'an","Airport to Shanghai Disney Resort","Airport to Suzhou or Hangzhou"],
+    faqs:[
+      {q:"Do you serve both Shanghai airports?",a:"Yes. We provide private pickups and drop-offs at Shanghai Pudong International Airport (PVG) and Shanghai Hongqiao International Airport (SHA)."},
+      {q:"What happens if my flight is delayed?",a:"When a valid flight number is provided, we monitor the arrival time and adjust coordination where possible. The confirmed waiting-time and delay terms are shown in your booking details."},
+      {q:"Can I request a name sign and child seat?",a:"Yes. A name sign and child-seat request can be added before confirmation, subject to availability. Please share the display name and the child's age, height, and weight."}
+    ]
+  },
+  {
+    slug:"pudong", name:"Pudong Airport Transfer (PVG)",
+    cat:"PVG private chauffeur",
+    lead:"Private transfers from Shanghai Pudong Airport (PVG) to city hotels, Disney, offices, cruise terminals, Suzhou, Hangzhou, and Wuzhen.",
+    img:IMG.airport,
+    intro:"Shanghai Pudong International Airport is located outside the central districts, so a pre-booked transfer is especially useful after a long international flight. We arrange a private vehicle, arrival monitoring, practical meeting instructions, and direct transport to your next destination without shared passengers or unplanned stops.",
+    highlights:["PVG Terminal 1 and 2","International arrival support","Luggage assistance","Regional direct transfers"],
+    steps:[
+      {t:"Meeting your chauffeur at PVG",p:"After immigration and baggage collection, follow the confirmed meeting instructions for your terminal. For meet-and-greet bookings, the chauffeur waits in the designated arrivals area with the requested name sign. Contact details are shared before the ride."},
+      {t:"Planning for international luggage",p:"Large suitcases can reduce passenger capacity in sedans and MPVs. Send the size and quantity of your bags when requesting a quote. Families with strollers or travelers carrying exhibition materials may need a larger vehicle than the passenger count alone suggests."},
+      {t:"PVG transfers to other cities",p:"A private vehicle can travel directly from Pudong Airport to Suzhou, Hangzhou, Wuzhen, or another confirmed destination. This can be simpler for groups, late arrivals, heavy luggage, or itineraries that do not connect conveniently by rail."}
+    ],
+    routes:["PVG to Lujiazui","PVG to Xintiandi","PVG to Shanghai Disney","PVG to Suzhou hotel"],
+    faqs:[
+      {q:"How much waiting time is included at Pudong Airport?",a:"Standard airport bookings include the waiting allowance stated in your written confirmation. Additional waiting and exceptional delay terms are also shown before payment."},
+      {q:"Can the chauffeur collect us from a specific terminal?",a:"Yes. Please provide the airline and flight number so we can confirm the correct PVG terminal and meeting point."},
+      {q:"Can we travel directly from PVG to Suzhou or Hangzhou?",a:"Yes. Direct private transfers can be arranged with an appropriate vehicle and a written route quote."}
+    ]
+  },
+  {
+    slug:"hongqiao", name:"Hongqiao Airport Transfer (SHA)",
+    cat:"SHA private chauffeur",
+    lead:"Private Shanghai Hongqiao Airport transfers for hotels, meetings, exhibitions, railway connections, and flexible multi-stop business schedules.",
+    img:IMG.business,
+    intro:"Hongqiao Airport is close to major business districts, the National Exhibition and Convention Center, and Hongqiao Railway Station. We coordinate precise private pickups for city hotels, offices, trade shows, railway connections, and full-day schedules, with a chauffeur and vehicle reserved for your party only.",
+    highlights:["SHA Terminal 1 and 2","Hongqiao Railway Station","Exhibition transfers","Multi-stop schedules"],
+    steps:[
+      {t:"Airport and railway coordination",p:"Hongqiao Airport and Hongqiao Railway Station are connected within the same transport hub, but meeting locations still matter. Tell us whether you arrive by air or high-speed rail, together with the terminal, train number, and scheduled time."},
+      {t:"Reliable timing for meetings and exhibitions",p:"For exhibitions, client meetings, and roadshows, we can include multiple stops, standby time, return transport, or a full-day chauffeur. The itinerary is confirmed in writing so your team knows the pickup order and vehicle plan."},
+      {t:"Vehicle choices for business arrivals",p:"Executive sedans suit individual travelers and light luggage, while luxury MPVs provide more cabin and baggage space for colleagues or client hosting. Vans and minibuses are available for delegations and equipment."}
+    ],
+    routes:["SHA to Jing'an","SHA to The Bund","SHA to NECC","Airport and railway connection"],
+    faqs:[
+      {q:"Do you pick up from Hongqiao Railway Station?",a:"Yes. Please share the train number, arrival time, and passenger and luggage details so we can confirm the meeting point and suitable vehicle."},
+      {q:"Can the driver wait during an exhibition or meeting?",a:"Yes. Standby, multi-stop, and full-day services can be quoted according to the schedule and vehicle category."},
+      {q:"Can you transfer a group from SHA to a hotel?",a:"Yes. MPVs, vans, minibuses, and larger group vehicles can be arranged according to passenger and luggage requirements."}
+    ]
+  },
+  {
+    slug:"chauffeur", name:"Shanghai Chauffeur Service",
+    cat:"Executive private transportation",
+    lead:"Premium Shanghai chauffeur service for airport transfers, business meetings, city travel, events, private tours, and flexible full-day itineraries.",
+    img:IMG.chauffeur,
+    intro:"A dedicated chauffeur gives you a calm, private way to move through Shanghai when the day includes several meetings, attractions, restaurants, or changing plans. Choose an executive sedan, luxury MPV, van, or group vehicle, then share the schedule and we will coordinate the practical route and pickup details.",
+    highlights:["Hourly or full-day charter","English-friendly coordination","Flexible multi-stop travel","Premium vehicle options"],
+    steps:[
+      {t:"One chauffeur for a changing day",p:"A city charter is useful when fixed point-to-point bookings would create unnecessary waiting or repeated coordination. The chauffeur follows the confirmed service window and itinerary while the support team remains available for reasonable route updates."},
+      {t:"Business-ready and family-friendly options",p:"Executive sedans provide a discreet arrival for one to three guests. Luxury MPVs suit colleagues, families, and visitors who prefer more cabin space. Child seats, name signs, and multi-vehicle coordination can be requested in advance."},
+      {t:"Clear inclusions before confirmation",p:"Your written quote identifies the service duration, included distance where applicable, vehicle category, route, tolls or parking treatment, overtime terms, payment method, and cancellation policy. This keeps the arrangement clear before the chauffeur is dispatched."}
+    ],
+    routes:["Lujiazui meeting circuit","Hotel and client visits","Shanghai city highlights","Evening dining transfer"],
+    faqs:[
+      {q:"Can I hire a chauffeur by the hour or for a full day?",a:"Yes. Hourly, half-day, full-day, and multi-day arrangements are available depending on the vehicle and itinerary."},
+      {q:"Can I change stops during the service?",a:"Reasonable changes can usually be coordinated within the booked time, distance, and service area. Significant changes may require a revised quote."},
+      {q:"Do you provide English-speaking support?",a:"Yes. English-friendly booking support is available for itinerary planning, meeting points, and changes during the service."}
+    ]
+  },
+  {
+    slug:"business", name:"Shanghai Business Chauffeur",
+    cat:"Corporate transportation",
+    lead:"Professional Shanghai business chauffeur service for executive meetings, delegations, roadshows, exhibitions, airport arrivals, and client hosting.",
+    img:IMG.business,
+    intro:"Keep a demanding business schedule moving with a dedicated chauffeur and a clear written itinerary. We coordinate hotel pickups, office visits, exhibitions, client dinners, airport connections, and multi-vehicle plans with executive sedans, luxury MPVs, and group vehicles.",
+    highlights:["Roadshows and meetings","Executive vehicles","Multi-vehicle coordination","Central booking support"],
+    steps:[
+      {t:"Built around the working itinerary",p:"Send the meeting addresses, preferred arrival times, passenger assignments, luggage, and client-contact requirements. We organize the pickup sequence and recommend realistic travel windows for Shanghai traffic and venue access."},
+      {t:"A professional vehicle for every role",p:"Executive sedans suit individual guests and formal arrivals. Luxury MPVs provide space for small teams or client hosting. Vans, minibuses, and multiple vehicles can support delegations, equipment, and simultaneous schedules."},
+      {t:"Clear records and central coordination",p:"Corporate bookings can be managed through one contact point with written itineraries, vehicle assignments, pickup updates, and trip records. Special billing or repeated travel requirements can be discussed before service begins."}
+    ],
+    routes:["Lujiazui executive meetings","NECC exhibition transfer","Hotel-office-dinner circuit","Airport and client pickup"],
+    faqs:[
+      {q:"Can you coordinate several vehicles for a delegation?",a:"Yes. Provide the passenger groups, schedule, luggage, and contact structure so we can prepare a multi-vehicle plan."},
+      {q:"Do you cover the National Exhibition and Convention Center?",a:"Yes. Airport, hotel, and exhibition transfers can be included in a point-to-point or full-day arrangement."},
+      {q:"Can one chauffeur remain available between meetings?",a:"Yes. Standby and full-day business chauffeur services are available, with time, distance, and overtime terms confirmed in writing."}
+    ]
+  },
+  {
+    slug:"disney", name:"Shanghai Disney Transfer",
+    cat:"Private Disney ride",
+    lead:"Private transfers to Shanghai Disney Resort with family-friendly vehicles, child-seat requests, luggage planning, and flexible return pickup.",
+    img:IMG.city,
+    intro:"Make a Shanghai Disney day easier with private door-to-door transport. We can arrange hotel pickup, airport-to-resort transfers, family luggage space, child-seat requests, and a confirmed return pickup after the park closes or your dinner finishes.",
+    highlights:["Hotel-to-Disney transfer","Airport-to-resort service","Child-seat requests","Late return pickup"],
+    steps:[
+      {t:"Door-to-door travel for families",p:"Avoid carrying children, strollers, and bags through multiple transport connections. A private vehicle collects your party from the hotel, residence, airport, or railway station and travels directly to the confirmed Disney drop-off area."},
+      {t:"Plan the return before entering the park",p:"Disney closing times, evening shows, and dining plans can affect pickup. We agree on a practical return plan before the trip and share the communication method for final coordination near the end of your visit."},
+      {t:"Space for strollers and holiday luggage",p:"A vehicle that seats the family may not hold every suitcase and stroller. Share the full luggage list for airport or hotel-change transfers so we can recommend a suitable MPV, van, or minibus."}
+    ],
+    routes:["City hotel to Disney Resort","PVG to Disney hotel","Disney to The Bund","Round-trip family transfer"],
+    faqs:[
+      {q:"Can you provide a child seat for a Disney transfer?",a:"Child and baby seats can be requested in advance, subject to availability. Please provide the child's age, height, and weight."},
+      {q:"Can we book a round trip with a late pickup?",a:"Yes. A return transfer can be scheduled around the park closing, evening show, or dinner plan."},
+      {q:"Do you transfer directly from Pudong Airport to Disney hotels?",a:"Yes. Share the flight number, hotel, passengers, and luggage so we can prepare an airport-to-resort quote."}
+    ]
+  },
+  {
+    slug:"cruise", name:"Shanghai Cruise Port Transfer",
+    cat:"Private cruise terminal transport",
+    lead:"Private Shanghai cruise terminal transfers to airports, hotels, railway stations, and city destinations with practical luggage planning.",
+    img:IMG.daytrip,
+    intro:"Start or finish your cruise with a private vehicle selected for your passengers and luggage. We coordinate the cruise terminal, arrival or embarkation window, hotel or airport destination, and practical pickup instructions for a smooth private transfer.",
+    highlights:["Cruise terminal pickup","Airport connections","Luggage-matched vehicles","Shanghai stopover tours"],
+    steps:[
+      {t:"Confirm the correct terminal",p:"Shanghai has different cruise and passenger port facilities. Send the ship name, cruise line, terminal information, date, and expected disembarkation or boarding time so the pickup location can be confirmed accurately."},
+      {t:"Allow for cruise luggage",p:"Cruise groups often carry more checked baggage than ordinary city travelers. A larger MPV, van, or minibus may be necessary even for a small party. We recommend the vehicle after reviewing every suitcase and cabin bag."},
+      {t:"Combine the transfer with a Shanghai visit",p:"If your schedule allows, a port transfer can include a hotel stop, city highlights, a meal, or an airport drop-off later in the day. Luggage remains with the confirmed vehicle according to the service plan."}
+    ],
+    routes:["Wusongkou to Pudong Airport","Cruise terminal to The Bund","Hotel to cruise terminal","Port pickup with city tour"],
+    faqs:[
+      {q:"Which Shanghai cruise terminals do you serve?",a:"Service can be arranged for confirmed Shanghai cruise terminals. Please send the ship and terminal details because meeting arrangements differ by port."},
+      {q:"Can you store our luggage during a city tour?",a:"Luggage can normally remain in the private vehicle during a confirmed transfer and city itinerary, subject to vehicle capacity and the agreed service plan."},
+      {q:"Can we travel from the cruise port directly to PVG or SHA?",a:"Yes. Direct airport transfers can be arranged according to the ship schedule, flight time, passenger count, and luggage."}
+    ]
+  },
+  {
+    slug:"suzhou", name:"Suzhou Day Trip by Private Car",
+    cat:"Shanghai to Suzhou",
+    lead:"Private Shanghai-to-Suzhou day trips with a chauffeur, flexible garden and canal stops, comfortable vehicles, and door-to-door return service.",
+    img:"https://aka.doubaocdn.com/s/sz7PLXvnMY",
+    intro:"Suzhou is well suited to a private day trip when you want to explore classical gardens, canals, museums, or historic streets at your own pace. Your chauffeur collects you from a Shanghai hotel or residence, waits while you visit, and returns you to Shanghai or another confirmed destination.",
+    highlights:["Shanghai hotel pickup","Flexible Suzhou itinerary","Private vehicle all day","One-way or return options"],
+    steps:[
+      {t:"Choose a realistic number of stops",p:"Suzhou has gardens, canals, museums, and water towns spread across different areas. A focused itinerary usually feels better than rushing. Tell us your priorities and we will help arrange a practical pickup and driving sequence."},
+      {t:"Your chauffeur waits while you explore",p:"The service provides private transport between confirmed stops. The chauffeur manages parking and the next pickup point while you visit attractions independently. Licensed attraction guides or tickets are separate unless explicitly included."},
+      {t:"Return to Shanghai or continue onward",p:"The trip can finish at your Shanghai hotel, a Suzhou hotel, railway station, Wuzhen, Hangzhou, or another confirmed destination. Multi-day routes can use the same vehicle category subject to the final itinerary."}
+    ],
+    routes:["Humble Administrator's Garden","Suzhou Museum","Pingjiang Road","Shantang Street"],
+    faqs:[
+      {q:"Can we choose our own Suzhou attractions?",a:"Yes. Share your preferred gardens, museums, streets, or dining stops and we will help order them into a practical route."},
+      {q:"Are attraction tickets included?",a:"Tickets and licensed guide services are included only when specifically stated in the written quote."},
+      {q:"Can we end the trip at a Suzhou hotel?",a:"Yes. One-way, return, hotel-change, and onward regional services can be quoted."}
+    ]
+  },
+  {
+    slug:"hangzhou", name:"Hangzhou Day Trip by Private Car",
+    cat:"Shanghai to Hangzhou",
+    lead:"Private chauffeur day trips from Shanghai to Hangzhou for West Lake, Lingyin Temple, tea villages, business visits, and flexible itineraries.",
+    img:"https://aka.doubaocdn.com/s/yXmF9n6Dq2",
+    intro:"Travel from Shanghai to Hangzhou in a private vehicle, with the freedom to spend more time at West Lake, Lingyin Temple, a tea village, or your preferred dining stop. We build the transport schedule around your pace rather than a fixed group-tour timetable.",
+    highlights:["West Lake itinerary","Tea village visits","Hotel pickup and return","Flexible private schedule"],
+    steps:[
+      {t:"Plan around West Lake traffic and walking",p:"Many West Lake areas involve walking and restricted vehicle access. A private chauffeur can use practical drop-off and pickup points while you explore selected sections, then continue to the next attraction or meal stop."},
+      {t:"Add a temple, tea village, or business stop",p:"The itinerary may include Lingyin Temple, Longjing, a hotel, office, or restaurant. Tell us which places matter most, because a comfortable day normally requires choosing priorities rather than attempting every attraction."},
+      {t:"Suitable vehicles for a regional journey",p:"For a longer intercity ride, cabin comfort and luggage space matter. Luxury MPVs are popular for families and small groups, while sedans and minibuses suit lighter or larger parties. Exact vehicle and route terms are confirmed before booking."}
+    ],
+    routes:["West Lake","Lingyin Temple","Longjing tea village","Hangzhou hotel or station"],
+    faqs:[
+      {q:"Can we visit West Lake and Longjing in one day?",a:"Yes, subject to your pickup time and preferred visit duration. We recommend prioritizing a few key stops for a relaxed itinerary."},
+      {q:"Can the trip finish at a Hangzhou hotel or station?",a:"Yes. One-way transfers, hotel changes, station drop-offs, and return journeys can all be arranged."},
+      {q:"Is a tour guide included?",a:"The chauffeur provides transport. A licensed guide is included only when specifically requested and listed in the quote."}
+    ]
+  },
+  {
+    slug:"wuzhen", name:"Wuzhen Private Tour from Shanghai",
+    cat:"Water town day trip",
+    lead:"Private chauffeur tours from Shanghai to Wuzhen with comfortable vehicles, flexible timing, direct hotel pickup, and onward travel options.",
+    img:"https://aka.doubaocdn.com/s/fnGPKIDB3V",
+    intro:"Wuzhen is easier to enjoy without the pressure of a fixed group-tour timetable. A chauffeur collects you in Shanghai, travels directly to the water town, waits during your visit, and returns you to your hotel or continues to another confirmed destination.",
+    highlights:["Shanghai door-to-door service","Flexible visit duration","East or West Scenic Zone","Onward regional travel"],
+    steps:[
+      {t:"Choose the scenic area and visit style",p:"Wuzhen's East and West Scenic Zones offer different layouts and atmospheres. Tell us whether you prefer a daytime visit, evening lights, photography, dining, or an overnight hotel so the driving schedule can match your plan."},
+      {t:"Private transport without a group timetable",p:"Your party travels in a reserved vehicle and sets the agreed visit duration. The chauffeur handles transport and waits at the planned pickup area; attraction admission and licensed guiding are separate unless stated in the quote."},
+      {t:"Connect Wuzhen with Suzhou or Hangzhou",p:"Wuzhen can form part of a multi-city route between Shanghai, Suzhou, and Hangzhou. We can quote one-way, same-day return, overnight, or multi-day transportation after reviewing hotel and luggage details."}
+    ],
+    routes:["Wuzhen West Scenic Zone","Wuzhen East Scenic Zone","Evening water-town visit","Wuzhen to Hangzhou"],
+    faqs:[
+      {q:"Should we visit Wuzhen East or West Scenic Zone?",a:"West Scenic Zone is popular for a longer visit and evening atmosphere, while East Scenic Zone can suit a shorter itinerary. Your choice depends on timing and interests."},
+      {q:"Can we stay overnight in Wuzhen?",a:"Yes. We can arrange one-way transport, next-day pickup, or a multi-day route with your confirmed hotel."},
+      {q:"Can we continue from Wuzhen to Hangzhou?",a:"Yes. Wuzhen can be included in a Shanghai-Suzhou-Wuzhen-Hangzhou itinerary with luggage and hotel transfers."}
+    ]
+  }
+];
+
+var SZIMG = "https://aka.doubaocdn.com/s/sz7PLXvnMY";
+var HZIMG = "https://aka.doubaocdn.com/s/yXmF9n6Dq2";
+var WZIMG = "https://aka.doubaocdn.com/s/fnGPKIDB3V";
+
+var routesDetail = [
+  {
+    slug:"pvg-to-shanghai-hotel", name:"PVG to Shanghai Hotel Private Transfer",
+    cat:"Pudong Airport to downtown Shanghai",
+    lead:"Private transfer from Shanghai Pudong Airport (PVG) to downtown Shanghai hotels with flight tracking, meet-and-greet options, luggage planning, and a clear written quote.",
+    pickup:"Shanghai Pudong International Airport (PVG)", dest:"Downtown Shanghai hotels",
+    time:"Usually 45–75 minutes, depending on district and traffic",
+    best:"International arrivals, families, executives, and travelers with luggage",
+    img:IMG.airport,
+    intro:"After a long flight, a pre-booked private vehicle is the simplest way to reach a Shanghai hotel without taxi queues, language uncertainty, or carrying luggage through several transport connections. We confirm the terminal, meeting point, vehicle category, and chauffeur contact before the journey.",
+    highlights:["Flight monitoring","Private vehicle only","Meet-and-greet option","Vehicle matched to luggage"],
+    steps:[
+      {t:"Share the flight number",p:"The airline and flight number help us confirm the arrival terminal and monitor schedule changes before pickup."},
+      {t:"Tell us the exact hotel",p:"Shanghai is large, so the hotel name and address are used to plan realistic travel time and the correct entrance or driveway."},
+      {t:"Count every suitcase",p:"Checked luggage, cabin bags, strollers, golf bags, and exhibition materials can change the most suitable vehicle category."}
+    ],
+    faqs:[
+      {q:"How much is a private transfer from PVG to a Shanghai hotel?",a:"The price depends on the vehicle, hotel district, pickup time, luggage, and any special requirements. We provide a written quote before booking, and reference airport-transfer pricing is available on the Fleet pages."},
+      {q:"What if my flight into Pudong Airport is delayed?",a:"When a valid flight number is provided, the arrival time can be monitored and pickup coordination adjusted where possible. Your confirmation states the included waiting and delay terms."},
+      {q:"Can I request a child seat?",a:"Yes. Child and baby seats can be requested before confirmation, subject to availability. Please provide the child's age, height, and weight."}
+    ]
+  },
+  {
+    slug:"pvg-to-the-bund", name:"PVG to The Bund Private Transfer",
+    cat:"Pudong Airport to The Bund",
+    lead:"Book a private transfer from Shanghai Pudong Airport (PVG) to The Bund hotels and waterfront area with flight tracking, luggage assistance, and fixed written booking details.",
+    pickup:"Shanghai Pudong International Airport (PVG)", dest:"The Bund and Huangpu waterfront hotels",
+    time:"Usually 50–80 minutes, depending on traffic",
+    best:"First-time visitors, couples, families, and hotel arrivals near The Bund",
+    img:IMG.city,
+    intro:"The Bund is one of Shanghai's most popular hotel and sightseeing areas. A private airport transfer takes you directly from the terminal to the correct hotel entrance or nearby drop-off point, with the route and luggage needs arranged before landing.",
+    highlights:["Direct hotel drop-off","Flight tracking","English-friendly coordination","Sedan, MPV, van, and minibus options"],
+    steps:[
+      {t:"Confirm the hotel entrance",p:"Many Bund-area properties have vehicle entrances on streets behind the waterfront. The exact hotel name and address help avoid unnecessary walking with luggage."},
+      {t:"Allow for peak traffic",p:"Travel time can increase during weekday rush hours, public holidays, and busy evening periods around the central riverfront."},
+      {t:"Continue sightseeing if needed",p:"The airport transfer can be upgraded into a city charter when you want to leave luggage with the vehicle and continue to other Shanghai stops."}
+    ],
+    faqs:[
+      {q:"How long does PVG to The Bund take by private car?",a:"A typical journey is around 50–80 minutes, but actual time depends on traffic, terminal conditions, and the exact Bund-area destination."},
+      {q:"Can the driver meet us with a name sign at PVG?",a:"Yes. Meet-and-greet with a requested display name can be arranged before confirmation."},
+      {q:"Can we stop in Lujiazui before going to The Bund?",a:"Yes. A planned extra stop can be included in the written route quote. Significant route changes may affect the price and timing."}
+    ]
+  },
+  {
+    slug:"pvg-to-hongqiao", name:"PVG to Hongqiao Private Transfer",
+    cat:"Pudong Airport to Hongqiao hub",
+    lead:"Private car transfer from Shanghai Pudong Airport (PVG) to Hongqiao Airport or Hongqiao Railway Station with luggage planning and connection-time guidance.",
+    pickup:"Shanghai Pudong International Airport (PVG)", dest:"Hongqiao Airport (SHA) or Hongqiao Railway Station",
+    time:"Usually 60–90 minutes; allow extra time for connections",
+    best:"Domestic flight connections, high-speed rail connections, business travelers, and groups",
+    img:IMG.airport,
+    intro:"Pudong and Hongqiao are on opposite sides of Shanghai, so airport and railway connections need realistic timing. A private transfer avoids multiple changes while keeping luggage together in one vehicle from the Pudong terminal to the correct Hongqiao drop-off area.",
+    highlights:["Airport-to-airport transfer","PVG-to-railway connection","Luggage stays in one vehicle","Connection schedule planning"],
+    steps:[
+      {t:"Build in a connection buffer",p:"Immigration, baggage claim, city traffic, terminal entry, and railway or airline check-in should all be considered before choosing a connecting departure."},
+      {t:"Specify airport or railway station",p:"Hongqiao Airport and Hongqiao Railway Station share a transport hub but use different vehicle approaches and meeting points."},
+      {t:"Use a larger vehicle for heavy luggage",p:"A direct cross-city connection is more comfortable when the vehicle is chosen for both passenger count and the full luggage load."}
+    ],
+    faqs:[
+      {q:"How much time should I allow from PVG to Hongqiao?",a:"The driving time is commonly around 60–90 minutes, but your full connection plan should also allow for immigration, baggage, traffic, and the check-in or boarding deadline."},
+      {q:"Can you transfer us from PVG directly to Hongqiao Railway Station?",a:"Yes. Please provide the arriving flight and departing train details so the route and practical buffer can be reviewed before confirmation."},
+      {q:"Can a minibus be arranged for a group connection?",a:"Yes. Vans, minibuses, and larger group vehicles can be quoted according to passenger and luggage requirements."}
+    ]
+  },
+  {
+    slug:"pvg-to-disneyland", name:"PVG to Shanghai Disneyland Private Transfer",
+    cat:"Pudong Airport to Disney Resort",
+    lead:"Family-friendly private transfer from Shanghai Pudong Airport (PVG) to Shanghai Disney Resort hotels with flight tracking, child-seat requests, and luggage planning.",
+    pickup:"Shanghai Pudong International Airport (PVG)", dest:"Shanghai Disney Resort and nearby hotels",
+    time:"Usually 20–35 minutes, depending on traffic and hotel",
+    best:"Families, resort guests, travelers with strollers, and late international arrivals",
+    img:IMG.city,
+    intro:"Shanghai Disney Resort is much closer to Pudong Airport than central Shanghai. A private transfer is especially convenient when the family is arriving with suitcases, strollers, or young children and wants to travel directly to the resort hotel.",
+    highlights:["Short direct airport route","Child-seat requests","Stroller and luggage planning","Round-trip options"],
+    steps:[
+      {t:"Confirm the Disney hotel",p:"Provide the exact resort or nearby hotel so the chauffeur can use the correct entrance and drop-off area."},
+      {t:"Request child seats in advance",p:"Share the child's age, height, and weight so the booking team can confirm a suitable seat where available."},
+      {t:"Plan your return at the same time",p:"A later return to PVG, a city hotel, or another Shanghai destination can be included in one itinerary."}
+    ],
+    faqs:[
+      {q:"How long is the drive from Pudong Airport to Shanghai Disneyland?",a:"The journey is commonly around 20–35 minutes, depending on traffic and the exact resort hotel or drop-off point."},
+      {q:"Can you provide a child seat from PVG to Disney?",a:"Child seats can be requested before confirmation, subject to availability. Please send the child's age, height, and weight."},
+      {q:"Can we book Disney to a downtown Shanghai hotel after our stay?",a:"Yes. Hotel-to-city and Disney-to-airport transfers can be included in the same travel plan."}
+    ]
+  },
+  {
+    slug:"hongqiao-airport-to-shanghai", name:"Hongqiao Airport to Shanghai Private Transfer",
+    cat:"SHA to central Shanghai",
+    lead:"Private transfer from Shanghai Hongqiao Airport (SHA) to downtown hotels, offices, exhibition venues, and residences with precise pickup coordination.",
+    pickup:"Shanghai Hongqiao International Airport (SHA)", dest:"Central Shanghai hotels, offices, and residences",
+    time:"Usually 25–50 minutes, depending on district and traffic",
+    best:"Business visitors, domestic arrivals, exhibition guests, and families",
+    img:IMG.business,
+    intro:"Hongqiao Airport is close to many business districts and central hotels. A private transfer gives you a confirmed meeting plan and direct drop-off, which is useful for tight meeting schedules, several pieces of luggage, or guests unfamiliar with Shanghai.",
+    highlights:["SHA Terminal 1 and 2","Business-ready timing","Hotel and office drop-off","Multi-stop option"],
+    steps:[
+      {t:"Confirm the terminal",p:"Share the flight number so the booking team can verify whether you arrive at Hongqiao Terminal 1 or Terminal 2."},
+      {t:"Add meeting addresses in advance",p:"If you need a hotel stop followed by an office or exhibition venue, include every address in the quote request."},
+      {t:"Choose a business-ready vehicle",p:"Executive sedans suit individual travelers, while premium MPVs give small teams more space for colleagues and luggage."}
+    ],
+    faqs:[
+      {q:"How long is Hongqiao Airport to downtown Shanghai by car?",a:"Many central districts are around 25–50 minutes from Hongqiao Airport, depending on traffic and the exact destination."},
+      {q:"Can you take us from SHA directly to the National Exhibition and Convention Center?",a:"Yes. Exhibition and conference transfers can be arranged as a point-to-point ride or part of a full-day business chauffeur schedule."},
+      {q:"Do you also pick up at Hongqiao Railway Station?",a:"Yes. Railway pickups are available. Please provide the train number, arrival time, passengers, and luggage."}
+    ]
+  },
+  {
+    slug:"shanghai-to-pvg-airport", name:"Shanghai Hotel to Pudong Airport (PVG) Transfer",
+    cat:"Downtown Shanghai to PVG",
+    lead:"Pre-book a private transfer from a Shanghai hotel, residence, or office to Pudong Airport (PVG) with pickup timing planned around your flight departure.",
+    pickup:"Shanghai hotel, residence, or office", dest:"Shanghai Pudong International Airport (PVG)",
+    time:"Usually 45–75 minutes; departure pickup should include traffic and check-in buffer",
+    best:"International departures, families, executives, and travelers with multiple bags",
+    img:IMG.airport,
+    intro:"Airport drop-off is easiest when the pickup time is planned backwards from the flight departure. We confirm the pickup address, terminal where known, passenger and luggage count, and practical departure window before the ride.",
+    highlights:["Hotel-door pickup","Terminal drop-off","Flight-time planning","Private vehicle sized for luggage"],
+    steps:[
+      {t:"Plan backwards from departure",p:"International check-in deadlines and Shanghai traffic should be considered together when choosing the hotel pickup time."},
+      {t:"Confirm the airline",p:"The airline and flight number help identify the likely Pudong terminal and make the drop-off plan more precise."},
+      {t:"Avoid last-minute luggage problems",p:"Share every large suitcase and unusual item in advance so the vehicle has adequate baggage space."}
+    ],
+    faqs:[
+      {q:"What time should I leave a Shanghai hotel for PVG?",a:"The right pickup time depends on your hotel district, day of week, traffic, airline check-in requirement, and flight departure. We recommend allowing a conservative buffer and confirm the plan before booking."},
+      {q:"Can you pick up from more than one hotel on the way to PVG?",a:"Yes. Multiple pickups can be quoted when all addresses and passenger details are provided in advance."},
+      {q:"Can I book an early-morning airport transfer?",a:"Yes. Early and late services can be arranged subject to vehicle availability and confirmed booking terms."}
+    ]
+  },
+  {
+    slug:"shanghai-to-hongqiao-airport", name:"Shanghai Hotel to Hongqiao Airport (SHA) Transfer",
+    cat:"Central Shanghai to SHA",
+    lead:"Private transfer from Shanghai hotels, offices, and residences to Hongqiao Airport (SHA) or Hongqiao Railway Station with reliable pickup planning.",
+    pickup:"Shanghai hotel, residence, or office", dest:"Hongqiao Airport (SHA) or Hongqiao Railway Station",
+    time:"Usually 25–50 minutes from central districts, depending on traffic",
+    best:"Domestic flights, high-speed rail, business travelers, and families",
+    img:IMG.business,
+    intro:"A hotel-to-Hongqiao transfer is straightforward when the correct terminal or railway entrance and a realistic city traffic buffer are confirmed in advance. The chauffeur collects your party from the requested address and travels directly to the appropriate drop-off point.",
+    highlights:["Airport or railway drop-off","Hotel pickup","Business schedule support","Group vehicle options"],
+    steps:[
+      {t:"Specify air or rail",p:"Hongqiao Airport and Railway Station are in the same hub but use different drop-off approaches. Include the flight or train details in the request."},
+      {t:"Allow for rush hour",p:"Weekday traffic can significantly change travel time from Lujiazui, The Bund, Xintiandi, or other central districts."},
+      {t:"Coordinate a business day",p:"The transfer can be the final stop of a full-day chauffeur itinerary after meetings, exhibitions, or client visits."}
+    ],
+    faqs:[
+      {q:"Can you drop us at Hongqiao Railway Station instead of the airport?",a:"Yes. Please provide the train number and departure time so the correct destination and timing can be confirmed."},
+      {q:"How early should we leave downtown Shanghai for SHA?",a:"Pickup time depends on the district, traffic, and airline check-in requirements. We recommend building in a reasonable buffer beyond the normal driving time."},
+      {q:"Can we use a luxury MPV for an executive airport drop-off?",a:"Yes. Premium MPVs and executive sedans are available subject to schedule and vehicle availability."}
+    ]
+  },
+  {
+    slug:"shanghai-to-suzhou", name:"Shanghai to Suzhou Private Car & Chauffeur",
+    cat:"Private Shanghai–Suzhou transfer",
+    lead:"Door-to-door private car from Shanghai to Suzhou for hotels, gardens, business visits, or a full-day private trip with flexible stops and vehicle options.",
+    pickup:"Shanghai hotel, airport, residence, or office", dest:"Suzhou city, hotel, industrial park, or attractions",
+    time:"Usually 1.5–2 hours each way, depending on traffic and destination",
+    best:"Day trips, families, hotel-to-hotel travel, factory visits, and business meetings",
+    img:SZIMG,
+    intro:"Suzhou is close enough for a comfortable private day trip and is also a common business destination from Shanghai. Door-to-door chauffeur service avoids station transfers and lets you travel with luggage or move between several Suzhou stops on one schedule.",
+    highlights:["Door-to-door intercity travel","Flexible waiting and stops","Garden and canal itineraries","Business and factory visits"],
+    steps:[
+      {t:"Choose transfer or full-day charter",p:"For a hotel-to-hotel journey, a one-way private transfer may be enough. For gardens, museums, factories, and several stops, a day charter is usually more practical."},
+      {t:"Popular Suzhou stops",p:"Common leisure stops include the Humble Administrator's Garden, Suzhou Museum, Pingjiang Road, and Shantang Street. Tickets and attraction entry remain separate unless confirmed otherwise."},
+      {t:"Plan a realistic return",p:"A full Suzhou day often needs 10–12 hours including driving, sightseeing, meals, and traffic. The quote should reflect the intended service window."}
+    ],
+    faqs:[
+      {q:"How long does Shanghai to Suzhou take by private car?",a:"The drive is commonly around 1.5–2 hours each way, depending on the Shanghai pickup point, Suzhou destination, and traffic."},
+      {q:"Can the chauffeur wait while we visit Suzhou attractions?",a:"Yes. A full-day charter can include waiting while you visit attractions, with the service duration and any overtime terms confirmed in writing."},
+      {q:"Can you pick us up at PVG and drive directly to Suzhou?",a:"Yes. Direct Pudong Airport to Suzhou transfers can be arranged with flight tracking and a vehicle selected for passengers and luggage."}
+    ]
+  },
+  {
+    slug:"shanghai-to-hangzhou", name:"Shanghai to Hangzhou Private Car & Chauffeur",
+    cat:"Private Shanghai–Hangzhou transfer",
+    lead:"Private chauffeur transfer from Shanghai to Hangzhou for West Lake, tea villages, hotels, business visits, and flexible day-trip itineraries.",
+    pickup:"Shanghai hotel, airport, residence, or office", dest:"Hangzhou city, West Lake area, hotel, station, or business district",
+    time:"Usually 2.5–3 hours by road, depending on traffic and destination",
+    best:"Private day trips, families, hotel changes, business travel, and travelers with luggage",
+    img:HZIMG,
+    intro:"A private Shanghai-to-Hangzhou vehicle is useful when you value door-to-door convenience, have substantial luggage, or want to combine several Hangzhou stops without changing transport. The day can be arranged around West Lake, Lingyin Temple, Longjing tea village, hotels, meetings, or onward travel.",
+    highlights:["Door-to-door intercity transfer","West Lake itinerary support","Tea village and temple stops","Hotel and business drop-off"],
+    steps:[
+      {t:"Allow enough time for a day trip",p:"Road travel plus sightseeing can make Hangzhou a long day. An early Shanghai departure usually gives more useful time around West Lake and nearby attractions."},
+      {t:"Build stops around geography",p:"West Lake, Lingyin Temple, and Longjing are easier when the itinerary avoids repeated cross-city driving. Share your priority stops and desired meal plans."},
+      {t:"Use a larger cabin for the long ride",p:"Luxury MPVs are popular for families and executives who prefer extra space on the longer intercity journey."}
+    ],
+    faqs:[
+      {q:"How long does Shanghai to Hangzhou take by private car?",a:"A road journey is commonly around 2.5–3 hours, but actual time varies with the Shanghai pickup point, Hangzhou destination, and traffic."},
+      {q:"Can we do Hangzhou as a day trip and return to Shanghai?",a:"Yes. A full-day or extended charter can be planned around your selected attractions and return time."},
+      {q:"Can you take us from Shanghai to a Hangzhou hotel with luggage?",a:"Yes. One-way hotel-to-hotel transfers are available, with the vehicle chosen for both passengers and luggage."}
+    ]
+  },
+  {
+    slug:"shanghai-to-wuzhen", name:"Shanghai to Wuzhen Private Car & Chauffeur",
+    cat:"Private Shanghai–Wuzhen transfer",
+    lead:"Private chauffeur from Shanghai to Wuzhen Water Town with door-to-door pickup, flexible visit duration, luggage-friendly vehicles, and onward transfer options.",
+    pickup:"Shanghai hotel, airport, residence, or office", dest:"Wuzhen Water Town, hotel, or onward destination",
+    time:"Usually 2–2.5 hours each way, depending on traffic",
+    best:"Water-town day trips, overnight stays, families, photographers, and multi-city itineraries",
+    img:WZIMG,
+    intro:"Wuzhen is easier to enjoy when the visit is not tied to a fixed group-tour timetable. A private vehicle can collect you in Shanghai, wait while you explore, take you to a Wuzhen hotel, or continue onward to Hangzhou as part of a multi-city route.",
+    highlights:["Flexible water-town visit","One-way or round-trip service","Overnight luggage support","Onward Hangzhou option"],
+    steps:[
+      {t:"Choose day trip or overnight",p:"Wuzhen is atmospheric in the evening, so some travelers prefer a one-way hotel transfer and continue the next day rather than returning to Shanghai the same night."},
+      {t:"Confirm the scenic zone or hotel",p:"Wuzhen has different entrances and accommodation areas. Send the exact hotel or scenic-zone details when requesting the route."},
+      {t:"Combine Wuzhen with Hangzhou",p:"A common multi-city sequence is Shanghai–Wuzhen–Hangzhou. We can quote one continuous private transport plan when dates and hotels are known."}
+    ],
+    faqs:[
+      {q:"How long is Shanghai to Wuzhen by private car?",a:"The journey is commonly around 2–2.5 hours each way, depending on traffic and the exact Shanghai and Wuzhen locations."},
+      {q:"Can the driver wait until after the evening lights?",a:"Yes. A longer day charter can be quoted with the planned visit duration and return time stated in advance."},
+      {q:"Can we continue from Wuzhen to Hangzhou the next day?",a:"Yes. Multi-day private transport can include Shanghai, Wuzhen, Hangzhou, Suzhou, and other confirmed stops."}
+    ]
+  },
+  {
+    slug:"shanghai-to-zhujiajiao", name:"Shanghai to Zhujiajiao Private Car",
+    cat:"Private Shanghai–Zhujiajiao transfer",
+    lead:"Private car and chauffeur from central Shanghai to Zhujiajiao Water Town for a flexible half-day or full-day visit with hotel pickup and return.",
+    pickup:"Shanghai hotel, residence, or office", dest:"Zhujiajiao Water Town",
+    time:"Usually 45–70 minutes each way, depending on pickup point and traffic",
+    best:"Half-day excursions, families, first-time visitors, and travelers with limited time",
+    img:WZIMG,
+    intro:"Zhujiajiao is one of the closest classic water towns to central Shanghai, making it suitable for a half-day or relaxed full-day private outing. A chauffeur handles the city-to-water-town transfer and returns at your agreed time.",
+    highlights:["Easy half-day option","Hotel pickup and return","Flexible visit duration","Family-friendly private vehicle"],
+    steps:[
+      {t:"Choose half day or full day",p:"A shorter visit works well for the canals, old lanes, and bridges. A longer service can add a meal, photo stops, or another Shanghai destination."},
+      {t:"Plan around weekends",p:"Traffic and visitor numbers can be higher on weekends and public holidays, so an earlier departure may be more comfortable."},
+      {t:"Keep the return flexible",p:"The chauffeur return can be planned around your expected visit time, with overtime treatment confirmed in the booking terms."}
+    ],
+    faqs:[
+      {q:"Is Zhujiajiao suitable for a half-day trip from Shanghai?",a:"Yes. Its relatively short driving distance makes Zhujiajiao a practical half-day private excursion from many central Shanghai districts."},
+      {q:"Does the private transfer include attraction or boat tickets?",a:"Transport pricing normally covers the confirmed chauffeur and vehicle service. Attraction, boat, meal, and guide costs are separate unless specifically included in your quote."},
+      {q:"Can we stop somewhere else in Shanghai after Zhujiajiao?",a:"Yes. Additional stops can be included when the route and service duration are agreed in advance."}
+    ]
+  },
+  {
+    slug:"shanghai-hotel-to-disneyland", name:"Shanghai Hotel to Disneyland Private Transfer",
+    cat:"City hotel to Disney Resort",
+    lead:"Private hotel-to-Shanghai-Disneyland transfer with family-friendly vehicles, child-seat requests, stroller planning, and flexible return pickup.",
+    pickup:"Shanghai city hotel or residence", dest:"Shanghai Disney Resort",
+    time:"Usually 35–60 minutes from central Shanghai, depending on traffic",
+    best:"Families, couples, resort day visitors, and travelers with young children",
+    img:IMG.chauffeur,
+    intro:"A private Disney transfer avoids early-morning public transport changes and gives the family direct door-to-door travel. Child seats, stroller space, and the evening return can all be planned before the day starts.",
+    highlights:["Hotel-door pickup","Child-seat requests","Stroller space planning","Late return option"],
+    steps:[
+      {t:"Leave early for park opening",p:"If you want to arrive near opening time, the pickup should account for weekday traffic and the final approach to the resort."},
+      {t:"Tell us about children and strollers",p:"Child-seat requirements and stroller size affect the vehicle plan. Send these details together with passenger count."},
+      {t:"Confirm the evening pickup plan",p:"A round trip can be coordinated around the evening show, dinner, or park closing, with the meeting method agreed in advance."}
+    ],
+    faqs:[
+      {q:"How long is downtown Shanghai to Disneyland by private car?",a:"Many central hotels are around 35–60 minutes from Shanghai Disney Resort, depending on traffic and the hotel district."},
+      {q:"Can we book only the return from Disney to our hotel?",a:"Yes. One-way and round-trip private transfers are available subject to vehicle availability."},
+      {q:"Can a larger MPV carry a stroller and several bags?",a:"Yes. Please provide the luggage and stroller details so the booking team can recommend a vehicle with enough usable storage."}
+    ]
+  },
+  {
+    slug:"shanghai-cruise-port-to-hotel", name:"Shanghai Cruise Port to Hotel Private Transfer",
+    cat:"Cruise terminal to Shanghai hotel",
+    lead:"Private transfer from a Shanghai cruise terminal to city hotels with terminal-specific pickup coordination, luggage planning, and vehicle options for couples, families, and groups.",
+    pickup:"Confirmed Shanghai cruise terminal", dest:"Shanghai city hotel or residence",
+    time:"Varies by terminal; Wusongkou to central Shanghai is often around 45–75 minutes",
+    best:"Cruise passengers, families, private groups, and travelers with multiple suitcases",
+    img:IMG.daytrip,
+    intro:"Cruise arrivals often involve more luggage and a less familiar pickup environment than an airport. We confirm the ship, terminal, disembarkation window, party size, and luggage before assigning the vehicle and meeting plan.",
+    highlights:["Terminal-specific coordination","Luggage-focused vehicle choice","Hotel-door drop-off","City-tour upgrade option"],
+    steps:[
+      {t:"Send the ship and terminal",p:"Shanghai has different passenger port facilities. The ship name, cruise line, terminal, and date are essential for accurate pickup instructions."},
+      {t:"Allow for disembarkation variability",p:"Immigration and ship clearance can affect the exact pickup time, so the booking should use a practical disembarkation window."},
+      {t:"Add a city tour if rooms are not ready",p:"When hotel check-in is later, the transfer can be extended into a private city charter while luggage stays with the confirmed vehicle."}
+    ],
+    faqs:[
+      {q:"Can the driver meet us at Wusongkou Cruise Terminal?",a:"Yes. Service can be arranged when the ship, terminal, date, disembarkation time, passengers, and luggage are provided in advance."},
+      {q:"What size vehicle should cruise passengers book?",a:"Cruise travelers often need more luggage space than the passenger count suggests. Please list all large suitcases and cabin bags so the right MPV, van, or minibus can be recommended."},
+      {q:"Can we tour Shanghai before checking into the hotel?",a:"Yes. A port pickup can be extended into a city charter with the final hotel drop-off included in the written itinerary."}
+    ]
+  },
+  {
+    slug:"shanghai-cruise-port-to-pvg", name:"Shanghai Cruise Port to Pudong Airport (PVG) Transfer",
+    cat:"Cruise terminal to PVG",
+    lead:"Private transfer from Shanghai cruise terminals to Pudong Airport (PVG) with luggage planning, flight-time coordination, and vehicles for couples, families, and groups.",
+    pickup:"Confirmed Shanghai cruise terminal", dest:"Shanghai Pudong International Airport (PVG)",
+    time:"Wusongkou to PVG is often around 75–110 minutes; allow additional flight buffer",
+    best:"Same-day cruise-to-flight connections and groups with heavy luggage",
+    img:IMG.airport,
+    intro:"A same-day cruise-to-flight connection needs enough time for ship clearance, disembarkation, city traffic, and airport check-in. A private vehicle keeps the entire group and luggage together from the terminal to Pudong Airport.",
+    highlights:["Port-to-airport direct route","Flight schedule planning","Large luggage capacity options","Private group transfer"],
+    steps:[
+      {t:"Share both ship and flight details",p:"The cruise terminal, planned disembarkation time, airline, flight number, and departure time are all needed to assess the route."},
+      {t:"Use a conservative connection buffer",p:"Ship clearance and Shanghai traffic are not fully predictable. Same-day international flights should have a comfortable margin rather than relying only on normal drive time."},
+      {t:"Match the vehicle to cruise luggage",p:"A van or minibus may be necessary even for a smaller party when everyone has large suitcases."}
+    ],
+    faqs:[
+      {q:"How long is Wusongkou Cruise Terminal to PVG?",a:"The drive is often around 75–110 minutes, but actual time can vary significantly with terminal exit conditions and Shanghai traffic."},
+      {q:"Can you advise whether our same-day flight is realistic?",a:"We can review the planned ship arrival, expected disembarkation, route, and flight time, but travelers should also follow the cruise line and airline's official timing requirements."},
+      {q:"Can you provide a minibus for a cruise group going to PVG?",a:"Yes. Group vehicles can be arranged according to passenger count, luggage, and confirmed availability."}
+    ]
+  },
+  {
+    slug:"shanghai-cruise-port-to-hongqiao", name:"Shanghai Cruise Port to Hongqiao Transfer",
+    cat:"Cruise terminal to SHA or Hongqiao Railway Station",
+    lead:"Private transfer from Shanghai cruise terminals to Hongqiao Airport (SHA) or Hongqiao Railway Station with luggage-friendly vehicles and connection planning.",
+    pickup:"Confirmed Shanghai cruise terminal", dest:"Hongqiao Airport (SHA) or Hongqiao Railway Station",
+    time:"Wusongkou to Hongqiao is often around 45–75 minutes, depending on traffic",
+    best:"Cruise passengers connecting to domestic flights or high-speed trains",
+    img:IMG.business,
+    intro:"Hongqiao is a major airport and high-speed rail hub. A private cruise transfer is convenient for travelers carrying several suitcases because the group can move directly from the terminal to the correct airport or railway drop-off without transport changes.",
+    highlights:["Port-to-airport or rail transfer","Luggage stays together","Connection schedule support","MPV, van, and minibus options"],
+    steps:[
+      {t:"Specify flight or train",p:"The Hongqiao Airport terminal or Railway Station entrance depends on the onward journey, so include the flight or train number and departure time."},
+      {t:"Allow time to exit the port",p:"Ship clearance, immigration, baggage collection, and vehicle access can affect the actual departure time from the cruise terminal."},
+      {t:"Keep the group in one vehicle",p:"A properly sized van or minibus can simplify a rail or airport connection for families and cruise groups with large luggage loads."}
+    ],
+    faqs:[
+      {q:"Can you take cruise passengers directly to Hongqiao Railway Station?",a:"Yes. Please provide the cruise details and departing train number, time, passengers, and luggage for the route quote."},
+      {q:"Can the same transfer go to Hongqiao Airport instead?",a:"Yes. Airport and railway destinations are both available, but the correct destination should be confirmed before dispatch."},
+      {q:"How long should we allow for a cruise-to-train connection?",a:"Allow more than the normal driving time because ship clearance and baggage collection can vary. The exact buffer should also respect the railway boarding deadline."}
+    ]
+  },
+  {
+    slug:"pvg-to-suzhou", name:"Pudong Airport (PVG) to Suzhou Private Transfer",
+    cat:"Direct airport-to-Suzhou chauffeur",
+    lead:"Direct private transfer from Shanghai Pudong Airport (PVG) to Suzhou hotels, industrial parks, residences, and attractions with flight monitoring and luggage planning.",
+    pickup:"Shanghai Pudong International Airport (PVG)", dest:"Suzhou hotel, residence, industrial park, or attraction",
+    time:"Usually 2–2.5 hours, depending on traffic and Suzhou destination",
+    best:"International arrivals, business travelers, families, and groups with luggage",
+    img:SZIMG,
+    intro:"Traveling directly from Pudong Airport to Suzhou can be easier than transferring through the city or railway network when you arrive late, carry heavy luggage, travel with children, or need to reach a factory, office, or hotel door-to-door.",
+    highlights:["Flight monitoring","Direct intercity transfer","No railway change","Business and hotel destinations"],
+    steps:[
+      {t:"Send the Suzhou address",p:"Suzhou covers a wide area, so the exact hotel, industrial park, office, or attraction is needed for accurate timing and quotation."},
+      {t:"Plan for a longer post-flight ride",p:"A premium MPV or larger vehicle can provide more space and comfort for the intercity journey after an international flight."},
+      {t:"Add a return or onward route",p:"The itinerary can include Suzhou-to-Shanghai, Suzhou-to-Wuzhen, or Suzhou-to-Hangzhou service on another date."}
+    ],
+    faqs:[
+      {q:"Can I go directly from PVG to Suzhou by private car?",a:"Yes. We can arrange a door-to-door private transfer from Pudong Airport to a confirmed Suzhou address."},
+      {q:"How long is Pudong Airport to Suzhou by car?",a:"The road journey is commonly around 2–2.5 hours, depending on traffic and the final Suzhou destination."},
+      {q:"Is this suitable for a business factory visit?",a:"Yes. Airport pickup can continue directly to an industrial park, office, factory, or hotel, with additional stops quoted when needed."}
+    ]
+  },
+  {
+    slug:"pvg-to-hangzhou", name:"Pudong Airport (PVG) to Hangzhou Private Transfer",
+    cat:"Direct airport-to-Hangzhou chauffeur",
+    lead:"Private transfer from Shanghai Pudong Airport (PVG) to Hangzhou hotels, West Lake, offices, and residences with flight tracking and luggage-friendly vehicle options.",
+    pickup:"Shanghai Pudong International Airport (PVG)", dest:"Hangzhou hotel, residence, West Lake area, or business district",
+    time:"Usually 3–3.5 hours, depending on traffic and destination",
+    best:"International arrivals, families, executives, and travelers with heavy luggage",
+    img:HZIMG,
+    intro:"A direct PVG-to-Hangzhou transfer removes the need to travel into Shanghai, change to rail, and move luggage again. It is especially practical for late arrivals, families, business guests, and travelers who want door-to-door service after a long flight.",
+    highlights:["Flight tracking","Direct airport-to-hotel route","Luggage-friendly vehicles","Late-arrival practicality"],
+    steps:[
+      {t:"Use the exact Hangzhou destination",p:"West Lake hotels, eastern business districts, and outlying resorts can have different drive times, so the final address matters."},
+      {t:"Choose comfort for the longer ride",p:"Premium MPVs are a popular choice for three to six guests who want more cabin space on the longer intercity journey."},
+      {t:"Plan the next leg",p:"A later Hangzhou-to-Wuzhen, Hangzhou-to-Shanghai, or Hangzhou-to-Suzhou transfer can be combined into a multi-day itinerary."}
+    ],
+    faqs:[
+      {q:"Can you drive directly from Pudong Airport to Hangzhou?",a:"Yes. Direct private transfers are available to confirmed Hangzhou hotels, residences, and business destinations."},
+      {q:"How long is PVG to Hangzhou by private car?",a:"The drive is commonly around 3–3.5 hours, depending on traffic and the exact Hangzhou destination."},
+      {q:"Can the driver meet us after a late international arrival?",a:"Late services can be arranged subject to confirmed vehicle availability and booking terms. Please provide the flight number and expected arrival time."}
+    ]
+  }
+];
+
+var whyChoose = [
+  {t:"Safe & Reliable",d:"Your safety is our top priority.",i:"shield"},
+  {t:"Punctual & Professional",d:"On time, every time.",i:"clock"},
+  {t:"International-Friendly",d:"English support and easy communication.",i:"globe"},
+  {t:"Transparent Pricing",d:"Clear quotes with no hidden fees.",i:"tag"},
+  {t:"Local Expertise",d:"The best routes across Shanghai and beyond.",i:"map"}
+];
+
+var testimonials = [
+  {q:"The airport pickup was seamless. Our driver tracked the flight and was waiting for us even after a long delay.",n:"Elaine C.",from:"Singapore",tag:"Airport Transfer",init:"EC"},
+  {q:"Our Shanghai chauffeur was punctual, polite and very helpful. The vehicle was spotless and comfortable.",n:"Mina K.",from:"South Korea",tag:"Private Chauffeur",init:"MK"},
+  {q:"A wonderful day trip to Suzhou. Everything was well arranged and the driver knew the best pickup points.",n:"Anne V.",from:"Netherlands",tag:"Suzhou Day Trip",init:"AV"}
+];
+
+var faqs = [
+  {q:"How long is the free waiting time for airport pickup?",a:"For standard airport pickups, we include up to 60 minutes of waiting time after your flight lands. Please share your flight number so we can monitor arrival updates. Your booking confirmation shows the exact included waiting time and any additional waiting charges."},
+  {q:"Can you provide a child or baby seat?",a:"Yes, child and baby seats can be arranged on request, subject to availability. Please tell us the child's age, height, and weight when booking so we can prepare the most suitable option."},
+  {q:"Can I plan my own itinerary?",a:"Absolutely. Your transfer can follow your preferred schedule, including hotel stops, business meetings, shopping, dining, and day trips. Send us your draft itinerary and we will help plan a practical route and recommend the right vehicle."},
+  {q:"Do you offer a meet-and-greet sign at the airport?",a:"Yes. Your chauffeur can meet you in the arrivals area with a name sign, assist with luggage, and escort you to the vehicle. Let us know the name you would like displayed when confirming your airport pickup."},
+  {q:"What happens if my flight is delayed?",a:"When you provide a flight number, we monitor the arrival time and adjust the pickup where possible. If the delay is significant, our team will contact you to reconfirm the arrangement and any waiting-time details."},
+  {q:"How do I choose the right vehicle?",a:"Tell us your passenger count, luggage quantity, and travel purpose. We will recommend an executive sedan, luxury MPV, or group vehicle with enough space for a comfortable journey."},
+  {q:"Do you provide English-speaking chauffeurs?",a:"Yes. Every chauffeur assigned can communicate in English, and our English-speaking support team remains available for route changes, meeting points, and detailed coordination."},
+  {q:"Can I pay by Visa, Mastercard, or PayPal?",a:"Yes. We accept Visa, Mastercard, and PayPal, together with supported China payment methods. The available payment route and any processing details are confirmed in writing before you book."},
+  {q:"Are tolls, parking, and airport fees included?",a:"Your quote clearly states what is included. Route tolls, parking, airport pickup fees, overtime, and additional waiting are confirmed before the ride so there are no surprises."},
+  {q:"Can I cancel or change my booking?",a:"Please contact us as early as possible. Cancellation and change terms depend on the vehicle, route, and notice period; the applicable policy is shown in your confirmation."},
+  {q:"How far in advance should I book?",a:"For airport transfers, booking 24 hours ahead is recommended. For luxury vehicles, holidays, exhibitions, or multi-day trips, earlier booking gives you the best selection. Last-minute requests are welcome subject to availability."},
+  {q:"Can I book a round trip or multiple stops?",a:"Yes. We arrange return transfers, hotel changes, business meetings, dinner reservations, and multi-stop city or regional itineraries. Share the timetable and we will build the route around it."},
+  {q:"Do you operate from both Shanghai airports?",a:"Yes. We provide pickup and drop-off service at Shanghai Pudong International Airport (PVG) and Shanghai Hongqiao International Airport (SHA), as well as railway stations, cruise terminals, hotels, and residences."},
+  {q:"Where will I meet the chauffeur at the airport?",a:"The meeting point and chauffeur contact details are sent before the ride. For meet and greet, your chauffeur waits in the arrivals area with your requested name sign after you collect luggage."},
+  {q:"Do you provide water or Wi-Fi in the vehicle?",a:"Complimentary water can be arranged for most private rides. Vehicle amenities vary by model; tell us your preferences when booking and we will confirm what can be prepared."},
+  {q:"Can you arrange transfers to Suzhou, Hangzhou, Wuzhen, or Disney?",a:"Yes. Private transfers and day charters are available for Shanghai Disney Resort, Suzhou, Hangzhou, Wuzhen, Zhujiajiao, and other destinations across the Yangtze River Delta."},
+  {q:"Are your vehicles smoke-free and regularly cleaned?",a:"Yes. We prepare clean, smoke-free vehicles before each ride and review vehicle condition, air conditioning, and luggage space before dispatch."},
+  {q:"Can you support corporate accounts and executive travel?",a:"Yes. We support business visitors, delegations, roadshows, and recurring company travel with central coordination, multi-vehicle planning, and clear trip records."},
+  {q:"What information do you need for an accurate quote?",a:"Please send the date, pickup time, flight number if relevant, route, passenger count, luggage count, preferred vehicle, and any special requests such as child seats or a name sign."},
+  {q:"Is my ride private?",a:"Always. Every booking is a private service for your party only. We do not combine you with other passengers or add unplanned stops."},
+  {q:"What if I cannot find my chauffeur?",a:"Message us on WhatsApp or use the chauffeur contact details in your confirmation. Our support team will coordinate immediately and keep you updated until you meet."}
+];
+
+/* ============ Icons ============ */
+var ICONS = {
+  shield:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg>',
+  clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>',
+  globe:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18-3-4-3-14.5 0-18z"/></svg>',
+  tag:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7l11 11-7 7L3 10z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>',
+  map:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>',
+  arrow:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',
+  check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5 11-11"/></svg>',
+  star:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>',
+  pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>'
+};
+
+/* ============ Render helpers ============ */
+function el(html){var d=document.createElement('div');d.innerHTML=html.trim();return d.firstChild;}
+function stars(){
+  return '<span class="testi-stars">'+ICONS.star.repeat(5)+'</span>';
+}
+
+/* ============ Home render ============ */
+function renderHome(){
+  // hero route
+  document.getElementById('heroRoute').innerHTML = destinations.map(function(d,i){
+    var gap = i<destinations.length-1 ? ' flex:1;min-width:0;' : '';
+    return '<div class="hero-route-item" style="'+gap+'"><span class="dot"></span><span><small>'+d.n+'</small></span></div>';
+  }).join('');
+  // services
+  document.getElementById('homeServices').innerHTML = services.map(function(s){
+    return '<article class="card"><a href="#service/'+s.slug+'" data-nav="service" class="card-img" style="display:block;">'+
+      '<span class="tag">'+s.name+'</span><img src="'+s.img+'" alt="'+s.name+'" loading="lazy"></a>'+
+      '<div class="card-body"><h3>'+s.name+'</h3><p>'+s.short+'</p>'+
+      '<a class="card-link" href="#service/'+s.slug+'" data-nav="service">Learn more '+ICONS.arrow+'</a></div></article>';
+  }).join('');
+  // fleet preview
+  var fleetCats = [
+    {n:"Sedan",r:"1 – 3",b:"2"},
+    {n:"MPV",r:"1 – 6",b:"5"},
+    {n:"Luxury Van",r:"1 – 7",b:"7"},
+    {n:"Minibus",r:"8 – 15",b:"15"}
+  ];
+  document.getElementById('homeFleet').innerHTML = fleetCats.map(function(f){
+    return '<div class="card" style="background:rgba(255,255,255,.05);border-color:var(--line-dark);">'+
+      '<div class="card-body" style="text-align:center;padding:30px 20px;">'+
+      '<div style="width:56px;height:56px;margin:0 auto 16px;border-radius:50%;background:rgba(200,164,92,.15);color:var(--gold);display:flex;align-items:center;justify-content:center;">'+ICONS.shield+'</div>'+
+      '<h3 style="color:#fff;">'+f.n+'</h3>'+
+      '<p style="margin-bottom:6px;">'+f.r+' passengers</p>'+
+      '<p style="color:rgba(255,255,255,.65);font-size:13px;">'+f.b+' bags</p>'+
+      '</div></div>';
+  }).join('');
+  // destinations
+  document.getElementById('homeDest').innerHTML = destinations.map(function(d){
+    return '<a class="dest-chip" href="#destination/'+d.slug+'" data-nav="destination"><span class="pin">'+ICONS.pin+'</span><span><span>'+d.n+'</span><small>'+d.d+'</small></span></a>';
+  }).join('');
+  // guides
+  document.getElementById('homeGuides').innerHTML = guides.map(function(g){
+    return '<article class="card"><a href="#guide/'+g.slug+'" data-nav="guide" class="card-img" style="display:block;">'+
+      '<span class="tag">'+g.cat+'</span><img src="'+g.img+'" alt="'+g.n+'" loading="lazy"></a>'+
+      '<div class="card-body"><h3>'+g.n+'</h3><p>'+g.d+'</p>'+
+      '<a class="card-link" href="#guide/'+g.slug+'" data-nav="guide">Read guide '+ICONS.arrow+'</a></div></article>';
+  }).join('');
+  // routes
+  document.getElementById('homeRoutes').innerHTML = routes.map(function(r){
+    return '<a class="route-item" href="#route/'+r.slug+'" data-nav="route">'+
+      '<span class="route-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 6-7M18 9h3v3"/></svg></span>'+
+      '<span><b>'+r.from+' → '+r.to+'</b><span>'+r.d+'</span></span></a>';
+  }).join('');
+  // why
+  document.getElementById('homeWhy').innerHTML = whyChoose.map(function(w){
+    return '<div class="why-item"><span class="w-icon">'+ICONS[w.i]+'</span><b>'+w.t+'</b><p>'+w.d+'</p></div>';
+  }).join('');
+  // testimonials
+  document.getElementById('homeTesti').innerHTML = testimonials.map(function(t){
+    return '<div class="testi-card"><div class="testi-tag">'+t.tag+'</div>'+stars()+
+      '<blockquote>"'+t.q+'"</blockquote>'+
+      '<div class="testi-person"><span class="testi-avatar">'+t.init+'</span><span><b>'+t.n+'</b><span>'+t.from+'</span></span></div></div>';
+  }).join('');
+  // faq preview (first 7)
+  renderFaqs(document.getElementById('homeFaq'), faqs.slice(0,7));
+}
+
+/* ============ FAQ ============ */
+function renderFaqs(container, list){
+  container.innerHTML = list.map(function(f,i){
+    return '<div class="faq-item"><button class="faq-q" type="button" data-idx="'+i+'"><span>'+f.q+'</span><span class="plus">+</span></button>'+
+      '<div class="faq-a"><div class="faq-a-inner">'+f.a+'</div></div></div>';
+  }).join('');
+  var items = container.querySelectorAll('.faq-item');
+  items.forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    q.addEventListener('click', function(){
+      var open = item.classList.contains('open');
+      items.forEach(function(o){o.classList.remove('open');var a=o.querySelector('.faq-a');a.style.maxHeight='0';});
+      if(!open){item.classList.add('open');var ans=item.querySelector('.faq-a');ans.style.maxHeight=ans.scrollHeight+'px';}
+    });
+  });
+}
+
+/* ============ Services page ============ */
+function renderServicesPage(){
+  var cats = ['Transfer Services','Tour & Charter','Event Support'];
+  var grouped = {};
+  grouped['Transfer Services'] = [{name:"Airport Transfer",desc:"Pudong and Hongqiao airport pickups with flight tracking included.",tags:["Flight tracking","Meet and greet","Luggage assistance"],slug:"airport-transfer"},
+    {name:"Disney Shuttle",desc:"Private Shanghai Disney Resort rides with flexible pickup after closing.",tags:["Wait until park closes","Child seats","Snacks and water"]}];
+  grouped['Tour & Charter'] = [{name:"City Tour",desc:"Explore Shanghai highlights at your own pace with a private chauffeur.",tags:["Custom route","Local driver","Photo stops"],slug:"city-charter"},
+    {name:"Day Trips",desc:"Private day trips to Suzhou, Hangzhou, Wuzhen, Zhujiajiao, and beyond.",tags:["Regional routes","Door-to-door pickup","Comfort breaks"],slug:"day-trips"},
+    {name:"Tickets & Dining",desc:"Help with attractions, restaurants, and local plans alongside private transport.",tags:["Dining suggestions","Ticket guidance","Local support"]}];
+  grouped['Event Support'] = [{name:"Business Charter",desc:"Professional service for corporate clients, roadshows, meetings, and delegations.",tags:["Executive vehicles","Multi-stop routes","Receipt support"],slug:"business-travel"},
+    {name:"Wedding & Events",desc:"Premium cars and coordinated transport for weddings, banquets, and VIP events.",tags:["VIP arrival","Guest shuttle","Decor ready"]},
+    {name:"Translation Support",desc:"English-friendly support with real-time assistance when language gets difficult.",tags:["English support","AI translation help","Driver coordination"]}];
+  var html = '';
+  cats.forEach(function(c){
+    html += '<div style="grid-column:1/-1;margin-top:14px;"><span class="eyebrow">'+c+'</span></div>';
+    grouped[c].forEach(function(s){
+      var link = s.slug ? '<a class="card-link" href="#service/'+s.slug+'" data-nav="service">View Service '+ICONS.arrow+'</a>'
+        : '<a class="card-link" href="#contact" data-nav="contact">Book now '+ICONS.arrow+'</a>';
+      html += '<article class="card"><div class="card-body"><h3>'+s.name+'</h3><p>'+s.desc+'</p>'+
+        '<div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">'+s.tags.map(function(t){return '<span style="background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--navy-800);">'+t+'</span>';}).join('')+'</div>'+
+        link+'</div></article>';
+    });
+  });
+  document.getElementById('servicesGrid').innerHTML = html;
+
+  // detail cards for main six
+  document.getElementById('servicesDetail').innerHTML = services.map(function(s){
+    return '<article class="card"><a href="#service/'+s.slug+'" data-nav="service" class="card-img" style="display:block;"><span class="tag">'+s.name+'</span><img src="'+s.img+'" alt="'+s.name+'" loading="lazy"></a>'+
+      '<div class="card-body"><h3>'+s.name+'</h3><p>'+s.short+'</p>'+
+      '<a class="card-link" href="#service/'+s.slug+'" data-nav="service">View service '+ICONS.arrow+'</a></div></article>';
+  }).join('');
+}
+
+/* ============ Service detail ============ */
+function renderServiceDetail(slug){
+  var s = services.filter(function(x){return x.slug===slug;})[0];
+  if(!s){location.hash='#services';return;}
+  document.getElementById('sdHeroImg').src = s.img;
+  document.getElementById('sdHeroImg').alt = s.name;
+  document.getElementById('sdCrumb').textContent = s.name;
+  document.getElementById('sdTitle').textContent = s.name;
+  document.getElementById('sdLead').textContent = s.lead;
+  document.getElementById('sdAboutTitle').textContent = s.aboutTitle;
+  document.getElementById('sdAboutText').textContent = s.about;
+  document.getElementById('sdChecks').innerHTML = s.checks.map(function(c){return '<li>'+ICONS.check+'<span>'+c+'</span></li>';}).join('');
+  document.getElementById('sdIdeal').innerHTML = s.ideal.map(function(t){return '<span>'+t+'</span>';}).join('');
+  document.getElementById('sdHighlights').innerHTML = s.highlights.map(function(h){
+    return '<div class="sd-hl"><span class="n">'+ICONS.map+'</span><div><h4>'+h.h+'</h4><p>'+h.p+'</p></div></div>';
+  }).join('');
+}
+
+/* ============ Destinations ============ */
+function renderDestinationsIndex(){
+  document.getElementById('destGrid').innerHTML = destinationsDetail.map(function(d){
+    return '<article class="card"><a href="#destination/'+d.slug+'" data-nav="destination" class="card-img" style="display:block;">'+
+      '<span class="tag">'+d.name+'</span><img src="'+d.img+'" alt="'+d.name+'" loading="lazy"></a>'+
+      '<div class="card-body"><h3>'+d.name+'</h3><p>'+d.lead+'</p>'+
+      '<a class="card-link" href="#destination/'+d.slug+'" data-nav="destination">Explore '+d.name+' '+ICONS.arrow+'</a></div></article>';
+  }).join('');
+}
+
+function renderDestinationDetail(slug){
+  var d = destinationsDetail.filter(function(x){return x.slug===slug;})[0];
+  if(!d){location.hash='#destinations';return;}
+  document.getElementById('ddHeroImg').src = d.img;
+  document.getElementById('ddHeroImg').alt = d.name;
+  document.getElementById('ddCrumb').textContent = d.name;
+  document.getElementById('ddTitle').textContent = d.title;
+  document.getElementById('ddLead').textContent = d.lead;
+  document.getElementById('ddAboutTitle').textContent = d.aboutTitle;
+  document.getElementById('ddAboutText').textContent = d.about;
+  document.getElementById('ddChecks').innerHTML = d.checks.map(function(c){return '<li>'+ICONS.check+'<span>'+c+'</span></li>';}).join('');
+  document.getElementById('ddIdeal').innerHTML = d.ideal.map(function(t){return '<span>'+t+'</span>';}).join('');
+  document.getElementById('ddHighlights').innerHTML = d.highlights.map(function(h){
+    return '<div class="sd-hl"><span class="n">'+ICONS.map+'</span><div><h4>'+h.h+'</h4><p>'+h.p+'</p></div></div>';
+  }).join('');
+}
+
+/* ============ Fleet ============ */
+var fleetFilter = 'All';
+function renderFleet(){
+  var cats = ['All','Luxury MPV','Business','Sedan','Minibus'];
+  document.getElementById('fleetFilters').innerHTML = cats.map(function(c){
+    return '<button class="filter-chip'+(c===fleetFilter?' active':'')+'" data-cat="'+c+'">'+c+'</button>';
+  }).join('');
+  document.getElementById('fleetFilters').querySelectorAll('.filter-chip').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      fleetFilter = btn.getAttribute('data-cat');
+      renderFleet();
+    });
+  });
+  var list = fleetFilter==='All' ? fleet : fleet.filter(function(v){return v.cat===fleetFilter;});
+  document.getElementById('fleetGrid').innerHTML = list.map(function(v){
+    return '<article class="card fleet-card"><a href="#contact" data-nav="contact" class="card-img" style="display:block;"><span class="tag">'+v.tag+'</span><img src="'+v.img+'" alt="'+v.name+'" loading="lazy"></a>'+
+      '<div class="card-body"><h3>'+v.name+'</h3><p>'+v.desc+'</p>'+
+      '<div class="fleet-spec">'+
+        '<div class="spec"><b>'+v.seats+'</b><span>passenger seats</span></div>'+
+        '<div class="spec"><b>'+v.bags+'</b><span>luggage</span></div>'+
+      '</div>'+
+      '<div class="fleet-price"><span><span class="from">From</span><div class="amt">US$'+v.price+'<span> / transfer</span></div></span>'+
+      '<a class="btn btn-outline" href="#contact" data-nav="contact" style="padding:9px 16px;font-size:13px;">Quote</a></div>'+
+      '</div></article>';
+  }).join('');
+}
+
+/* ============ Guides page ============ */
+function renderGuides(){
+  document.getElementById('guidesGrid').innerHTML = guides.map(function(g){
+    return '<article class="card"><a href="#guide/'+g.slug+'" data-nav="guide" class="card-img" style="display:block;">'+
+      '<span class="tag">'+g.cat+'</span><img src="'+g.img+'" alt="'+g.n+'" loading="lazy"></a>'+
+      '<div class="card-body"><h3>'+g.n+'</h3><p>'+g.d+'</p>'+
+      '<a class="card-link" href="#guide/'+g.slug+'" data-nav="guide">Read guide '+ICONS.arrow+'</a></div></article>';
+  }).join('');
+}
+
+/* ============ Guide detail ============ */
+function renderGuideDetail(slug){
+  var g = guidesDetail.filter(function(x){return x.slug===slug;})[0];
+  if(!g){location.hash='#guides';return;}
+  document.getElementById('gdHeroImg').src = g.img;
+  document.getElementById('gdHeroImg').alt = g.name;
+  document.getElementById('gdCrumb').textContent = g.name;
+  document.getElementById('gdTitle').textContent = g.name;
+  document.getElementById('gdLead').textContent = g.lead;
+  document.getElementById('gdIntro').textContent = g.intro;
+  document.getElementById('gdHighlights').innerHTML = g.highlights.map(function(c){return '<li>'+ICONS.check+'<span>'+c+'</span></li>';}).join('');
+  document.getElementById('gdSteps').innerHTML = g.steps.map(function(s,i){
+    return '<div class="guide-step"><span class="n">'+(i<9?'0':'')+(i+1)+'</span><div><h4>'+s.t+'</h4><p>'+s.p+'</p></div></div>';
+  }).join('');
+  document.getElementById('gdRoutes').innerHTML = g.routes.map(function(r){
+    return '<span style="background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:13.5px;font-weight:600;color:var(--navy-800);">'+r+'</span>';
+  }).join('');
+  renderFaqs(document.getElementById('gdFaqs'), g.faqs);
+}
+
+/* ============ Routes page ============ */
+function renderRoutesIndex(){
+  document.getElementById('routesGrid').innerHTML = routesDetail.map(function(r){
+    return '<a class="route-card" href="#route/'+r.slug+'" data-nav="route" style="display:block;text-decoration:none;">'+
+      '<span class="rc-top"><span class="tag">'+r.cat+'</span></span>'+
+      '<h3>'+r.from.split('(')[0].trim()+' → '+r.dest.split(',')[0].split(' or ')[0].trim()+'</h3>'+
+      '<p style="color:var(--muted);font-size:14.5px;line-height:1.6;">'+r.best+'</p>'+
+      '<span class="rc-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> '+r.time+'</span>'+
+      '<span class="rc-more">View route details '+ICONS.arrow+'</span></a>';
+  }).join('');
+}
+
+/* ============ Route detail ============ */
+function renderRouteDetail(slug){
+  var r = routesDetail.filter(function(x){return x.slug===slug;})[0];
+  if(!r){location.hash='#routes';return;}
+  document.getElementById('rtHeroImg').src = r.img;
+  document.getElementById('rtHeroImg').alt = r.name;
+  document.getElementById('rtCrumb').textContent = r.name;
+  document.getElementById('rtTitle').textContent = r.name;
+  document.getElementById('rtLead').textContent = r.lead;
+  document.getElementById('rtFacts').innerHTML =
+    '<div class="route-fact"><b>Pickup</b><span>'+r.pickup+'</span></div>'+
+    '<div class="route-fact"><b>Destination</b><span>'+r.dest+'</span></div>'+
+    '<div class="route-fact"><b>Typical travel time</b><span>'+r.time+'</span></div>'+
+    '<div class="route-fact"><b>Best for</b><span>'+r.best+'</span></div>';
+  document.getElementById('rtIntro').textContent = r.intro;
+  document.getElementById('rtHighlights').innerHTML = r.highlights.map(function(c){return '<li>'+ICONS.check+'<span>'+c+'</span></li>';}).join('');
+  document.getElementById('rtSteps').innerHTML = r.steps.map(function(s,i){
+    return '<div class="guide-step"><span class="n">'+(i<9?'0':'')+(i+1)+'</span><div><h4>'+s.t+'</h4><p>'+s.p+'</p></div></div>';
+  }).join('');
+  renderFaqs(document.getElementById('rtFaqs'), r.faqs);
+}
+
+/* ============ Policies ============ */
+var policies = {
+  privacy:{
+    crumb:"Legal information", title:"Privacy Policy",
+    lead:"We respect your privacy. This policy explains how we handle the information you share when requesting, booking, or using our private chauffeur services.",
+    updated:"Last updated: July 29, 2026",
+    sections:[
+      {h:"Information we collect",p:"We collect information needed to respond to your request and arrange your journey. This may include your name, email address, phone or WhatsApp number, travel dates, flight details, pickup and destination information, passenger count, luggage requirements, and service preferences. When you contact us, we may retain the content of your message and our booking correspondence. We do not ask for or store full payment card details through this website."},
+      {h:"How we use information",p:"We use your information to prepare quotations, confirm and operate bookings, monitor flights when requested, communicate service updates, provide customer support, and improve our service quality. We may also use limited website usage data to maintain site performance and understand how visitors find our services. You can control cookies through your browser settings."},
+      {h:"Cookies and website analytics",p:"We use essential website technologies and may use analytics tools to understand site performance and visitor journeys. These tools can use cookies or similar technologies. You can manage or delete cookies through your browser settings; restricting cookies may affect some website features."},
+      {h:"When information is shared",p:"We share only the information necessary to deliver your trip with assigned chauffeurs, vehicle operators, and service partners. Some providers may process information outside your country of residence when this is necessary to provide communication, booking, or analytics services. We may disclose information when required by applicable law or to protect the safety, rights, or property of our passengers and team. We do not sell personal information."},
+      {h:"Data retention and security",p:"We retain booking and enquiry records only for as long as reasonably necessary for service delivery, accounting, dispute handling, and legal obligations. Marketing contact preferences are retained until you opt out or we no longer need them. We use reasonable administrative and technical safeguards, but no online transmission or storage system can be guaranteed completely secure."},
+      {h:"Your choices",p:"You may ask us to access, correct, or delete personal information we hold about you, subject to legal and operational requirements. You can opt out of non-essential marketing contact at any time. To make a request, use the contact form and include enough information for us to identify your booking or enquiry."},
+      {h:"Updates to this policy",p:"We may update this policy when our services or legal requirements change. The latest version will always be posted on this page with its update date."}
+    ]
+  },
+  terms:{
+    crumb:"Booking information", title:"Terms of Service",
+    lead:"These terms explain how our quotations, reservations, and private chauffeur services are provided. Please review them before confirming your booking.",
+    updated:"Last updated: July 29, 2026",
+    sections:[
+      {h:"Bookings and confirmations",p:"A quotation is not a confirmed reservation. Your booking is confirmed only after we provide written confirmation and any agreed payment or deposit has been received. Please check all dates, pickup locations, flight details, passenger numbers, and vehicle requirements in the confirmation."},
+      {h:"Prices and payments",p:"Quoted prices include only the services stated in your confirmation. Parking, tolls, overtime, additional waiting time, itinerary changes, attraction tickets, accommodation, and third-party charges may be additional where applicable. Any deposit, payment method, and due date will be shown in your quotation or confirmation."},
+      {h:"Passenger responsibilities",p:"Passengers must provide accurate booking information, arrive on time, comply with applicable laws, and treat vehicles and chauffeurs respectfully. For safety, seat belts must be worn where available. Smoking, illegal items, and conduct that creates a safety risk are not permitted. We may charge for material cleaning or damage caused by passengers and may refuse service where behavior creates a safety risk."},
+      {h:"Vehicle, chauffeur, and capacity",p:"We aim to provide the confirmed vehicle category. If an operational issue requires a change, we may provide a comparable or higher-category vehicle and, where practical, notify you in advance. Passenger and luggage details must be accurate so we can recommend a suitable vehicle. Excess luggage, passengers, or equipment may require a larger vehicle or additional vehicle at an additional cost."},
+      {h:"Child seats and special requests",p:"Child and baby seats can be requested in advance, subject to availability. Please provide each child's age, height, and weight so we can prepare an appropriate option. The accompanying adult remains responsible for confirming that the seat and restraint are suitable for the child before travel."},
+      {h:"Airport pickups and waiting time",p:"For airport services, please provide a valid flight number and notify us promptly of any changes. We will make reasonable efforts to monitor flight arrival times when flight details are supplied. Included waiting time, meet-and-greet arrangements, and any additional charges are stated in the booking confirmation."},
+      {h:"Changes and cancellations",p:"Changes are subject to vehicle availability and may affect the quoted price. Cancellations and refunds are handled under our Cancellation & Refund Policy, unless your written quotation states different terms."},
+      {h:"Itinerary, inclusions, and local partners",p:"Additional stops, time, distance, passengers, or route changes may affect the price and must be confirmed where possible before travel. Attraction tickets, meals, accommodation, licensed tour guides, and other third-party services are excluded unless specifically stated in writing. Chauffeurs are transportation professionals and are not licensed guides unless a guide is expressly included. Some services may be delivered by carefully selected local vehicle operators; only the details necessary to operate your trip will be shared with them."},
+      {h:"Service limitations",p:"We make reasonable efforts to provide punctual, safe, and professional service. However, we are not responsible for delays or service changes caused by circumstances beyond reasonable control, including severe weather, road closures, traffic incidents, government restrictions, flight changes, or force majeure events."}
+    ]
+  },
+  cancellation:{
+    crumb:"Booking changes", title:"Cancellation & Refund Policy",
+    lead:"We understand travel plans can change. Please notify us as early as possible so we can help adjust your arrangements or confirm any applicable refund.",
+    updated:"Last updated: July 29, 2026",
+    sections:[
+      {h:"How to cancel or change a booking",p:"Send your request by email or WhatsApp using the contact details on this website. A cancellation or change is effective only at the time we confirm receipt in writing, not when a message is first sent. Include your name, service date, and booking reference where available."},
+      {h:"Standard cancellation schedule",p:"More than 48 hours before scheduled pickup: eligible for a full refund of prepaid service charges. 24 to 48 hours before scheduled pickup: eligible for a 50% refund of prepaid service charges. Less than 24 hours before scheduled pickup: prepaid service charges are non-refundable. No-show, refusal of service, or cancellation after vehicle dispatch: non-refundable."},
+      {h:"Special services and third-party costs",p:"Bookings involving Toyota Alphard, Volvo EM90, Mercedes-Benz S-Class, peak dates, exhibitions, long-distance travel, or multi-day charters may have different cancellation terms. Guides, tickets, accommodation, and other third-party services can also carry separate rules. Non-refundable third-party costs, bank charges, and expenses already incurred are not refundable unless a provider refunds them to us. Your written quotation takes priority where it states different terms."},
+      {h:"Itinerary changes and delays",p:"We will make reasonable efforts to accommodate changes, subject to vehicle and chauffeur availability. Changes that add distance, time, locations, passengers, or vehicle requirements may result in additional charges. Flight delays are handled according to the waiting-time terms in your booking confirmation."},
+      {h:"Refund timing",p:"Approved refunds are returned to the original payment method where possible. Processing time may vary by payment provider and bank; please allow 5 to 10 business days after our written approval. Any payment processor or bank fees that cannot be recovered may be deducted where permitted."},
+      {h:"Events outside either party's control",p:"If a service cannot proceed because of a force majeure event, we will work with you to reschedule or provide the available refund after unavoidable costs. This may include severe weather, official restrictions, major transport disruption, or other events beyond reasonable control."}
+    ]
+  }
+};
+function renderPolicy(slug){
+  var p = policies[slug];
+  if(!p){location.hash='#home';return;}
+  document.getElementById('plCrumb').textContent = p.crumb;
+  document.getElementById('plTitle').textContent = p.title;
+  document.getElementById('plLead').textContent = p.lead;
+  document.getElementById('plBody').innerHTML =
+    '<p style="color:var(--muted);font-size:13px;letter-spacing:.5px;margin-bottom:34px;">'+p.updated+'</p>' +
+    p.sections.map(function(s){
+      return '<div class="gf-block"><h3>'+s.h+'</h3><p>'+s.p+'</p></div>';
+    }).join('') +
+    '<div class="gf-block"><h3>Questions about this policy?</h3><p>Contact our team before confirming your journey. We are available 24/7 for booking support.</p>'+
+    '<a class="btn btn-navy" href="#contact" data-nav="contact" style="margin-top:14px;">Contact Us</a></div>';
+}
+
+/* ============ Router ============ */
+var navMap = {home:'home',services:'services',fleet:'fleet',destinations:'destinations',routes:'routes',guides:'guides',faq:'faq',contact:'contact'};
+
+function router(){
+  var raw = location.hash.replace(/^#\/?/, '') || 'home';
+  var parts = raw.split('/');
+  var view = parts[0] || 'home';
+  var views = document.querySelectorAll('.view');
+  views.forEach(function(v){v.classList.remove('active');});
+
+  if(view === 'service' && parts[1]){
+    var sd = document.getElementById('view-service');
+    sd.classList.add('active');
+    renderServiceDetail(parts[1]);
+    document.title = 'Shanghai Private Transfer — ' + (services.filter(function(s){return s.slug===parts[1];})[0]||{name:''}).name;
+  } else if(view === 'destination' && parts[1]){
+    var dd = document.getElementById('view-destination');
+    dd.classList.add('active');
+    renderDestinationDetail(parts[1]);
+    document.title = 'Shanghai Private Transfer — ' + (destinationsDetail.filter(function(d){return d.slug===parts[1];})[0]||{name:''}).name;
+  } else if(view === 'guide' && parts[1]){
+    var gd = document.getElementById('view-guide');
+    gd.classList.add('active');
+    renderGuideDetail(parts[1]);
+    document.title = 'Shanghai Private Transfer — ' + (guidesDetail.filter(function(g){return g.slug===parts[1];})[0]||{name:''}).name;
+  } else if(view === 'policy' && parts[1]){
+    var pv = document.getElementById('view-policy');
+    pv.classList.add('active');
+    renderPolicy(parts[1]);
+    document.title = 'Shanghai Private Transfer — ' + (policies[parts[1]]||{title:''}).title;
+  } else if(view === 'route' && parts[1]){
+    var rv = document.getElementById('view-route');
+    rv.classList.add('active');
+    renderRouteDetail(parts[1]);
+    document.title = 'Shanghai Private Transfer — ' + (routesDetail.filter(function(r){return r.slug===parts[1];})[0]||{name:''}).name;
+  } else {
+    var target = document.getElementById('view-' + view);
+    if(!target){ view='home'; target=document.getElementById('view-home'); }
+    target.classList.add('active');
+    if(view==='home'){renderHome();}
+    if(view==='services'){renderServicesPage();}
+    if(view==='fleet'){renderFleet();}
+    if(view==='destinations'){renderDestinationsIndex();}
+    if(view==='routes'){renderRoutesIndex();}
+    if(view==='guides'){renderGuides();}
+    if(view==='faq'){renderFaqs(document.getElementById('faqList'), faqs);}
+    document.title = 'Shanghai Private Transfer — ' + (view==='home' ? 'Airport Transfer & Private Chauffeur' : view.charAt(0).toUpperCase()+view.slice(1));
+  }
+  // nav active state
+  var activeNav = (view==='service' || view==='destination' || view==='guide') ? 'services' : (navMap[view]||'home');
+  if(view==='destination'){ activeNav = 'destinations'; }
+  if(view==='guide'){ activeNav = 'guides'; }
+  if(view==='route'){ activeNav = 'routes'; }
+  document.querySelectorAll('[data-nav]').forEach(function(a){
+    a.classList.toggle('active', a.getAttribute('data-nav')===activeNav);
+  });
+  // close mobile nav
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('navToggle').classList.remove('open');
+  window.scrollTo(0,0);
+}
+
+window.addEventListener('hashchange', router);
+
+/* ============ Mobile nav ============ */
+document.getElementById('navToggle').addEventListener('click', function(){
+  var mn = document.getElementById('mobileNav');
+  mn.classList.toggle('open');
+  this.classList.toggle('open');
+});
+
+/* ============ Header scroll ============ */
+window.addEventListener('scroll', function(){
+  var h = document.getElementById('siteHeader');
+  if(window.scrollY > 30){ h.style.background = 'rgba(8,20,32,.95)'; }
+  else { h.style.background = 'rgba(8,20,32,.82)'; }
+});
+
+/* ============ Quote form ============ */
+document.getElementById('quoteForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  function v(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; }
+  var msg = [
+    'New transfer request — ' + new Date().toISOString().slice(0,10),
+    '',
+    'Name: ' + v('f-name'),
+    'Email / WhatsApp: ' + v('f-email'),
+    'Date: ' + v('f-date'),
+    'Pickup time: ' + v('f-time'),
+    'Route: ' + v('f-route'),
+    'Flight: ' + (v('f-flight') || '—'),
+    'Passengers: ' + v('f-pax'),
+    'Luggage: ' + v('f-bags'),
+    'Vehicle: ' + (v('f-vehicle') || 'Let us recommend'),
+    'Notes: ' + (v('f-notes') || '—')
+  ].join('\n');
+  window.open('https://wa.me/8619117273912?text=' + encodeURIComponent(msg), '_blank');
+  document.getElementById('formSuccess').style.display = 'block';
+  this.querySelector('.btn').style.display = 'none';
+  this.querySelector('.form-note').style.display = 'none';
+});
+
+/* ============ Year ============ */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ============ Init ============ */
+router();
+</script>
+</body>
+</html>
