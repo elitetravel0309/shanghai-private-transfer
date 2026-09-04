@@ -1197,17 +1197,17 @@ main{min-height:70vh;}
                 <div class="bk-vehicle-card active" data-vehicle="economy">
                   <div class="bk-veh-title">Economy Sedan</div>
                   <div class="bk-veh-desc">1&ndash;3 pax &middot; 2&ndash;3 bags</div>
-                  <div class="bk-veh-price" id="bk-price-economy">$65</div>
+                  <div class="bk-veh-price" id="bk-price-economy">¥440</div>
                 </div>
                 <div class="bk-vehicle-card" data-vehicle="business">
                   <div class="bk-veh-title">Business MPV</div>
                   <div class="bk-veh-desc">4&ndash;6 pax &middot; 4&ndash;6 bags</div>
-                  <div class="bk-veh-price" id="bk-price-business">$90</div>
+                  <div class="bk-veh-price" id="bk-price-business">¥610</div>
                 </div>
                 <div class="bk-vehicle-card" data-vehicle="luxury">
                   <div class="bk-veh-title">Luxury Van</div>
                   <div class="bk-veh-desc">7&ndash;9 pax &middot; 6&ndash;8 bags</div>
-                  <div class="bk-veh-price" id="bk-price-luxury">$130</div>
+                  <div class="bk-veh-price" id="bk-price-luxury">¥880</div>
                 </div>
               </div>
             </div>
@@ -1225,9 +1225,9 @@ main{min-height:70vh;}
             <div class="bk-price-summary" id="bk-price-summary">
               <div class="bk-ps-row"><span>Service</span><span id="bk-ps-service">Airport Transfer &middot; PVG</span></div>
               <div class="bk-ps-row"><span>Vehicle</span><span id="bk-ps-vehicle">Economy Sedan</span></div>
-              <div class="bk-ps-row bk-ps-total"><span>Total</span><span id="bk-ps-total">$65.00</span></div>
-              <div class="bk-ps-row bk-ps-deposit"><span>Deposit due today (30%, min $50)</span><span id="bk-ps-deposit">$50.00</span></div>
-              <div class="bk-ps-row bk-ps-muted"><span>Balance on service day</span><span id="bk-ps-balance">$15.00</span></div>
+              <div class="bk-ps-row bk-ps-total"><span>Total</span><span id="bk-ps-total">¥440.00</span></div>
+              <div class="bk-ps-row bk-ps-deposit"><span>Deposit due today (30%, min ¥350)</span><span id="bk-ps-deposit">¥350.00</span></div>
+              <div class="bk-ps-row bk-ps-muted"><span>Balance on service day</span><span id="bk-ps-balance">¥90.00</span></div>
             </div>
             <!-- PayPal -->
             <div id="paypal-button-container" style="margin-top:16px;max-width:320px;"></div>
@@ -2603,11 +2603,13 @@ var CONTACT_WORKER_URL = 'https://shanghai-private-transfer-contact.travel-ed8.w
 /* ============ Smart Booking Engine ============ */
 (function initSmartBooking(){
   var PRICES = {
-    airport: { PVG: { economy: 65, business: 90, luxury: 130 }, SHA: { economy: 45, business: 65, luxury: 95 } },
-    charter: { '4h': { economy: 85, business: 110, luxury: 155 }, '8h': { economy: 140, business: 180, luxury: 250 }, '10h': { economy: 170, business: 220, luxury: 300 } }
+    airport: { PVG: { economy: 440, business: 610, luxury: 880 }, SHA: { economy: 300, business: 440, luxury: 640 } },
+    charter: { '4h': { economy: 570, business: 740, luxury: 1050 }, '8h': { economy: 950, business: 1220, luxury: 1690 }, '10h': { economy: 1150, business: 1490, luxury: 2030 } }
   };
   var VEHICLE_LABELS = { economy: 'Economy Sedan', business: 'Business MPV', luxury: 'Luxury Van' };
-  var DEPOSIT_RATE = 0.30, MIN_DEPOSIT = 50;
+  var USD_CNY_RATE = 6.75;
+  var DEPOSIT_RATE = 0.30, MIN_DEPOSIT = 350;
+  function cnyToUsd(cny){ return (parseFloat(cny)/USD_CNY_RATE).toFixed(2); }
   var currentService = 'airport';
   var currentVehicle = 'economy';
   var paypalReady = false;
@@ -2635,7 +2637,7 @@ var CONTACT_WORKER_URL = 'https://shanghai-private-transfer-contact.travel-ed8.w
         var p = currentService === 'airport'
           ? (PRICES.airport[($('bk-airport')||{}).value||'PVG'][v] || 65)
           : (PRICES.charter[($('bk-duration')||{}).value||'8h'][v] || 140);
-        priceEl.textContent = '$'+p;
+        priceEl.textContent = '¥'+p;
       }
     }
     // Update summary
@@ -2647,9 +2649,9 @@ var CONTACT_WORKER_URL = 'https://shanghai-private-transfer-contact.travel-ed8.w
       : 'Full-Day Charter · '+(($('bk-duration')||{}).value||'8h');
     if($('bk-ps-service')) $('bk-ps-service').textContent = svcLabel;
     if($('bk-ps-vehicle')) $('bk-ps-vehicle').textContent = VEHICLE_LABELS[currentVehicle];
-    if($('bk-ps-total')) $('bk-ps-total').textContent = '$'+fmt(total);
-    if($('bk-ps-deposit')) $('bk-ps-deposit').textContent = '$'+fmt(deposit);
-    if($('bk-ps-balance')) $('bk-ps-balance').textContent = '$'+fmt(balance);
+    if($('bk-ps-total')) $('bk-ps-total').textContent = '¥'+fmt(total)+'  (≈ $'+cnyToUsd(total)+')';
+    if($('bk-ps-deposit')) $('bk-ps-deposit').textContent = '¥'+fmt(deposit)+'  (≈ $'+cnyToUsd(deposit)+')';
+    if($('bk-ps-balance')) $('bk-ps-balance').textContent = '¥'+fmt(balance)+'  (≈ $'+cnyToUsd(balance)+')';
   }
 
   function buildBookingPayload(){
@@ -2735,6 +2737,7 @@ var CONTACT_WORKER_URL = 'https://shanghai-private-transfer-contact.travel-ed8.w
     .then(function(r){ return r.json(); })
     .then(function(cfg){
       if(cfg && cfg.prices){ PRICES = cfg.prices; }
+      if(cfg && cfg.rate){ USD_CNY_RATE = cfg.rate; }
       if(cfg && cfg.depositRate){ DEPOSIT_RATE = cfg.depositRate; }
       if(cfg && cfg.minDeposit){ MIN_DEPOSIT = cfg.minDeposit; }
       updatePrices();
