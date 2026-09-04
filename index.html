@@ -89,14 +89,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .brand-mark svg{width:24px;height:24px;}
 .brand-name{font-family:var(--font-display);font-size:20px;letter-spacing:.6px;line-height:1.1;}
 .brand-sub{font-size:10.5px;letter-spacing:2.2px;text-transform:uppercase;color:var(--gold-soft);opacity:.9;}
-.main-nav{display:flex;align-items:center;gap:30px;}
-.main-nav a{color:rgba(255,255,255,.82);font-size:15px;font-weight:500;transition:color .2s;position:relative;padding:6px 0;}
+.main-nav{display:flex;align-items:center;gap:22px;}
+.main-nav a{color:rgba(255,255,255,.82);font-size:14.5px;font-weight:500;transition:color .2s;position:relative;padding:6px 0;white-space:nowrap;}
 .main-nav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold);transition:width .25s ease;}
 .main-nav a:hover,.main-nav a.active{color:#fff;}
 .main-nav a:hover::after,.main-nav a.active::after{width:100%;}
-.header-cta{display:flex;align-items:center;gap:14px;}
-.header-phone{display:flex;align-items:center;gap:8px;color:var(--gold-soft);font-weight:600;font-size:14.5px;}
-.header-phone svg{width:16px;height:16px;color:var(--gold);}
+.header-cta{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+.header-phone{display:flex;align-items:center;gap:8px;color:var(--gold-soft);font-weight:600;font-size:14px;white-space:nowrap;}
+.header-phone svg{width:16px;height:16px;color:var(--gold);flex:none;}
 .nav-toggle{display:none;flex-direction:column;gap:5px;padding:8px;}
 .nav-toggle span{width:24px;height:2px;background:#fff;border-radius:2px;transition:.25s;}
 .mobile-nav{
@@ -368,9 +368,13 @@ main{min-height:70vh;}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,164,92,.18);background:#fff;}
 .field textarea{min-height:110px;resize:vertical;}
 .form-note{font-size:12.5px;color:var(--muted);margin-top:16px;}
-.form-success{display:none;margin-top:18px;background:#E9F3EA;border:1px solid #BFDCC4;color:#1F5A2C;border-radius:10px;padding:16px;font-size:14.5px;}
 .contact-channels{display:grid;gap:16px;}
 .channel{display:flex;gap:18px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-card);transition:.22s;}
+.pay-channel{background:linear-gradient(135deg,#0B1B2E 0%,#10263E 100%);border:1px solid #183451;color:#fff;}
+.channel.pay-channel b{color:#EAD9B4;}
+.channel.pay-channel p{color:rgba(255,255,255,.78);}
+.pay-channel .pay-hint{color:rgba(255,255,255,.45) !important;}
+.pay-channel .c-icon{color:var(--gold);}
 .channel:hover{transform:translateY(-3px);box-shadow:var(--shadow-card-hover);}
 .channel .c-icon{flex:none;width:50px;height:50px;border-radius:13px;background:var(--cream);color:var(--gold-strong);display:flex;align-items:center;justify-content:center;}
 .channel .c-icon svg{width:24px;height:24px;}
@@ -402,6 +406,12 @@ main{min-height:70vh;}
 .page-hero > .wrap{position:relative;z-index:2;}
 
 /* ============ Responsive ============ */
+@media(max-width:1180px){
+  .header-phone span{display:none;}
+  .main-nav{gap:18px;}
+  .main-nav a{font-size:14px;}
+  .brand-sub{display:none !important;}
+}
 @media(max-width:1080px){
   .features{grid-template-columns:repeat(3,1fr);}
   .feature{border-bottom:1px solid rgba(255,255,255,.07);}
@@ -428,6 +438,11 @@ main{min-height:70vh;}
   .footer-grid{grid-template-columns:1fr;}
   .hero{min-height:88vh;}
 }
+@keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.form-success{margin-top:18px;background:#E9F3EA;border:1px solid #BFDCC4;color:#1F5A2C;border-radius:10px;padding:18px 20px;font-size:14.5px;line-height:1.6;}
+.form-success b{color:#1F5A2C;}
+#formErrorContent{color:#7A2E2E;}
+#formErrorContent b{color:#7A2E2E;}
 </style>
 </head>
 <body>
@@ -1125,12 +1140,41 @@ main{min-height:70vh;}
             </button>
             <p class="form-note">We reply with a clear written quote within 30 minutes. No hidden fees.</p>
             <div class="form-success" id="formSuccess">
-              <b>Almost done — WhatsApp opened with your request pre-filled.</b><br>
-              Tap <b>Send</b> in WhatsApp to deliver your enquiry to our booking desk, and we will reply with a written quote. If WhatsApp did not open, message us at +86 191 1727 3912.
+              <div id="formSuccessContent">
+                <b>Request sent successfully!</b><br>
+                Thank you — your enquiry has been delivered to our booking desk by email. We will reply with a clear written quote within 30 minutes.
+                <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--line);">
+                  <span style="font-size:13px;color:var(--muted);">Need an instant response?</span>
+                  <a href="https://wa.me/8619117273912" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;margin-left:8px;font-weight:600;color:var(--gold-strong);">
+                    <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.2c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.1.2-.2.4-.3.5l-.5.6c-.2.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.6-.1l1-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.1z"/></svg>
+                    Message us on WhatsApp
+                  </a>
+                </div>
+              </div>
+              <div id="formErrorContent" style="display:none;">
+                <b>Something went wrong sending your request.</b><br>
+                Please try again, or reach us instantly on WhatsApp and we will help you right away.
+                <div style="margin-top:14px;">
+                  <a href="https://wa.me/8619117273912" target="_blank" rel="noopener" class="btn btn-gold" style="display:inline-flex;">
+                    <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.2c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.1.2-.2.4-.3.5l-.5.6c-.2.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.6-.1l1-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.1z"/></svg>
+                    WhatsApp: +86 191 1727 3912
+                  </a>
+                </div>
+              </div>
             </div>
           </form>
         </div>
         <div class="contact-channels">
+          <div class="channel pay-channel">
+            <span class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.4"/><path d="M6 6v12"/></svg></span>
+            <div style="flex:1;">
+              <b>Secure your booking with a deposit</b>
+              <p>Pay a <b>$50 deposit</b> via PayPal to lock your transfer. Balance due on the day.</p>
+              <div id="paypal-button-container" style="margin-top:10px;max-width:300px;"></div>
+              <div id="pay-result" style="margin-top:10px;font-size:13.5px;"></div>
+              <p class="pay-hint" id="pay-hint" style="margin-top:8px;color:var(--muted);font-size:12.5px;">PayPal deposits are fully refundable if you cancel 24h+ before pickup.</p>
+            </div>
+          </div>
           <div class="channel">
             <span class="c-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.2c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.1.2-.2.4-.3.5l-.5.6c-.2.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.6-.1l1-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.1z"/></svg></span>
             <div>
@@ -2481,28 +2525,112 @@ window.addEventListener('scroll', function(){
 });
 
 /* ============ Quote form ============ */
-document.getElementById('quoteForm').addEventListener('submit', function(e){
+var CONTACT_WORKER_URL = 'https://shanghai-private-transfer-contact.travel-ed8.workers.dev';
+
+document.getElementById('quoteForm').addEventListener('submit', async function(e){
   e.preventDefault();
+  var form = this;
+  var btn = form.querySelector('.btn[type="submit"]');
+  var originalBtnHtml = btn.innerHTML;
   function v(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; }
-  var msg = [
-    'New transfer request — ' + new Date().toISOString().slice(0,10),
-    '',
-    'Name: ' + v('f-name'),
-    'Email / WhatsApp: ' + v('f-email'),
-    'Date: ' + v('f-date'),
-    'Pickup time: ' + v('f-time'),
-    'Route: ' + v('f-route'),
-    'Flight: ' + (v('f-flight') || '—'),
-    'Passengers: ' + v('f-pax'),
-    'Luggage: ' + v('f-bags'),
-    'Vehicle: ' + (v('f-vehicle') || 'Let us recommend'),
-    'Notes: ' + (v('f-notes') || '—')
-  ].join('\n');
-  window.open('https://wa.me/8619117273912?text=' + encodeURIComponent(msg), '_blank');
-  document.getElementById('formSuccess').style.display = 'block';
-  this.querySelector('.btn').style.display = 'none';
-  this.querySelector('.form-note').style.display = 'none';
+
+  var payload = {
+    name: v('f-name'),
+    email: v('f-email'),
+    date: v('f-date'),
+    time: v('f-time'),
+    route: v('f-route'),
+    flight: v('f-flight'),
+    pax: v('f-pax'),
+    bags: v('f-bags'),
+    vehicle: v('f-vehicle'),
+    notes: v('f-notes')
+  };
+
+  // Show loading state
+  btn.disabled = true;
+  btn.style.opacity = '0.7';
+  btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;animation:spin 1s linear infinite;"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Sending…';
+
+  try {
+    var resp = await fetch(CONTACT_WORKER_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    var result = await resp.json().catch(function(){ return {}; });
+
+    if (resp.ok && result.success) {
+      // Success — show email-sent confirmation
+      document.getElementById('formSuccessContent').style.display = 'block';
+      document.getElementById('formErrorContent').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+      form.querySelector('.form-note').style.display = 'none';
+      btn.style.display = 'none';
+    } else {
+      throw new Error(result.error || 'Failed to send');
+    }
+  } catch (err) {
+    console.error('Form submission error:', err);
+    // Show error state with WhatsApp fallback
+    document.getElementById('formSuccessContent').style.display = 'none';
+    document.getElementById('formErrorContent').style.display = 'block';
+    document.getElementById('formSuccess').style.display = 'block';
+    form.querySelector('.form-note').style.display = 'none';
+    btn.style.display = 'none';
+  }
 });
+
+/* ============ PayPal deposit ============ */
+(function initPayPal(){
+  var container = document.getElementById('paypal-button-container');
+  if (!container) return;
+  fetch(CONTACT_WORKER_URL + '/paypal/config')
+    .then(function(r){ return r.json(); })
+    .then(function(cfg){
+      if (!cfg || !cfg.clientId) throw new Error('PayPal not configured');
+      var s = document.createElement('script');
+      s.src = 'https://www.paypal.com/sdk/js?client-id=' + encodeURIComponent(cfg.clientId) + '&currency=' + encodeURIComponent(cfg.currency) + '&intent=capture';
+      s.onload = function(){
+        paypal.Buttons({
+          style: { layout: 'vertical', color: 'gold', shape: 'rect', label: 'paypal' },
+          createOrder: function(){
+            return fetch(CONTACT_WORKER_URL + '/paypal/create-order', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                name: (document.getElementById('f-name') || {}).value || 'Guest',
+                route: (document.getElementById('f-route') || {}).value || ''
+              })
+            }).then(function(r){ return r.json(); }).then(function(res){
+              if (res.id) return res.id;
+              throw new Error(res.error || 'Failed to create order');
+            });
+          },
+          onApprove: function(data){
+            return fetch(CONTACT_WORKER_URL + '/paypal/capture-order', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ orderId: data.orderID })
+            }).then(function(r){ return r.json(); }).then(function(res){
+              if (res.success) {
+                var box = document.getElementById('pay-result');
+                box.innerHTML = '<b style="color:#1F5A2C;">✅ Payment successful — your deposit is confirmed!</b><br><span style="color:var(--muted);">Our team will finalize your booking shortly. Reference: ' + (res.captureId || '').slice(0, 8) + '</span>';
+                container.style.display = 'none';
+                document.getElementById('pay-hint').style.display = 'none';
+              } else {
+                throw new Error(res.error || 'Capture failed');
+              }
+            });
+          },
+          onError: function(err){ console.error('PayPal error:', err); }
+        }).render('#paypal-button-container');
+      };
+      s.onerror = function(){ console.error('PayPal SDK failed to load'); };
+      document.head.appendChild(s);
+    })
+    .catch(function(e){ console.log('PayPal disabled:', e.message); });
+})();
 
 /* ============ Year ============ */
 document.getElementById('year').textContent = new Date().getFullYear();
