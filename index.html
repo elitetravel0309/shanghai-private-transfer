@@ -375,6 +375,31 @@ main{min-height:70vh;}
 .channel.pay-channel p{color:rgba(255,255,255,.78);}
 .pay-channel .pay-hint{color:rgba(255,255,255,.45) !important;}
 .pay-channel .c-icon{color:var(--gold);}
+/* ============ Smart Booking Widget ============ */
+.bk-step{margin-bottom:22px;}
+.bk-step-label{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-strong);font-weight:700;margin-bottom:10px;}
+.bk-service-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.bk-service-card{border:2px solid var(--line);border-radius:12px;padding:16px 14px;cursor:pointer;transition:.2s;text-align:center;background:var(--paper);}
+.bk-service-card:hover{border-color:var(--gold);transform:translateY(-2px);}
+.bk-service-card.active{border-color:var(--gold);background:linear-gradient(135deg,#FFF9EE,#FFFDF7);box-shadow:0 4px 16px rgba(200,164,92,.18);}
+.bk-svc-icon{font-size:28px;margin-bottom:6px;}
+.bk-svc-title{font-size:14.5px;font-weight:700;color:var(--navy-900);}
+.bk-svc-desc{font-size:12px;color:var(--muted);margin-top:3px;}
+.bk-vehicle-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}
+.bk-vehicle-card{border:2px solid var(--line);border-radius:12px;padding:14px 10px;cursor:pointer;transition:.2s;text-align:center;background:var(--paper);}
+.bk-vehicle-card:hover{border-color:var(--gold);}
+.bk-vehicle-card.active{border-color:var(--gold);background:linear-gradient(135deg,#FFF9EE,#FFFDF7);box-shadow:0 4px 16px rgba(200,164,92,.18);}
+.bk-veh-title{font-size:13px;font-weight:700;color:var(--navy-900);}
+.bk-veh-desc{font-size:11px;color:var(--muted);margin-top:3px;}
+.bk-veh-price{font-size:16px;font-weight:800;color:var(--gold-strong);margin-top:6px;}
+.bk-price-summary{background:linear-gradient(135deg,#0B1B2E,#10263E);border-radius:12px;padding:18px 20px;margin-top:18px;border:1px solid #183451;}
+.bk-ps-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;font-size:13.5px;color:rgba(255,255,255,.75);}
+.bk-ps-total{border-top:1px solid rgba(255,255,255,.12);margin-top:4px;padding-top:10px;font-size:15px;font-weight:700;color:#fff;}
+.bk-ps-deposit{color:#EAD9B4;font-weight:700;font-size:14px;}
+.bk-ps-muted{color:rgba(255,255,255,.45);font-size:12.5px;}
+.bk-success{text-align:center;padding:24px 16px;background:#F0FAF2;border:1px solid #B8E0C0;border-radius:12px;margin-top:16px;}
+.bk-order-num{display:inline-block;background:var(--navy-900);color:#EAD9B4;font-family:Consolas,monospace;font-size:18px;font-weight:700;padding:8px 20px;border-radius:8px;margin-top:8px;letter-spacing:1px;}
+@media(max-width:600px){.bk-service-cards{grid-template-columns:1fr;}.bk-vehicle-cards{grid-template-columns:1fr;}}
 .channel:hover{transform:translateY(-3px);box-shadow:var(--shadow-card-hover);}
 .channel .c-icon{flex:none;width:50px;height:50px;border-radius:13px;background:var(--cream);color:var(--gold-strong);display:flex;align-items:center;justify-content:center;}
 .channel .c-icon svg{width:24px;height:24px;}
@@ -1111,70 +1136,118 @@ main{min-height:70vh;}
     <div class="wrap">
       <div class="contact-grid">
         <div class="contact-form">
-          <h3>Private Booking Desk</h3>
-          <p>Share your journey through the secure form. Our team will reply with a clear written proposal.</p>
-          <form id="quoteForm">
-            <div class="form-grid">
-              <div class="field"><label for="f-name">Full name</label><input id="f-name" type="text" required placeholder="Your name"></div>
-              <div class="field"><label for="f-email">Email / WhatsApp</label><input id="f-email" type="text" required placeholder="Email or WhatsApp number"></div>
-              <div class="field"><label for="f-date">Date</label><input id="f-date" type="date"></div>
-              <div class="field"><label for="f-time">Pickup time</label><input id="f-time" type="time"></div>
-              <div class="field"><label for="f-route">Route</label><input id="f-route" type="text" placeholder="e.g. PVG → The Bund hotel"></div>
-              <div class="field"><label for="f-flight">Flight number (optional)</label><input id="f-flight" type="text" placeholder="e.g. MU588"></div>
-              <div class="field"><label for="f-pax">Passengers</label><input id="f-pax" type="number" min="1" placeholder="e.g. 3"></div>
-              <div class="field"><label for="f-bags">Luggage</label><input id="f-bags" type="number" min="0" placeholder="e.g. 3 suitcases"></div>
-              <div class="field full"><label for="f-vehicle">Preferred vehicle</label>
-                <select id="f-vehicle">
-                  <option value="">Let us recommend</option>
-                  <option>Sedan (1–3 pax)</option>
-                  <option>Luxury MPV (1–6 pax)</option>
-                  <option>Luxury Van (1–7 pax)</option>
-                  <option>Minibus (8–15 pax)</option>
-                </select>
-              </div>
-              <div class="field full"><label for="f-notes">Special requests</label><textarea id="f-notes" placeholder="Child seats, name sign, multi-stop, or anything else we should know…"></textarea></div>
-            </div>
-            <button class="btn btn-gold" type="submit" style="width:100%;justify-content:center;margin-top:22px;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              Submit Request
-            </button>
-            <p class="form-note">We reply with a clear written quote within 30 minutes. No hidden fees.</p>
-            <div class="form-success" id="formSuccess">
-              <div id="formSuccessContent">
-                <b>Request sent successfully!</b><br>
-                Thank you — your enquiry has been delivered to our booking desk by email. We will reply with a clear written quote within 30 minutes.
-                <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--line);">
-                  <span style="font-size:13px;color:var(--muted);">Need an instant response?</span>
-                  <a href="https://wa.me/8619117273912" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;margin-left:8px;font-weight:600;color:var(--gold-strong);">
-                    <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.2c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.1.2-.2.4-.3.5l-.5.6c-.2.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.6-.1l1-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.1z"/></svg>
-                    Message us on WhatsApp
-                  </a>
+          <h3>Book Your Transfer</h3>
+          <p>Select your service, fill in the details, and secure your booking with a deposit.</p>
+          <div id="booking-widget">
+            <!-- Step 1: Service Type -->
+            <div class="bk-step">
+              <div class="bk-step-label">Step 1 · Choose Service</div>
+              <div class="bk-service-cards">
+                <div class="bk-service-card active" data-service="airport">
+                  <div class="bk-svc-icon">&#9992;&#65039;</div>
+                  <div class="bk-svc-title">Airport Transfer</div>
+                  <div class="bk-svc-desc">PVG / SHA &harr; city hotel</div>
                 </div>
-              </div>
-              <div id="formErrorContent" style="display:none;">
-                <b>Something went wrong sending your request.</b><br>
-                Please try again, or reach us instantly on WhatsApp and we will help you right away.
-                <div style="margin-top:14px;">
-                  <a href="https://wa.me/8619117273912" target="_blank" rel="noopener" class="btn btn-gold" style="display:inline-flex;">
-                    <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.2c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.1.2-.2.4-.3.5l-.5.6c-.2.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.6-.1l1-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.1z"/></svg>
-                    WhatsApp: +86 191 1727 3912
-                  </a>
+                <div class="bk-service-card" data-service="charter">
+                  <div class="bk-svc-icon">&#128663;</div>
+                  <div class="bk-svc-title">Full-Day Charter</div>
+                  <div class="bk-svc-desc">4h / 8h / 10h with driver</div>
                 </div>
               </div>
             </div>
-          </form>
-        </div>
-        <div class="contact-channels">
-          <div class="channel pay-channel">
-            <span class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.4"/><path d="M6 6v12"/></svg></span>
-            <div style="flex:1;">
-              <b>Secure your booking with a deposit</b>
-              <p>Pay a <b>$50 deposit</b> via PayPal to lock your transfer. Balance due on the day.</p>
-              <div id="paypal-button-container" style="margin-top:10px;max-width:300px;"></div>
-              <div id="pay-result" style="margin-top:10px;font-size:13.5px;"></div>
-              <p class="pay-hint" id="pay-hint" style="margin-top:8px;color:var(--muted);font-size:12.5px;">PayPal deposits are fully refundable if you cancel 24h+ before pickup.</p>
+            <!-- Step 2: Trip Details -->
+            <div class="bk-step">
+              <div class="bk-step-label">Step 2 · Trip Details</div>
+              <!-- Airport fields -->
+              <div id="bk-airport-fields">
+                <div class="form-grid">
+                  <div class="field"><label>Direction</label>
+                    <select id="bk-direction"><option value="arrival">Arrival (pickup at airport)</option><option value="departure">Departure (dropoff at airport)</option></select>
+                  </div>
+                  <div class="field"><label>Airport</label>
+                    <select id="bk-airport"><option value="PVG">PVG &mdash; Pudong Intl</option><option value="SHA">SHA &mdash; Hongqiao</option></select>
+                  </div>
+                  <div class="field"><label>Flight number</label><input id="bk-flight" type="text" placeholder="e.g. MU588"></div>
+                  <div class="field"><label>Date</label><input id="bk-date" type="date"></div>
+                  <div class="field"><label>Arrival / Departure time</label><input id="bk-time" type="time"></div>
+                  <div class="field full"><label>Hotel / Pickup address</label><input id="bk-hotel" type="text" placeholder="e.g. The Peninsula Shanghai, The Bund"></div>
+                </div>
+              </div>
+              <!-- Charter fields -->
+              <div id="bk-charter-fields" style="display:none;">
+                <div class="form-grid">
+                  <div class="field"><label>Date</label><input id="bk-cdate" type="date"></div>
+                  <div class="field"><label>Duration</label>
+                    <select id="bk-duration"><option value="4h">4 hours (half day)</option><option value="8h" selected>8 hours (full day)</option><option value="10h">10 hours (extended)</option></select>
+                  </div>
+                  <div class="field full"><label>Pickup address</label><input id="bk-pickup" type="text" placeholder="e.g. Hotel name or full address"></div>
+                  <div class="field full"><label>Destinations / Places to visit</label><input id="bk-dest" type="text" placeholder="e.g. The Bund, Yu Garden, Shanghai Tower"></div>
+                </div>
+              </div>
+              <!-- Common -->
+              <div class="form-grid" style="margin-top:14px;">
+                <div class="field"><label>Passengers</label><input id="bk-pax" type="number" min="1" value="2"></div>
+                <div class="field"><label>Luggage</label><input id="bk-bags" type="number" min="0" value="2"></div>
+              </div>
+            </div>
+            <!-- Step 3: Vehicle -->
+            <div class="bk-step">
+              <div class="bk-step-label">Step 3 &middot; Choose Vehicle</div>
+              <div class="bk-vehicle-cards">
+                <div class="bk-vehicle-card active" data-vehicle="economy">
+                  <div class="bk-veh-title">Economy Sedan</div>
+                  <div class="bk-veh-desc">1&ndash;3 pax &middot; 2&ndash;3 bags</div>
+                  <div class="bk-veh-price" id="bk-price-economy">$65</div>
+                </div>
+                <div class="bk-vehicle-card" data-vehicle="business">
+                  <div class="bk-veh-title">Business MPV</div>
+                  <div class="bk-veh-desc">4&ndash;6 pax &middot; 4&ndash;6 bags</div>
+                  <div class="bk-veh-price" id="bk-price-business">$90</div>
+                </div>
+                <div class="bk-vehicle-card" data-vehicle="luxury">
+                  <div class="bk-veh-title">Luxury Van</div>
+                  <div class="bk-veh-desc">7&ndash;9 pax &middot; 6&ndash;8 bags</div>
+                  <div class="bk-veh-price" id="bk-price-luxury">$130</div>
+                </div>
+              </div>
+            </div>
+            <!-- Step 4: Contact -->
+            <div class="bk-step">
+              <div class="bk-step-label">Step 4 &middot; Your Contact</div>
+              <div class="form-grid">
+                <div class="field"><label>Full name *</label><input id="bk-name" type="text" required placeholder="Your name"></div>
+                <div class="field"><label>Email *</label><input id="bk-email" type="email" required placeholder="you@example.com"></div>
+                <div class="field"><label>WhatsApp (optional)</label><input id="bk-whatsapp" type="text" placeholder="+1 ..."></div>
+                <div class="field"><label>Special requests (optional)</label><input id="bk-notes" type="text" placeholder="Child seat, name sign, etc."></div>
+              </div>
+            </div>
+            <!-- Price Summary -->
+            <div class="bk-price-summary" id="bk-price-summary">
+              <div class="bk-ps-row"><span>Service</span><span id="bk-ps-service">Airport Transfer &middot; PVG</span></div>
+              <div class="bk-ps-row"><span>Vehicle</span><span id="bk-ps-vehicle">Economy Sedan</span></div>
+              <div class="bk-ps-row bk-ps-total"><span>Total</span><span id="bk-ps-total">$65.00</span></div>
+              <div class="bk-ps-row bk-ps-deposit"><span>Deposit due today (30%, min $50)</span><span id="bk-ps-deposit">$50.00</span></div>
+              <div class="bk-ps-row bk-ps-muted"><span>Balance on service day</span><span id="bk-ps-balance">$15.00</span></div>
+            </div>
+            <!-- PayPal -->
+            <div id="paypal-button-container" style="margin-top:16px;max-width:320px;"></div>
+            <div id="pay-result" style="margin-top:10px;font-size:13.5px;"></div>
+            <p class="pay-hint" id="pay-hint" style="margin-top:8px;color:var(--muted);font-size:12.5px;">Secure payment via PayPal. Deposits are fully refundable if you cancel 24h+ before pickup.</p>
+            <!-- Success -->
+            <div class="bk-success" id="bk-success" style="display:none;">
+              <div style="font-size:32px;margin-bottom:10px;">&#9989;</div>
+              <b style="font-size:17px;color:#1F5A2C;">Booking Confirmed!</b>
+              <p style="margin-top:8px;color:var(--muted);font-size:14px;">Your deposit has been received and your booking is secured. Order number:</p>
+              <div class="bk-order-num" id="bk-order-num">SPT-XXXX</div>
+              <p style="margin-top:10px;color:var(--muted);font-size:13px;">A confirmation email has been sent. Our team will contact you within 30 minutes to finalise details.</p>
+              <a href="https://wa.me/8619117273912" target="_blank" rel="noopener" class="btn btn-gold" style="display:inline-flex;margin-top:14px;">
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.2c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.1.2-.2.4-.3.5l-.5.6c-.2.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.6-.1l1-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.1z"/></svg>
+                Message us on WhatsApp
+              </a>
             </div>
           </div>
+        </div>
+        <div class="contact-channels">
           <div class="channel">
             <span class="c-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.2c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.1.2-.2.4-.3.5l-.5.6c-.2.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.6-.1l1-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.1z"/></svg></span>
             <div>
@@ -2527,109 +2600,207 @@ window.addEventListener('scroll', function(){
 /* ============ Quote form ============ */
 var CONTACT_WORKER_URL = 'https://shanghai-private-transfer-contact.travel-ed8.workers.dev';
 
-document.getElementById('quoteForm').addEventListener('submit', async function(e){
-  e.preventDefault();
-  var form = this;
-  var btn = form.querySelector('.btn[type="submit"]');
-  var originalBtnHtml = btn.innerHTML;
-  function v(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; }
-
-  var payload = {
-    name: v('f-name'),
-    email: v('f-email'),
-    date: v('f-date'),
-    time: v('f-time'),
-    route: v('f-route'),
-    flight: v('f-flight'),
-    pax: v('f-pax'),
-    bags: v('f-bags'),
-    vehicle: v('f-vehicle'),
-    notes: v('f-notes')
+/* ============ Smart Booking Engine ============ */
+(function initSmartBooking(){
+  var PRICES = {
+    airport: { PVG: { economy: 65, business: 90, luxury: 130 }, SHA: { economy: 45, business: 65, luxury: 95 } },
+    charter: { '4h': { economy: 85, business: 110, luxury: 155 }, '8h': { economy: 140, business: 180, luxury: 250 }, '10h': { economy: 170, business: 220, luxury: 300 } }
   };
+  var VEHICLE_LABELS = { economy: 'Economy Sedan', business: 'Business MPV', luxury: 'Luxury Van' };
+  var DEPOSIT_RATE = 0.30, MIN_DEPOSIT = 50;
+  var currentService = 'airport';
+  var currentVehicle = 'economy';
+  var paypalReady = false;
+  var currentBooking = null;
 
-  // Show loading state
-  btn.disabled = true;
-  btn.style.opacity = '0.7';
-  btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;animation:spin 1s linear infinite;"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Sending…';
+  function $(id){ return document.getElementById(id); }
+  function fmt(n){ return Number(n).toFixed(2); }
 
-  try {
-    var resp = await fetch(CONTACT_WORKER_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    var result = await resp.json().catch(function(){ return {}; });
-
-    if (resp.ok && result.success) {
-      // Success — show email-sent confirmation
-      document.getElementById('formSuccessContent').style.display = 'block';
-      document.getElementById('formErrorContent').style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
-      form.querySelector('.form-note').style.display = 'none';
-      btn.style.display = 'none';
-    } else {
-      throw new Error(result.error || 'Failed to send');
+  function calcTotal(){
+    if(currentService === 'airport'){
+      var ap = ($('bk-airport') || {}).value || 'PVG';
+      return PRICES.airport[ap][currentVehicle] || 65;
     }
-  } catch (err) {
-    console.error('Form submission error:', err);
-    // Show error state with WhatsApp fallback
-    document.getElementById('formSuccessContent').style.display = 'none';
-    document.getElementById('formErrorContent').style.display = 'block';
-    document.getElementById('formSuccess').style.display = 'block';
-    form.querySelector('.form-note').style.display = 'none';
-    btn.style.display = 'none';
+    var dur = ($('bk-duration') || {}).value || '8h';
+    return PRICES.charter[dur][currentVehicle] || 140;
   }
-});
 
-/* ============ PayPal deposit ============ */
-(function initPayPal(){
-  var container = document.getElementById('paypal-button-container');
-  if (!container) return;
+  function updatePrices(){
+    // Update vehicle card prices
+    var vehs = ['economy','business','luxury'];
+    for(var i=0;i<vehs.length;i++){
+      var v = vehs[i];
+      var priceEl = $('bk-price-'+v);
+      if(priceEl){
+        var p = currentService === 'airport'
+          ? (PRICES.airport[($('bk-airport')||{}).value||'PVG'][v] || 65)
+          : (PRICES.charter[($('bk-duration')||{}).value||'8h'][v] || 140);
+        priceEl.textContent = '$'+p;
+      }
+    }
+    // Update summary
+    var total = calcTotal();
+    var deposit = Math.max(Math.round(total*DEPOSIT_RATE*100)/100, MIN_DEPOSIT);
+    var balance = Math.round((total-deposit)*100)/100;
+    var svcLabel = currentService === 'airport'
+      ? 'Airport Transfer · '+(($('bk-airport')||{}).value||'PVG')
+      : 'Full-Day Charter · '+(($('bk-duration')||{}).value||'8h');
+    if($('bk-ps-service')) $('bk-ps-service').textContent = svcLabel;
+    if($('bk-ps-vehicle')) $('bk-ps-vehicle').textContent = VEHICLE_LABELS[currentVehicle];
+    if($('bk-ps-total')) $('bk-ps-total').textContent = '$'+fmt(total);
+    if($('bk-ps-deposit')) $('bk-ps-deposit').textContent = '$'+fmt(deposit);
+    if($('bk-ps-balance')) $('bk-ps-balance').textContent = '$'+fmt(balance);
+  }
+
+  function buildBookingPayload(){
+    var payload = {
+      serviceType: currentService,
+      vehicle: currentVehicle,
+      passengers: parseInt(($('bk-pax')||{}).value||'1',10),
+      luggage: parseInt(($('bk-bags')||{}).value||'0',10),
+      customer: {
+        name: ($('bk-name')||{}).value||'',
+        email: ($('bk-email')||{}).value||'',
+        whatsapp: ($('bk-whatsapp')||{}).value||''
+      },
+      notes: ($('bk-notes')||{}).value||''
+    };
+    if(currentService === 'airport'){
+      payload.airport = {
+        direction: ($('bk-direction')||{}).value||'arrival',
+        airport: ($('bk-airport')||{}).value||'PVG',
+        flightNumber: ($('bk-flight')||{}).value||'',
+        date: ($('bk-date')||{}).value||'',
+        time: ($('bk-time')||{}).value||'',
+        hotelAddress: ($('bk-hotel')||{}).value||''
+      };
+    } else {
+      payload.charter = {
+        date: ($('bk-cdate')||{}).value||'',
+        duration: ($('bk-duration')||{}).value||'8h',
+        pickupAddress: ($('bk-pickup')||{}).value||'',
+        destinations: ($('bk-dest')||{}).value||''
+      };
+    }
+    return payload;
+  }
+
+  function validateBooking(){
+    var p = buildBookingPayload();
+    if(!p.customer.name || !p.customer.email){ return 'Please fill in your name and email.'; }
+    if(currentService === 'airport'){
+      if(!p.airport.date || !p.airport.hotelAddress){ return 'Please fill in the date and hotel address.'; }
+    } else {
+      if(!p.charter.date || !p.charter.pickupAddress){ return 'Please fill in the date and pickup address.'; }
+    }
+    return null;
+  }
+
+  // Service type cards
+  var svcCards = document.querySelectorAll('.bk-service-card');
+  for(var i=0;i<svcCards.length;i++){
+    (function(card){
+      card.addEventListener('click', function(){
+        for(var j=0;j<svcCards.length;j++) svcCards[j].classList.remove('active');
+        card.classList.add('active');
+        currentService = card.getAttribute('data-service');
+        if($('bk-airport-fields')) $('bk-airport-fields').style.display = currentService==='airport' ? '' : 'none';
+        if($('bk-charter-fields')) $('bk-charter-fields').style.display = currentService==='charter' ? '' : 'none';
+        updatePrices();
+      });
+    })(svcCards[i]);
+  }
+
+  // Vehicle cards
+  var vehCards = document.querySelectorAll('.bk-vehicle-card');
+  for(var i=0;i<vehCards.length;i++){
+    (function(card){
+      card.addEventListener('click', function(){
+        for(var j=0;j<vehCards.length;j++) vehCards[j].classList.remove('active');
+        card.classList.add('active');
+        currentVehicle = card.getAttribute('data-vehicle');
+        updatePrices();
+      });
+    })(vehCards[i]);
+  }
+
+  // Airport/charter field changes
+  ['bk-airport','bk-duration'].forEach(function(id){
+    var el = $(id);
+    if(el) el.addEventListener('change', updatePrices);
+  });
+
+  // Load prices from config (override defaults)
   fetch(CONTACT_WORKER_URL + '/paypal/config')
     .then(function(r){ return r.json(); })
     .then(function(cfg){
-      if (!cfg || !cfg.clientId) throw new Error('PayPal not configured');
-      var s = document.createElement('script');
-      s.src = 'https://www.paypal.com/sdk/js?client-id=' + encodeURIComponent(cfg.clientId) + '&currency=' + encodeURIComponent(cfg.currency) + '&intent=capture';
-      s.onload = function(){
-        paypal.Buttons({
-          style: { layout: 'vertical', color: 'gold', shape: 'rect', label: 'paypal' },
-          createOrder: function(){
-            return fetch(CONTACT_WORKER_URL + '/paypal/create-order', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                name: (document.getElementById('f-name') || {}).value || 'Guest',
-                route: (document.getElementById('f-route') || {}).value || ''
-              })
-            }).then(function(r){ return r.json(); }).then(function(res){
-              if (res.id) return res.id;
-              throw new Error(res.error || 'Failed to create order');
-            });
-          },
-          onApprove: function(data){
-            return fetch(CONTACT_WORKER_URL + '/paypal/capture-order', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ orderId: data.orderID })
-            }).then(function(r){ return r.json(); }).then(function(res){
-              if (res.success) {
-                var box = document.getElementById('pay-result');
-                box.innerHTML = '<b style="color:#1F5A2C;">✅ Payment successful — your deposit is confirmed!</b><br><span style="color:var(--muted);">Our team will finalize your booking shortly. Reference: ' + (res.captureId || '').slice(0, 8) + '</span>';
-                container.style.display = 'none';
-                document.getElementById('pay-hint').style.display = 'none';
-              } else {
-                throw new Error(res.error || 'Capture failed');
+      if(cfg && cfg.prices){ PRICES = cfg.prices; }
+      if(cfg && cfg.depositRate){ DEPOSIT_RATE = cfg.depositRate; }
+      if(cfg && cfg.minDeposit){ MIN_DEPOSIT = cfg.minDeposit; }
+      updatePrices();
+      // Load PayPal SDK
+      if(cfg && cfg.clientId){
+        var s = document.createElement('script');
+        s.src = 'https://www.paypal.com/sdk/js?client-id=' + encodeURIComponent(cfg.clientId) + '&currency=' + encodeURIComponent(cfg.currency||'USD') + '&intent=capture';
+        s.onload = function(){
+          paypal.Buttons({
+            style: { layout: 'vertical', color: 'gold', shape: 'rect', label: 'paypal' },
+            createOrder: function(){
+              var err = validateBooking();
+              if(err){
+                if($('pay-result')) $('pay-result').innerHTML = '<b style="color:#C0392B;">'+err+'</b>';
+                return Promise.reject(new Error(err));
               }
-            });
-          },
-          onError: function(err){ console.error('PayPal error:', err); }
-        }).render('#paypal-button-container');
-      };
-      s.onerror = function(){ console.error('PayPal SDK failed to load'); };
-      document.head.appendChild(s);
+              if($('pay-result')) $('pay-result').innerHTML = '<span style="color:var(--muted);">Creating your booking…</span>';
+              var payload = buildBookingPayload();
+              return fetch(CONTACT_WORKER_URL + '/booking/create', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+              }).then(function(r){ return r.json(); }).then(function(res){
+                if(res.paypalOrderId){
+                  currentBooking = res.booking;
+                  return res.paypalOrderId;
+                }
+                throw new Error(res.error || 'Failed to create booking');
+              });
+            },
+            onApprove: function(data){
+              return fetch(CONTACT_WORKER_URL + '/paypal/capture-order', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ orderId: data.orderID, booking: currentBooking })
+              }).then(function(r){ return r.json(); }).then(function(res){
+                if(res.success){
+                  // Hide form, show success
+                  var widget = $('booking-widget');
+                  if(widget){
+                    var steps = widget.querySelectorAll('.bk-step, .bk-price-summary, #paypal-button-container, .pay-hint');
+                    for(var i=0;i<steps.length;i++) steps[i].style.display = 'none';
+                  }
+                  if($('pay-result')) $('pay-result').innerHTML = '';
+                  if($('bk-order-num')) $('bk-order-num').textContent = res.orderNumber || (currentBooking && currentBooking.orderNumber) || 'SPT-XXXX';
+                  if($('bk-success')) $('bk-success').style.display = 'block';
+                  window.scrollTo({ top: $('booking-widget').offsetTop - 80, behavior: 'smooth' });
+                } else {
+                  throw new Error(res.error || 'Payment capture failed');
+                }
+              });
+            },
+            onError: function(err){
+              console.error('PayPal error:', err);
+              if($('pay-result')) $('pay-result').innerHTML = '<b style="color:#C0392B;">Payment was not completed. Please try again or contact us on WhatsApp.</b>';
+            }
+          }).render('#paypal-button-container');
+          paypalReady = true;
+        };
+        s.onerror = function(){ console.error('PayPal SDK failed to load'); };
+        document.head.appendChild(s);
+      }
     })
-    .catch(function(e){ console.log('PayPal disabled:', e.message); });
+    .catch(function(e){ console.log('Booking config error:', e.message); updatePrices(); });
+
+  updatePrices();
 })();
 
 /* ============ Year ============ */
