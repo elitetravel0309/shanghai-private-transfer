@@ -3160,7 +3160,7 @@ var CONTACT_WORKER_URL = 'https://shanghai-private-transfer-contact.travel-ed8.w
       // Load PayPal SDK
       if(cfg && cfg.clientId){
         var s = document.createElement('script');
-        s.src = 'https://www.paypal.com/sdk/js?client-id=' + encodeURIComponent(cfg.clientId) + '&currency=' + encodeURIComponent(cfg.currency||'USD') + '&intent=capture';
+        s.src = 'https://www.paypal.com/sdk/js?client-id=' + encodeURIComponent(cfg.clientId) + '&currency=' + encodeURIComponent(cfg.paymentCurrency||cfg.currency||'USD') + '&intent=capture';
         s.onload = function(){
           paypal.Buttons({
             style: { layout: 'vertical', color: 'gold', shape: 'rect', label: 'paypal' },
