@@ -3128,7 +3128,7 @@ function router(){
     if(view==='routes'){renderRoutesIndex();}
     if(view==='guides'){renderGuides();}
     if(view==='faq'){renderFaqs(document.getElementById('faqList'), faqs);}
-    document.title = 'Shanghai Private Transfer — ' + (view==='home' ? 'Airport Transfer & Private Chauffeur' : view.charAt(0).toUpperCase()+view.slice(1));
+    document.title = 'Shanghai Private Transfer — ' + (view==='home' ? 'Best Private Car & Airport Transfer Service in Shanghai' : view.charAt(0).toUpperCase()+view.slice(1));
   }
   // nav active state
   var activeNav = (view==='service' || view==='destination' || view==='guide') ? 'services' : (navMap[view]||'home');
