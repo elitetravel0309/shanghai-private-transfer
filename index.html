@@ -364,7 +364,7 @@ main{min-height:70vh;}
 .guide-step p{font-size:14px;color:var(--muted);margin:0;}
 
 /* ============ Contact ============ */
-.contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:start;}
+.contact-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:54px;align-items:start;}
 .contact-form{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:38px;}
 .contact-form h3{font-family:var(--font-display);font-weight:400;font-size:26px;color:var(--navy-900);margin-bottom:6px;}
 .contact-form > p{color:var(--muted);font-size:14.5px;margin-bottom:26px;}
@@ -1647,10 +1647,16 @@ main{min-height:70vh;}
             </div>
             <!-- Submit Booking (manual mode - no online payment) -->
             <div style="margin-top:20px;">
-              <button type="button" id="bk-submit-btn" class="btn btn-gold" style="width:100%;max-width:320px;justify-content:center;font-size:16px;padding:14px 24px;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;margin-right:8px;"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-                Submit Booking Request
-              </button>
+              <div style="display:flex;gap:12px;flex-wrap:wrap;max-width:480px;">
+                <button type="button" id="bk-submit-btn" class="btn btn-gold" style="flex:1;min-width:200px;justify-content:center;font-size:15px;padding:14px 20px;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;margin-right:8px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  Submit via Email
+                </button>
+                <button type="button" id="bk-whatsapp-btn" class="btn" style="flex:1;min-width:200px;justify-content:center;font-size:15px;padding:14px 20px;background:#25D366;color:#fff;border:none;">
+                  <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;margin-right:8px;"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.2c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.1.2-.2.4-.3.5l-.5.6c-.2.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.6-.1l1-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.1z"/></svg>
+                  Submit via WhatsApp
+                </button>
+              </div>
             </div>
             <div id="pay-result" style="margin-top:10px;font-size:13.5px;"></div>
             <p class="pay-hint" id="pay-hint" style="margin-top:8px;color:var(--muted);font-size:12.5px;">No payment required now. Our team will contact you within 30 minutes to confirm details and arrange payment.</p>
@@ -3268,6 +3274,66 @@ var CONTACT_WORKER_URL = 'https://shanghai-private-transfer-contact.travel-ed8.w
         submitBtn.style.opacity = '1';
         if($('pay-result')) $('pay-result').innerHTML = '<b style="color:#C0392B;">Submission failed. Please try again or contact us on WhatsApp.</b>';
       });
+    });
+  }
+
+  // Submit via WhatsApp
+  var waBtn = $('bk-whatsapp-btn');
+  if(waBtn){
+    waBtn.addEventListener('click', function(){
+      var err = validateBooking();
+      if(err){
+        if($('pay-result')) $('pay-result').innerHTML = '<b style="color:#C0392B;">'+err+'</b>';
+        return;
+      }
+
+      // Collect booking details
+      var serviceType = document.querySelector('input[name="bk-service"]:checked');
+      var service = serviceType ? serviceType.value : 'airport';
+      var serviceLabel = service === 'charter' ? 'Private Charter' : 'Airport Transfer';
+
+      var details = [];
+      details.push('*New Booking Request*');
+      details.push('');
+      details.push('*Service:* ' + serviceLabel);
+
+      if(service === 'airport'){
+        var airport = document.querySelector('input[name="bk-airport"]:checked');
+        details.push('*Airport:* ' + (airport ? airport.value : 'PVG'));
+        details.push('*Date:* ' + ($('bk-date') ? $('bk-date').value : ''));
+        details.push('*Time:* ' + ($('bk-time') ? $('bk-time').value : ''));
+        if($('bk-flight') && $('bk-flight').value) details.push('*Flight:* ' + $('bk-flight').value);
+        details.push('*Pickup:* ' + ($('bk-pickup') ? $('bk-pickup').value : ''));
+        details.push('*Dropoff:* ' + ($('bk-dropoff') ? $('bk-dropoff').value : ''));
+      } else {
+        details.push('*Date:* ' + ($('bk-cdate') ? $('bk-cdate').value : ''));
+        details.push('*Duration:* ' + ($('bk-duration') ? $('bk-duration').value : '8h'));
+        details.push('*Pickup:* ' + ($('bk-pickup') ? $('bk-pickup').value : ''));
+        if($('bk-dest') && $('bk-dest').value) details.push('*Destinations:* ' + $('bk-dest').value);
+      }
+
+      details.push('*Passengers:* ' + ($('bk-pax') ? $('bk-pax').value : '2'));
+      details.push('*Luggage:* ' + ($('bk-bags') ? $('bk-bags').value : '2'));
+
+      var vehicle = document.querySelector('.bk-vehicle-card.active');
+      details.push('*Vehicle:* ' + (vehicle ? vehicle.querySelector('.bk-veh-title').textContent : 'Economy Sedan'));
+
+      details.push('');
+      details.push('*Price Summary:*');
+      details.push('*Total:* ' + ($('bk-ps-total') ? $('bk-ps-total').textContent : ''));
+      details.push('*Deposit:* ' + ($('bk-ps-deposit') ? $('bk-ps-deposit').textContent : ''));
+      details.push('*Balance:* ' + ($('bk-ps-balance') ? $('bk-ps-balance').textContent : ''));
+
+      details.push('');
+      details.push('*Contact:*');
+      details.push('*Name:* ' + ($('bk-name') ? $('bk-name').value : ''));
+      details.push('*Email:* ' + ($('bk-email') ? $('bk-email').value : ''));
+      if($('bk-whatsapp') && $('bk-whatsapp').value) details.push('*WhatsApp:* ' + $('bk-whatsapp').value);
+      if($('bk-notes') && $('bk-notes').value) details.push('*Special Requests:* ' + $('bk-notes').value);
+
+      var message = details.join('%0A');
+      var whatsappUrl = 'https://wa.me/8615347723823?text=' + message;
+      window.open(whatsappUrl, '_blank');
     });
   }
 })();
