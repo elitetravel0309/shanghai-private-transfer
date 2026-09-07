@@ -25,6 +25,14 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1B2E'/%3E%3Cpath d='M20 34l8-8 5 5 9-11' stroke='%23C8A45C' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='18' cy='42' r='2.4' fill='%23C8A45C'/%3E%3Ccircle cx='46' cy='42' r='2.4' fill='%23C8A45C'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://miaoda.feishu.cn">
 <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Marcellus&family=Public+Sans:wght@400;500;600;700&display=swap">
+<!-- Google tag (gtag.js) - Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N6W39Q43BV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N6W39Q43BV');
+</script>
 <style>
 /* ============ Design tokens ============ */
 :root{
@@ -3400,6 +3408,16 @@ var CONTACT_WORKER_URL = 'https://shanghai-private-transfer-contact.travel-ed8.w
           if($('pay-result')) $('pay-result').innerHTML = '';
           if($('bk-order-num')) $('bk-order-num').textContent = res.orderNumber || (currentBooking && currentBooking.orderNumber) || 'SPT-XXXX';
           if($('bk-success')) $('bk-success').style.display = 'block';
+          // GA4: Track booking lead conversion
+          if(typeof gtag === 'function'){
+            gtag('event', 'generate_lead', {
+              currency: 'CNY',
+              value: (currentBooking && currentBooking.totalCny) ? currentBooking.totalCny : 0,
+              transaction_id: res.orderNumber || (currentBooking && currentBooking.orderNumber) || '',
+              service_type: service,
+              vehicle_class: (currentBooking && currentBooking.vehicle) ? currentBooking.vehicle : ''
+            });
+          }
           window.scrollTo({ top: $('booking-widget').offsetTop - 80, behavior: 'smooth' });
         } else {
           throw new Error(res.error || 'Failed to submit booking');
@@ -3469,6 +3487,15 @@ var CONTACT_WORKER_URL = 'https://shanghai-private-transfer-contact.travel-ed8.w
 
       var message = details.join('%0A');
       var whatsappUrl = 'https://wa.me/8615347723823?text=' + message;
+      // GA4: Track WhatsApp booking lead
+      if(typeof gtag === 'function'){
+        gtag('event', 'generate_lead', {
+          currency: 'CNY',
+          method: 'whatsapp',
+          service_type: service,
+          vehicle_class: vehicle ? vehicle.querySelector('.bk-veh-title').textContent : ''
+        });
+      }
       window.open(whatsappUrl, '_blank');
     });
   }
