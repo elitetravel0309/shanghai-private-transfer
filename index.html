@@ -230,6 +230,13 @@ main{min-height:70vh;}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
 
+/* ============ Guide / Blog cards ============ */
+.guide-card{
+  display:block;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px 22px;transition:transform .2s,box-shadow .2s,border-color .2s;
+}
+.guide-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card);border-color:var(--gold);text-decoration:none;}
+
 /* ============ Fleet ============ */
 .fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
 .filter-bar{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:38px;}
@@ -1242,6 +1249,46 @@ main{min-height:70vh;}
       <div class="faq-list" id="homeFaq"></div>
       <div style="text-align:center;margin-top:34px;">
         <a class="btn btn-outline" href="#faq" data-nav="faq">View All FAQs</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog preview -->
+  <div class="section cream">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Travel Guides & Tips</span>
+        <h2>Latest from our blog</h2>
+        <p>Expert guides, insider tips, and practical itineraries for your Shanghai trip.</p>
+      </div>
+      <div class="grid-4" id="homeBlogGrid">
+        <a href="blog/shanghai-night-tour-skyline-viewing-guide.html" class="guide-card" style="text-decoration:none;color:inherit;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-strong);margin-bottom:10px;">Night Tour Guide</div>
+          <h3 style="font-family:var(--font-display);font-weight:400;font-size:18px;line-height:1.35;margin-bottom:10px;color:var(--navy-900);">Shanghai Night Tour & Skyline Viewing Guide 2026</h3>
+          <p style="font-size:13.5px;line-height:1.65;color:var(--muted);margin-bottom:14px;">Best night views, skyline viewpoints, river cruises, rooftop bars, and evening activities.</p>
+          <span style="font-size:13px;font-weight:600;color:var(--gold-strong);">Read Guide →</span>
+        </a>
+        <a href="blog/shanghai-family-tour-kids-friendly-guide.html" class="guide-card" style="text-decoration:none;color:inherit;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-strong);margin-bottom:10px;">Family Travel Guide</div>
+          <h3 style="font-family:var(--font-display);font-weight:400;font-size:18px;line-height:1.35;margin-bottom:10px;color:var(--navy-900);">Shanghai Family Tour & Kids-Friendly Activities Guide 2026</h3>
+          <p style="font-size:13.5px;line-height:1.65;color:var(--muted);margin-bottom:14px;">Best kid-friendly attractions by age, theme parks, museums, private car with child seats.</p>
+          <span style="font-size:13px;font-weight:600;color:var(--gold-strong);">Read Guide →</span>
+        </a>
+        <a href="blog/shanghai-shopping-tour-mall-transfer-guide.html" class="guide-card" style="text-decoration:none;color:inherit;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-strong);margin-bottom:10px;">Shopping Tour Guide</div>
+          <h3 style="font-family:var(--font-display);font-weight:400;font-size:18px;line-height:1.35;margin-bottom:10px;color:var(--navy-900);">Shanghai Shopping Tour & Mall Transfer Guide 2026</h3>
+          <p style="font-size:13.5px;line-height:1.65;color:var(--muted);margin-bottom:14px;">Best shopping districts, malls, markets, luxury boutiques, and outlet centers.</p>
+          <span style="font-size:13px;font-weight:600;color:var(--gold-strong);">Read Guide →</span>
+        </a>
+        <a href="blog/shanghai-food-tour-restaurant-transfer-guide.html" class="guide-card" style="text-decoration:none;color:inherit;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-strong);margin-bottom:10px;">Food Tour Guide</div>
+          <h3 style="font-family:var(--font-display);font-weight:400;font-size:18px;line-height:1.35;margin-bottom:10px;color:var(--navy-900);">Shanghai Food Tour & Restaurant Transfer Guide 2026</h3>
+          <p style="font-size:13.5px;line-height:1.65;color:var(--muted);margin-bottom:14px;">Best restaurants by cuisine and neighborhood, must-try dishes, food market tours.</p>
+          <span style="font-size:13px;font-weight:600;color:var(--gold-strong);">Read Guide →</span>
+        </a>
+      </div>
+      <div style="text-align:center;margin-top:34px;">
+        <a class="btn btn-outline" href="blog/index.html">View All Articles</a>
       </div>
     </div>
   </div>
