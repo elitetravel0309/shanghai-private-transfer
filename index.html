@@ -1129,6 +1129,88 @@ main{min-height:70vh;}
     </div>
   </div>
 
+  <!-- Quick Book: Standard Products -->
+  <div class="section cream">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Quick Book · Best Sellers</span>
+        <h2>Book in 2 minutes — fixed price, no surprises</h2>
+        <p>Most popular routes with transparent fixed pricing. Select your vehicle, fill in the details, and pay securely online.</p>
+      </div>
+
+      <div class="quick-book-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;margin-top:40px;">
+
+        <!-- PVG Arrival - Sedan -->
+        <div class="qb-card" style="background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 8px 30px rgba(11,27,46,.08);border:1px solid #E5DECF;">
+          <div style="background:linear-gradient(135deg,#0B1B2E,#183451);padding:28px 30px;color:#fff;">
+            <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#C8A45C;font-weight:700;margin-bottom:8px;">Airport Arrival</div>
+            <h3 style="font-family:var(--font-display);font-size:24px;font-weight:400;line-height:1.3;">PVG Pudong Airport → City Hotel</h3>
+            <div style="margin-top:16px;display:flex;align-items:baseline;gap:8px;">
+              <span style="font-size:36px;font-weight:800;color:#C8A45C;">¥380</span>
+              <span style="color:rgba(255,255,255,0.6);font-size:14px;">/ sedan (1–3 pax)</span>
+            </div>
+          </div>
+          <div style="padding:24px 30px 30px;">
+            <ul style="list-style:none;padding:0;margin:0 0 24px 0;">
+              <li style="padding:6px 0;color:var(--muted);font-size:14px;display:flex;align-items:center;gap:8px;">
+                <span style="color:#2E7D32;">✓</span> Meet & greet with name sign
+              </li>
+              <li style="padding:6px 0;color:var(--muted);font-size:14px;display:flex;align-items:center;gap:8px;">
+                <span style="color:#2E7D32;">✓</span> 60 min free flight waiting
+              </li>
+              <li style="padding:6px 0;color:var(--muted);font-size:14px;display:flex;align-items:center;gap:8px;">
+                <span style="color:#2E7D32;">✓</span> English-speaking driver
+              </li>
+              <li style="padding:6px 0;color:var(--muted);font-size:14px;display:flex;align-items:center;gap:8px;">
+                <span style="color:#2E7D32;">✓</span> All tolls & parking included
+              </li>
+            </ul>
+            <button onclick="quickBook('airport','PVG','arrival','economy')" class="btn btn-gold" style="width:100%;justify-content:center;">
+              Book Now — ¥380
+            </button>
+          </div>
+        </div>
+
+        <!-- PVG Arrival - MPV -->
+        <div class="qb-card" style="background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 8px 30px rgba(11,27,46,.08);border:1px solid #E5DECF;position:relative;">
+          <div style="position:absolute;top:16px;right:16px;background:#E94560;color:#fff;padding:5px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1px;">FAMILY FAVORITE</div>
+          <div style="background:linear-gradient(135deg,#0B1B2E,#183451);padding:28px 30px;color:#fff;">
+            <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#C8A45C;font-weight:700;margin-bottom:8px;">Airport Arrival</div>
+            <h3 style="font-family:var(--font-display);font-size:24px;font-weight:400;line-height:1.3;">PVG Pudong Airport → City Hotel</h3>
+            <div style="margin-top:16px;display:flex;align-items:baseline;gap:8px;">
+              <span style="font-size:36px;font-weight:800;color:#C8A45C;">¥480</span>
+              <span style="color:rgba(255,255,255,0.6);font-size:14px;">/ MPV (4–6 pax)</span>
+            </div>
+          </div>
+          <div style="padding:24px 30px 30px;">
+            <ul style="list-style:none;padding:0;margin:0 0 24px 0;">
+              <li style="padding:6px 0;color:var(--muted);font-size:14px;display:flex;align-items:center;gap:8px;">
+                <span style="color:#2E7D32;">✓</span> Extra luggage space
+              </li>
+              <li style="padding:6px 0;color:var(--muted);font-size:14px;display:flex;align-items:center;gap:8px;">
+                <span style="color:#2E7D32;">✓</span> Perfect for families
+              </li>
+              <li style="padding:6px 0;color:var(--muted);font-size:14px;display:flex;align-items:center;gap:8px;">
+                <span style="color:#2E7D32;">✓</span> Child seats available
+              </li>
+              <li style="padding:6px 0;color:var(--muted);font-size:14px;display:flex;align-items:center;gap:8px;">
+                <span style="color:#2E7D32;">✓</span> All tolls & parking included
+              </li>
+            </ul>
+            <button onclick="quickBook('airport','PVG','arrival','business')" class="btn btn-gold" style="width:100%;justify-content:center;">
+              Book Now — ¥480
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin-top:32px;">
+        <a href="#contact" data-nav="contact" class="btn btn-outline">Need something else? Get a custom quote →</a>
+      </div>
+    </div>
+  </div>
+
   <!-- Fleet preview (navy) -->
   <div class="section navy">
     <div class="wrap">
@@ -3250,6 +3332,71 @@ var CONTACT_WORKER_URL = 'https://shanghai-private-transfer-contact.travel-ed8.w
   var paypalReady = false;
   var currentBooking = null;
 
+  // Quick Book: auto-fill booking form from standard product cards
+  function quickBook(service, airport, direction, vehicle) {
+    // Set service type
+    currentService = service;
+    currentVehicle = vehicle;
+
+    // Update service selection cards
+    var svcCards = document.querySelectorAll('.bk-service-card');
+    for (var i = 0; i < svcCards.length; i++) {
+      svcCards[i].classList.remove('active');
+      if (svcCards[i].dataset.service === service) {
+        svcCards[i].classList.add('active');
+      }
+    }
+
+    // Show/hide airport vs charter fields
+    if (service === 'airport') {
+      var af = $('bk-airport-fields');
+      var cf = $('bk-charter-fields');
+      if (af) af.style.display = '';
+      if (cf) cf.style.display = 'none';
+
+      // Set airport
+      if ($('bk-airport')) {
+        $('bk-airport').value = airport;
+      }
+      // Set direction
+      if ($('bk-direction')) {
+        $('bk-direction').value = direction;
+      }
+    } else {
+      var af2 = $('bk-airport-fields');
+      var cf2 = $('bk-charter-fields');
+      if (af2) af2.style.display = 'none';
+      if (cf2) cf2.style.display = '';
+    }
+
+    // Set vehicle
+    var vehCards = document.querySelectorAll('.bk-vehicle-card');
+    for (var k = 0; k < vehCards.length; k++) {
+      vehCards[k].classList.remove('active');
+      if (vehCards[k].dataset.vehicle === vehicle) {
+        vehCards[k].classList.add('active');
+      }
+    }
+
+    // Update prices
+    updatePrices();
+
+    // Scroll to booking widget
+    var widget = $('booking-widget');
+    if (widget) {
+      window.scrollTo({ top: widget.offsetTop - 80, behavior: 'smooth' });
+    }
+
+    // Highlight the form briefly
+    setTimeout(function() {
+      if (widget) {
+        widget.style.transition = 'box-shadow 0.3s';
+        widget.style.boxShadow = '0 0 0 3px #C8A45C';
+        setTimeout(function() { widget.style.boxShadow = ''; }, 1500);
+      }
+    }, 500);
+  }
+
   function $(id){ return document.getElementById(id); }
   function fmt(n){ return Number(n).toFixed(2); }
 
@@ -3575,3 +3722,6 @@ router();
 </a>
 </body>
 </html>
+
+
+
